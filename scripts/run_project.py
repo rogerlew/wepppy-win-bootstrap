@@ -2,21 +2,33 @@ import sys
 from glob import glob
 import os
 from os.path import join as _join
-from os.path import join as _split
+from os.path import split as _split
 from os.path import exists
-import time
+from time import time
+import argparse
 import subprocess
 import multiprocessing
 import shutil
 
-from concurrent.futures import ThreadPoolExecutor, as_completed, wait, FIRST_EXCEPTION
+from concurrent.futures import (
+    ThreadPoolExecutor, 
+    as_completed, 
+    wait, 
+    FIRST_EXCEPTION
+)
+
+from wy_calc import wy_calc
+
 
 NCPU = multiprocessing.cpu_count() - 1
 if NCPU < 1:
     NCPU = 1
-
+    
+USE_MULTIPROCESSING = True
 
 wepp_exe = "../bin/WEPP2014.exe"
+
+perl_exe = r"C:\Perl64\bin\perl.exe"
 daily_hillslopes_pl_path = "../bin/correct_daily_hillslopes.pl"
 
 
@@ -94,11 +106,29 @@ def oncomplete(wepprun):
     assert status
     print('  {} completed run in {}s\n'.format(_id, elapsed_time))
 
-
+    
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('wd', type=str,   
+                        help='path of project')
+    parser.add_argument('-n', '--numcpu',   type=int, 
+                        help='Number of cpus in pool    (1)')
+    parser.add_argument('--wy_calc_start_year',   type=int, 
+                        help='run WY Calc postprocessing routine')   
+    parser.add_argument('--no_multiprocessing',
+                        help='Disable multiprocessing', action='store_true')    
+    args = parser.parse_args()
 
-    wd = sys.argv[-1].strip()
-
+    wd = args.wd
+    numcpu = (args.numcpu, NCPU)[args.numcpu is None]
+    wy_calc_start_year = args.wy_calc_start_year
+    
+    no_multiprocessing = (args.no_multiprocessing, False)[args.no_multiprocessing is None]
+    if no_multiprocessing:
+        USE_MULTIPROCESSING = False
+        
+    print('USE_MULTIPROCESSING', USE_MULTIPROCESSING)
+    
     assert not wd.endswith('.py')
     assert exists(wd)
 
@@ -112,29 +142,48 @@ if __name__ == "__main__":
 
     hillslope_runs = glob(_join(runs_dir, 'p*.run'))
     hillslope_runs = [run for run in hillslope_runs if 'pw' not in run]
+    
+    print('cleaning output dir')
+    if exists(output_dir):
+        shutil.rmtree(output_dir)
+    os.mkdir(output_dir)
 
     pool = ThreadPoolExecutor(NCPU)
     futures = []
 
     for hillslope_run in hillslope_runs:
+        
         run_fn = _split(hillslope_run)[-1]
-        wepp_id = run_fn.replace('p', '').replace('.run', 'run')
-        assert isint(wepp_id)
-
-        futures.append(pool.submit(lambda p: run_hillslope(*p), (wepp_id, runs_dir)))
-        futures[-1].add_done_callback(oncomplete)
+        wepp_id = run_fn.replace('p', '').replace('.run', '')
+        assert isint(wepp_id), wepp_id
+        
+        if USE_MULTIPROCESSING:
+            futures.append(pool.submit(lambda p: run_hillslope(*p), (int(wepp_id), runs_dir)))
+            futures[-1].add_done_callback(oncomplete)
+        else:
+            status, _id, elapsed_time = run_hillslope(int(wepp_id), runs_dir)
+            assert status
+            print('  {} completed run in {}s\n'.format(_id, elapsed_time))
 
     run_watershed(runs_dir)
+    print('completed watershed run')
 
     totwatsed_pl = _join(output_dir, 'correct_daily_hillslopes.pl')
     if exists(totwatsed_pl):
         os.remove(totwatsed_pl)
 
     shutil.copyfile(daily_hillslopes_pl_path, totwatsed_pl)
+    shutil.copyfile("../bin/ls.bat", _join(output_dir, "ls.bat"))
+    shutil.copyfile("../bin/rm.bat", _join(output_dir, "rm.bat"))
 
-    cmd = ['perl', 'correct_daily_hillslopes.pl']
+    cmd = [perl_exe, 'correct_daily_hillslopes.pl']
     _log = open(_join(output_dir, 'correct_daily_hillslopes.log'), 'w')
 
     p = subprocess.Popen(cmd, stdout=_log, stderr=_log, cwd=output_dir)
     p.wait()
     _log.close()
+    
+    if wy_calc_start_year is not None:
+        wy_calc(wy_calc_start_year, output_dir)
+    
+    print('done')
