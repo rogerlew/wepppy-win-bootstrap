@@ -148,8 +148,9 @@ if __name__ == "__main__":
         shutil.rmtree(output_dir)
     os.mkdir(output_dir)
 
-    pool = ThreadPoolExecutor(NCPU)
-    futures = []
+    if USE_MULTIPROCESSING:
+        pool = ThreadPoolExecutor(NCPU)
+        futures = []
 
     for hillslope_run in hillslope_runs:
         
@@ -165,6 +166,9 @@ if __name__ == "__main__":
             assert status
             print('  {} completed run in {}s\n'.format(_id, elapsed_time))
 
+    if USE_MULTIPROCESSING:
+        wait(futures, return_when=FIRST_EXCEPTION)
+    
     run_watershed(runs_dir)
     print('completed watershed run')
 
