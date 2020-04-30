@@ -9,8 +9,40 @@ def wy_calc(start_year, out_dir):
         os.chdir(out_dir)
         
         # put contents here
-        
-        
+        names = "Day Month Year Precip. Runoff Peak Sediment Solub. Particulate Total".split()
+        df = pd.read_csv('ebe_pw0.txt', delim_whitespace=True, names=names, skiprows=9)
+
+        df_list = []
+
+        for index, row in df.iterrows():
+            
+            row["Year2"] = start_year + row["Year"]
+            if row["Month"]>9:
+                row["WY"] = row["Year2"]+1
+            else:
+                row["WY"] = row["Year2"]
+            try:
+                row["SedimentWY"] = float(row["Sediment"])/1000.0
+            except:
+                row["SedimentWY"] = 0
+               
+            df_list.append(row)
+
+        df2 = pd.DataFrame(df_list)
+
+        dfWY = df2.groupby(["WY"])["SedimentWY"].sum()
+
+        dfSRP = df2.groupby(["WY"])["Solub."].sum()
+        dfPP = df2.groupby(["WY"])["Particulate"].sum()
+        dfTP = df2.groupby(["WY"])["Total"].sum()
+        #dfY = df2.groupby(["Year2"])["SedimentWY"].sum()
+            
+        dfWY.to_csv('WY_sediment.txt')
+
+        dfSRP.to_csv('WY_SRP.txt')
+        dfPP.to_csv('WY_PP.txt')
+        dfTP.to_csv('WY_TP.txt')
+                
         os.chdir(cwd)
     except:
         os.chdir(cwd)
