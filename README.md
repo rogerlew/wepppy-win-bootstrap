@@ -39,19 +39,19 @@ Use the run_project.py script to run wepp. By default it runs the hillslopes in 
 
 e.g.
 ```
-python3 run_project.py C:\Users\roger\rlew-mucky-pepporoni
+python3 run_project.py C:\Users\roger\rlew-mucky-pepperoni
 ```
 
 Some versions of WEPP will crash if multiple executables are trying to write to the same file (e.g. fort.80). If this occurs disable multiprocessing with the --no_multiprocesing flag
 
 e.g.
 ```
-python3 run_project.py C:\Users\roger\rlew-mucky-pepporoni --no_multiprocessing
+python3 run_project.py C:\Users\roger\rlew-mucky-pepperoni --no_multiprocessing
 ```
 
 To run the wy_calc post processing provide --wy_calc_start_year <start_year>
 e.g.
 ```
-python3 run_project.py C:\Users\roger\rlew-mucky-pepporoni --wy_calc_start_year 1989
+python3 run_project.py C:\Users\roger\rlew-mucky-pepperoni --wy_calc_start_year 1989
 ```
 
