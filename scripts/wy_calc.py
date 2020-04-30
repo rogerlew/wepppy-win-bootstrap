@@ -8,7 +8,6 @@ def wy_calc(start_year, out_dir):
     try:
         os.chdir(out_dir)
         
-        # put contents here
         names = "Day Month Year Precip. Runoff Peak Sediment Solub. Particulate Total".split()
         df = pd.read_csv('ebe_pw0.txt', delim_whitespace=True, names=names, skiprows=9)
 
