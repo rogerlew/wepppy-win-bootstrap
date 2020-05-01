@@ -61,7 +61,7 @@ def run_hillslope(wepp_id, runs_dir):
                     % (wepp_id, log_fn))
 
 
-def run_watershed(runs_dir):
+def run_watershed(runs_dir, output_dir):
     t0 = time()
 
     cmd = [os.path.abspath(wepp_exe)]
@@ -85,11 +85,15 @@ def run_watershed(runs_dir):
 
     log_fn = _join(runs_dir, 'pw0.err')
 
+    for fn in glob(_join(runs_dir, '*.out')):
+        dst_path = _join(output_dir, _split(fn)[1])
+        shutil.move(fn, dst_path)
+        
     with open(_join(runs_dir, 'pw0.err')) as fp:
         stdout = fp.read()
         if 'WEPP COMPLETED WATERSHED SIMULATION SUCCESSFULLY' in stdout:
             return True, time() - t0
-
+            
     raise Exception('Error running wepp for watershed \nSee <a href="browse/wepp/runs/pw0.err">%s</a>' % log_fn)
 
 
@@ -169,7 +173,7 @@ if __name__ == "__main__":
     if USE_MULTIPROCESSING:
         wait(futures, return_when=FIRST_EXCEPTION)
     
-    run_watershed(runs_dir)
+    run_watershed(runs_dir, output_dir)
     print('completed watershed run')
 
     totwatsed_pl = _join(output_dir, 'correct_daily_hillslopes.pl')
