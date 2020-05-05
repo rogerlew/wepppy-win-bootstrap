@@ -55,3 +55,11 @@ e.g.
 python3 run_project.py C:\Users\roger\rlew-mucky-pepperoni --wy_calc_start_year 1989
 ```
 
+### pmetpara.txt prep
+
+The pmetpara prepation can be enabled by providing the --pmetpara_prep flag. The parameters are hard coded in the run_project.py script. `mid_season_crop_coeff` and `p_coeff` can be float values or dictionaries with the plant loop names and values cooresponding to the coefficients.
+
+### phosphorus.txt prep
+
+The phosphorus prepation can be enabled by providing the --phosphorus_prep flag. The parameters are hard coded in the run_project.py script.
+
