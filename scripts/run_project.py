@@ -21,6 +21,7 @@ from wy_calc import wy_calc
 from phosphorus_prep import phosphorus_prep
 from pmetpara_prep import pmetpara_prep
 from gwcoeff_prep import gwcoeff_prep
+from anu_wepp_management_mod import anu_wepp_management_mod
 
 NCPU = multiprocessing.cpu_count() - 1
 if NCPU < 1:
@@ -129,6 +130,8 @@ if __name__ == "__main__":
                         help='Build phosphorus.txt', action='store_true')
     parser.add_argument('--gwcoeff_prep',
                         help='Build gwcoeff.txt', action='store_true')   
+    parser.add_argument('--anu_man_mod',
+                        help='Modify plant loop parameters for Anu WEPP', action='store_true')   
     args = parser.parse_args()
 
     wd = args.wd
@@ -142,6 +145,7 @@ if __name__ == "__main__":
     run_pmetpara_prep = (args.pmetpara_prep, False)[args.pmetpara_prep is None]
     run_phosphorus_prep = (args.phosphorus_prep, False)[args.phosphorus_prep is None]
     run_gwcoeff_prep = (args.gwcoeff_prep, False)[args.gwcoeff_prep is None]
+    run_anu_man_mod = (args.anu_man_mod, False)[args.anu_man_mod is None]
     
     print('USE_MULTIPROCESSING', USE_MULTIPROCESSING)
     
@@ -164,6 +168,9 @@ if __name__ == "__main__":
 
     if run_gwcoeff_prep:
         gwcoeff_prep(runs_dir, gwstorage=100, bfcoeff=0.01, dscoeff=0.00, bfthreshold=1.001)
+        
+    if run_anu_man_mod:
+        anu_wepp_management_mod(runs_dir)
         
     hillslope_runs = glob(_join(runs_dir, 'p*.run'))
     hillslope_runs = [run for run in hillslope_runs if 'pw' not in run]

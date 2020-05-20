@@ -169,7 +169,11 @@ class ScenarioReference(ScenarioBase):
         
         return str(i + 1)  # section indices are 1 indexed
             
+VERSION = None
 
+def get_version():
+    return VERSION
+    
 class PlantLoopCropland(ScenarioBase):
     def __init__(self, lines, root):
         self.root = root
@@ -216,12 +220,18 @@ class PlantLoopCropland(ScenarioBase):
         self.tmpmax = float(line.pop(0))
         
         line = lines.pop(0).split()
-        assert len(line) == 3
+        assert len(line) >= 3
         self.tmpmin = float(line.pop(0))
         self.xmxlai = float(line.pop(0))
         self.yld = float(line.pop(0))
         
+        if len(line) == 4:
+            line.pop(0)
+        
     def __str__(self):
+        anu_mod = ''
+        if 'anu' in VERSION:
+            anu_mod = ' 0.00000'
         return """\
 {0.crunit}
 {0.bb:0.5f} {0.bbb:0.5f} {0.beinp:0.5f} {0.btemp:0.5f} {0.cf:0.5f} \
@@ -231,8 +241,8 @@ class PlantLoopCropland(ScenarioBase):
 {0.mfocod}
 {0.oratea:0.5f} {0.orater:0.5f} {0.otemp:0.5f} {0.pltol:0.5f} {0.pltsp:0.5f} \
 {0.rdmax:0.5f} {0.rsr:0.5f} {0.rtmmax:0.5f} {0.spriod} {0.tmpmax:0.5f}
-{0.tmpmin:0.5f} {0.xmxlai:0.5f} {0.yld:0.5f}
-""".format(self)
+{0.tmpmin:0.5f} {0.xmxlai:0.5f} {0.yld:0.5f}{1}
+""".format(self, anu_mod)
 
 
 class PlantLoopRangeland(ScenarioBase):
