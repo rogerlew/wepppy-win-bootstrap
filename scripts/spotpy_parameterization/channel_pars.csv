@@ -1,11 +1,11 @@
-parameter,description,optimize,optguess,parameter_distribution,low,high,stepsize (optional),mean,stddev,sigma
+parameter,description,optimize,optguess,distribution,low,high,stepsize,mean,stddev,sigma
 chnz,inverse slope of the channel banks (m/m),0,19.99,,,,,,,
 chnnbr,Manning roughness coefficient for bare soil in the channel,0,0.04,,,,,,,
 chnn,total manning roughness coefficient in channel allowing for vegetation,0,0.3,,,,,,,
 chnk,channel erodibility factor (s/m),1,0.20854,Uniform,1.00E-08,1,,,,
 chntcr,channel critical shear stress (N/m^2),1,100,Uniform,0,100,,,,
-chnedm,depth to nonerodible layer in mid-channel (m),0,0.5,Uniform,0.01,1.5,,,,
-chneds,depth to nonerodible layer along the side of channel (m),0,0.1,Uniform,0.01,1.5,,,,
+chnedm,depth to nonerodible layer in mid-channel (m),1,0.5,Uniform,0.01,1.5,,,,
+chneds,depth to nonerodible layer along the side of channel (m),1,0.1,Uniform,0.01,1.5,,,,
 ctlslp,control structure slope (m/m),0,0.02,,,,,,,
 ctlz,control structure average side slope (m/m),0,4,,,,,,,
 ctln,control structure Manning roughness coefficient (m/m),0,0.04,,,,,,,
