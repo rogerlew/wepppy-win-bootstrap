@@ -1,0 +1,114 @@
+99.1
+11
+4
+1.500000
+Waterway channel with rock base
+**Make sure erodibility and shear stress match soil file
+Bill Eliot based on L. Tysdal 2/98
+2
+1
+1
+0
+19.99 0.04
+0.3 {chnk} {chntcr} {chnedm} {chneds}
+0.02 4.0 0.04
+Waterway channel with rock base
+**Make sure erodibility and shear stress match soil file
+Bill Eliot based on L. Tysdal 2/98
+2
+1
+1
+0
+19.99 0.04
+0.3 {chnk} {chntcr} {chnedm} {chneds}
+0.02 4.0 0.04
+Waterway channel with rock base
+**Make sure erodibility and shear stress match soil file
+Bill Eliot based on L. Tysdal 2/98
+2
+1
+1
+0
+19.99 0.04
+0.3 {chnk} {chntcr} {chnedm} {chneds}
+0.02 4.0 0.04
+Waterway channel with rock base
+**Make sure erodibility and shear stress match soil file
+Bill Eliot based on L. Tysdal 2/98
+2
+1
+1
+0
+19.99 0.04
+0.3 {chnk} {chntcr} {chnedm} {chneds}
+0.02 4.0 0.04
+Waterway channel with rock base
+**Make sure erodibility and shear stress match soil file
+Bill Eliot based on L. Tysdal 2/98
+2
+1
+1
+0
+19.99 0.04
+0.3 {chnk} {chntcr} {chnedm} {chneds}
+0.02 4.0 0.04
+Waterway channel with rock base
+**Make sure erodibility and shear stress match soil file
+Bill Eliot based on L. Tysdal 2/98
+2
+1
+1
+0
+19.99 0.04
+0.3 {chnk} {chntcr} {chnedm} {chneds}
+0.02 4.0 0.04
+Waterway channel with rock base
+**Make sure erodibility and shear stress match soil file
+Bill Eliot based on L. Tysdal 2/98
+2
+1
+1
+0
+19.99 0.04
+0.3 {chnk} {chntcr} {chnedm} {chneds}
+0.02 4.0 0.04
+Waterway channel with rock base
+**Make sure erodibility and shear stress match soil file
+Bill Eliot based on L. Tysdal 2/98
+2
+1
+1
+0
+19.99 0.04
+0.3 {chnk} {chntcr} {chnedm} {chneds}
+0.02 4.0 0.04
+Waterway channel with rock base
+**Make sure erodibility and shear stress match soil file
+Bill Eliot based on L. Tysdal 2/98
+2
+1
+1
+0
+19.99 0.04
+0.3 {chnk} {chntcr} {chnedm} {chneds}
+0.02 4.0 0.04
+Waterway channel with rock base
+**Make sure erodibility and shear stress match soil file
+Bill Eliot based on L. Tysdal 2/98
+2
+1
+1
+0
+19.99 0.04
+0.3 {chnk} {chntcr} {chnedm} {chneds}
+0.02 4.0 0.04
+Waterway channel with rock base
+**Make sure erodibility and shear stress match soil file
+Bill Eliot based on L. Tysdal 2/98
+2
+1
+1
+0
+19.99 0.04
+0.3 {chnk} {chntcr} {chnedm} {chneds}
+0.02 4.0 0.04

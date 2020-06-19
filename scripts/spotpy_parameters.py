@@ -27,7 +27,8 @@ Bill Eliot based on L. Tysdal 2/98
 0
 {chnz} {chnnbr}
 {chnn} {chnk} {chntcr} {chnedm} {chneds}
-{ctlslp} {ctlz} {ctln}"""
+{ctlslp} {ctlz} {ctln}
+"""
 
 
 class ChannelParameters:
@@ -62,26 +63,31 @@ class ChannelParameters:
                     stepsize = float(stepsize)
                     
                 if stepsize is None:
-                    pars_list.append(parameter.Uniform(low=low, high=high, optguess=optguess))
+                    pars_list.append(parameter.Uniform(name=par, low=low, high=high, optguess=optguess))
                 else:
-                    pars_list.append(parameter.Uniform(low=low, high=high, optguess=optguess, stepsize=stepsize))
+                    pars_list.append(parameter.Uniform(name=par, low=low, high=high, optguess=optguess, stepsize=stepsize))
                 
                 
         fp.close()
         self.pars = pars
         self.pars_list = pars_list
         
-    def create_template_file(self, nchan, fn):
-        
+    def create_template_file(self, nchan, dst_fn):
         chn_stub = _chn_stub.format(**self.pars)
         chn_txt = _chn_template.format(nchan=nchan, chn_stubs=chn_stub * nchan)
-        print(chn_txt)
+        
+        with open(dst_fn, 'w') as fp:
+            fp.write(chn_txt)
+            
+        assert exists(dst_fn)
+        
+        
         
         
 if __name__ == "__main__":
     from pprint import pprint
     chn_pars = ChannelParameters()
     
-    chn_pars.create_template_file(11, 'chn_template.txt')
+    chn_pars.create_template_file(11, 'spotpy_tests/chn_template.txt')
     
         
