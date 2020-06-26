@@ -79,3 +79,4 @@ Adds a fourth parameter 0.0000 to the last line of the plant cropland loop
 python.exe .\run_project.py C:\Users\roger\Downloads\lt_obs_Blackwood_BC1_10336660_CurCond.2020.cl532.observed.ki5krcs.no_pmet.wepp_ui --wy_calc_start_year 1989 --pmetpara_prep --phosphorus_prep --gwcoeff_prep --anu_man_mod
 ```
 
+# Observed
