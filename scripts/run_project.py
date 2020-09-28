@@ -16,7 +16,7 @@ from concurrent.futures import (
     wait, 
     FIRST_EXCEPTION
 )
-
+from all_your_base import isint
 from wy_calc import wy_calc
 from phosphorus_prep import phosphorus_prep
 from pmetpara_prep import pmetpara_prep
@@ -65,6 +65,8 @@ def run_hillslope(wepp_id, runs_dir):
 
 
 def run_watershed(runs_dir, output_dir):
+    print('runs_dir', runs_dir)
+
     t0 = time()
 
     cmd = [os.path.abspath(wepp_exe)]
@@ -98,14 +100,6 @@ def run_watershed(runs_dir, output_dir):
             return True, time() - t0
             
     raise Exception('Error running wepp for watershed \nSee <a href="browse/wepp/runs/pw0.err">%s</a>' % log_fn)
-
-
-def isint(x):
-    # noinspection PyBroadException
-    try:
-        return float(int(x)) == float(x)
-    except Exception:
-        return False
 
 
 def oncomplete(wepprun):

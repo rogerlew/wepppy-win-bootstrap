@@ -32,8 +32,11 @@ Bill Eliot based on L. Tysdal 2/98
 
 
 class ChannelParameters:
-    def __init__(self):
-        fn = _join(_par_dir, 'channel_pars.csv')
+    def __init__(self, chn_fn=None):
+        if chn_fn is None:
+            chn_fn = 'channel_pars.csv'
+
+        fn = _join(_par_dir, chn_fn)
         
         fp = open(fn)
         csv_rdr = csv.DictReader(fp)
@@ -63,31 +66,38 @@ class ChannelParameters:
                     stepsize = float(stepsize)
                     
                 if stepsize is None:
-                    pars_list.append(parameter.Uniform(name=par, low=low, high=high, optguess=optguess))
+                    pars_list.append(parameter.Uniform(name='chndefs:' + par, low=low, high=high, optguess=optguess))
                 else:
-                    pars_list.append(parameter.Uniform(name=par, low=low, high=high, optguess=optguess, stepsize=stepsize))
-                
-                
+                    pars_list.append(parameter.Uniform(name='chndefs:' + par, low=low, high=high, optguess=optguess,
+                                                       stepsize=stepsize))
+
         fp.close()
         self.pars = pars
         self.pars_list = pars_list
         
-    def create_template_file(self, nchan, dst_fn):
-        chn_stub = _chn_stub.format(**self.pars)
+    def create_template_file(self, nchan, dst_fn, guesses_d):
+        global _chn_stub, _chn_template
+        pars = self.pars
+
+        for _name, val in pars.items():
+            if _name not in guesses_d:
+                guesses_d[_name] = val
+
+        print('guesses', guesses_d)
+
+        chn_stub = _chn_stub.format(**guesses_d)
         chn_txt = _chn_template.format(nchan=nchan, chn_stubs=chn_stub * nchan)
         
         with open(dst_fn, 'w') as fp:
             fp.write(chn_txt)
             
         assert exists(dst_fn)
-        
-        
-        
+
         
 if __name__ == "__main__":
     from pprint import pprint
     chn_pars = ChannelParameters()
     
-    chn_pars.create_template_file(11, 'spotpy_tests/chn_template.txt')
+    chn_pars.create_template_file(11, 'spotpy_templates/chn_template.txt')
     
         

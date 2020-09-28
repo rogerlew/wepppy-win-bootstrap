@@ -1,0 +1,24 @@
+{
+  "daily":
+  {
+    "sediment":
+    [
+    {
+      "path": "C:\\Users\\roger\\Documents\\GitHub\\wepppy-win-bootstrap-mica-test-run\\clear-cut-blast\\observed\\Mica_fl3_daily_observed_sediment.csv",
+      "weight": 0.25
+    } ,
+    {
+      "path": "C:\\Users\\roger\\Documents\\GitHub\\wepppy-win-bootstrap-mica-test-run\\clear-cut-blast\\observed\\Mica_fl3_daily_observed_sediment.csv",
+      "weight": 0.25
+    }
+    ],
+    "streamflow":
+    [
+    {
+      "path": "C:\\Users\\roger\\Documents\\GitHub\\wepppy-win-bootstrap-mica-test-run\\clear-cut-blast\\observed\\Mica_fl3_daily_observed_sediment.csv",
+      "weight": 0.5,
+      "transform": "log"
+    }
+    ]
+  }
+}

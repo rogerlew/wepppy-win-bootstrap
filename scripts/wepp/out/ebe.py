@@ -93,6 +93,17 @@ class Ebe(object):
           'Total P': 'kg'
         }
 
+    def sim_d(self, measure):
+        assert measure in ['sediment', 'streamflow']
+        _measure = {'sediment': 'Sediment Yield (kg)',
+                    'streamflow': 'Runoff Volume (m^3)'}[measure]
+
+        _sim_d = {}
+        for index, row in self.df.iterrows():
+            _sim_d[(int(row['year']), int(row['mo']), int(row['da']))] = row[_measure]
+
+        return _sim_d
+
 
 if __name__ == "__main__":
     from .loss import Loss
