@@ -22,6 +22,8 @@ from phosphorus_prep import phosphorus_prep
 from pmetpara_prep import pmetpara_prep
 from gwcoeff_prep import gwcoeff_prep
 from anu_wepp_management_mod import anu_wepp_management_mod
+from totalwatsed import TotalWatSed
+from nodb_stubs import BaseflowOpts
 
 NCPU = multiprocessing.cpu_count() - 1
 if NCPU < 1:
@@ -212,6 +214,9 @@ if __name__ == "__main__":
     p = subprocess.Popen(cmd, stdout=_log, stderr=_log, cwd=output_dir)
     p.wait()
     _log.close()
+    
+    totwatsed = TotalWatSed(_join(output_dir, 'totalwatsed.txt'), BaseflowOpts())
+    totwatsed.export(_join(output_dir, 'totalwatsed.csv'))
     
     if wy_calc_start_year is not None:
         wy_calc(wy_calc_start_year, output_dir)
