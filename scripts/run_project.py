@@ -31,7 +31,7 @@ if NCPU < 1:
     
 USE_MULTIPROCESSING = True
 
-wepp_exe = "../bin/WEPP2014.exe"
+wepp_exe = "../bin/wepppy-win-bootstrap.exe"
 
 perl_exe = r"C:\Perl64\bin\perl.exe"
 daily_hillslopes_pl_path = "../bin/correct_daily_hillslopes.pl"
