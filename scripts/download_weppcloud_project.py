@@ -26,15 +26,14 @@ if __name__ == "__main__":
     no_extract = args.no_extract
     remove = args.remove
     
-    url = 'https://wepp1.nkn.uidaho.edu/weppcloud/runs/{wd}/0/archive'
+    url_template = 'https://wepp1.nkn.uidaho.edu/weppcloud/runs/{wd}/0/archive/'
 
     fname = _join(destination, "{wd}.zip".format(wd=wd))
     print("attempting to download", wd)
 
-    response = urlopen('https://wepp1.nkn.uidaho.edu/weppcloud/runs/{wd}/0/archive'.format(wd=wd))
+    response = urlopen(url_template.format(wd=wd))
     data = response.read()
     print('download complete')
-
 
     print('saving archive')
     if exists(fname):
