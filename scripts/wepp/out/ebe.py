@@ -53,7 +53,7 @@ class HillslopeEbe(object):
 
 
 class Ebe(object):
-    def __init__(self, fn):
+    def __init__(self, fn, first_sim_year=1):
         lines = _get_lines(fn)
 
         header = ['da', 'mo', 'year',
@@ -80,6 +80,7 @@ class Ebe(object):
         df['Sed. Del (kg)'] = df['Sediment Yield (kg)']
 
         self.df = df
+        self.first_sim_year = first_sim_year
         self.years = int(max(df['year']))
         self.header = header
         self.units_d = {
@@ -94,13 +95,14 @@ class Ebe(object):
         }
 
     def sim_d(self, measure):
+        first_sim_year = self.first_sim_year
         assert measure in ['sediment', 'streamflow']
         _measure = {'sediment': 'Sediment Yield (kg)',
                     'streamflow': 'Runoff Volume (m^3)'}[measure]
 
         _sim_d = {}
         for index, row in self.df.iterrows():
-            _sim_d[(int(row['year']), int(row['mo']), int(row['da']))] = row[_measure]
+            _sim_d[(int(row['year']) + first_sim_year - 1, int(row['mo']), int(row['da']))] = row[_measure]
 
         return _sim_d
 
