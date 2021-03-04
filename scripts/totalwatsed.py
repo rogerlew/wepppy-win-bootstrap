@@ -21,6 +21,7 @@ import numpy as np
 
 from all_your_base import determine_wateryear
 from nodb_stubs import PhosphorusOpts, BaseflowOpts
+from hill_wat import watershed_swe
 
 class TotalWatSed(object):
 
