@@ -7,7 +7,7 @@ This project assumes:
     - If you want to run the wy_calc postprocessing you will need numpy, scipy, pandas
     
     
-## Downloading a project with wget
+## Downloading a project with wget (preferred)
 Use the wget_download_weppcloud_project.py script and provide the run_id and local destination directory as arguments. The included wget.exe must be in your path if the batch file is called from outside of the scripts folder.
 
 e.g.
