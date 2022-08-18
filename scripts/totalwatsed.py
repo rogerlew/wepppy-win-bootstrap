@@ -16,14 +16,16 @@ import csv
 import math
 from datetime import datetime, timedelta
 from glob import glob
+import multiprocessing
 from multiprocessing import Pool
 import numpy as np
 import pandas as pd
 
 from all_your_base import determine_wateryear
 
-NCPU = 2
-
+NCPU = multiprocessing.cpu_count() - 1
+if NCPU < 1:
+    NCPU = 1
 
 def _read_hill_wat_sed(pass_fn):
     from .hill_pass import HillPass
