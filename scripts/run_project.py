@@ -23,7 +23,7 @@ from pmetpara_prep import pmetpara_prep
 from gwcoeff_prep import gwcoeff_prep
 from anu_wepp_management_mod import anu_wepp_management_mod
 from totalwatsed import TotalWatSed2
-from nodb_stubs import BaseflowOpts
+from nodb_stubs import BaseflowOpts, PhosphorusOpts
 
 NCPU = multiprocessing.cpu_count() - 1
 if NCPU < 1:
@@ -33,10 +33,36 @@ USE_MULTIPROCESSING = True
 
 wepp_exe = "../bin/wepppy-win-bootstrap.exe"
 
-perl_exe = r"C:\Perl64\bin\perl.exe"
-daily_hillslopes_pl_path = "../bin/correct_daily_hillslopes.pl"
-
-
+def get_baseflow_opts(runs_dir):
+    fn = _join(runs_dir, 'gwcoeff.txt')
+    if not exists(fn):
+        return None
+    
+    with open(fn, 'r') as fp:
+        lines = fp.readlines()
+    
+    gwstorage = float(lines[0].split()[0]) 
+    bfcoeff = float(lines[1].split()[0]) 
+    dscoeff = float(lines[2].split()[0]) 
+    bfthreshold = float(lines[3].split()[0]) 
+    return BaseflowOpts(gwstorage=gwstorage, bfcoeff=bfcoeff, dscoeff=dscoeff, bfthreshold=bfthreshold)
+ 
+    
+def get_phosphorus_opts(runs_dir):
+    fn = _join(self.runs_dir, 'phosphorus.txt')
+    if not exists(fn):
+        return None
+    
+    with open(fn, 'r') as fp:
+        lines = fp.readlines()
+    
+    surf_runoff = float(lines[0].split()[0]) 
+    lateral_flow = float(lines[1].split()[0]) 
+    baseflow = float(lines[2].split()[0]) 
+    sediment = float(lines[3].split()[0]) 
+    return PhosphorusOpts(surf_runoff=surf_runoff, lateral_flow=lateral_flow, baseflow=baseflow, sediment=sediment)
+        
+    
 def run_hillslope(wepp_id, runs_dir):
     t0 = time()
 
@@ -200,23 +226,10 @@ if __name__ == "__main__":
     run_watershed(runs_dir, output_dir)
     print('completed watershed run')
 
-    totwatsed_pl = _join(output_dir, 'correct_daily_hillslopes.pl')
-    if exists(totwatsed_pl):
-        os.remove(totwatsed_pl)
-
-    shutil.copyfile(daily_hillslopes_pl_path, totwatsed_pl)
-    shutil.copyfile("../bin/ls.bat", _join(output_dir, "ls.bat"))
-    shutil.copyfile("../bin/rm.bat", _join(output_dir, "rm.bat"))
-
-    cmd = [perl_exe, 'correct_daily_hillslopes.pl']
-    _log = open(_join(output_dir, 'correct_daily_hillslopes.log'), 'w')
-
-    p = subprocess.Popen(cmd, stdout=_log, stderr=_log, cwd=output_dir)
-    p.wait()
-    _log.close()
-    
-    totwatsed = TotalWatSed2(output_dir, BaseflowOpts())
-    totwatsed.export(_join(output_dir, 'totalwatsed.csv'))
+    totwatsed = TotalWatSed2(output_dir, 
+                             get_baseflow_opts(), 
+                             get_phosphorus_opts())
+    totwatsed.export(_join(output_dir, 'totalwatsed2.csv'))
     
     if wy_calc_start_year is not None:
         wy_calc(wy_calc_start_year, output_dir)
