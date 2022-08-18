@@ -227,8 +227,8 @@ if __name__ == "__main__":
     print('completed watershed run')
 
     totwatsed = TotalWatSed2(output_dir, 
-                             get_baseflow_opts(), 
-                             get_phosphorus_opts())
+                             get_baseflow_opts(runs_dir), 
+                             get_phosphorus_opts(runs_dir))
     totwatsed.export(_join(output_dir, 'totalwatsed2.csv'))
     
     if wy_calc_start_year is not None:
