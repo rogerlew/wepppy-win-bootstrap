@@ -3,8 +3,6 @@ Acquire and Run weppcloud projects on Windows
 
 This project assumes:
   - You are on windows
-  - You have perl installed as C:\Perl64\bin\perl.exe
-    - If not change the perl_exe in the run_project.py
   - You have Python3 installed
     - If you want to run the wy_calc postprocessing you will need numpy, scipy, pandas
     
