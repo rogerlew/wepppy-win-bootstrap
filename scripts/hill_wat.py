@@ -14,20 +14,20 @@ from collections import OrderedDict
 import numpy as np
 import os
 
+import pandas as pd
+from deprecated import deprecated
+
+from all_your_base import try_parse_float
+from all_your_base import determine_wateryear
 
 uint_types = ['OFE (#)', 'J', 'Y', 'M', 'D']
-vars_collapse_ofe = ['Y', 'J', 'M', 'D', 'Date', 'P (mm)', 'RM (mm)', 'Q (mm)',
-                     'Ep (mm)', 'Es (mm)', 'Er (mm)', 'Dp (mm)', 'UpStrmQ (mm)',
-                     'SubRIn (mm)', 'latqcc (mm)', 'Total-Soil Water (mm)',
-                     'frozwt (mm)', 'Snow-Water (mm)', 'QOFE (mm)', 'Tile (mm)', 'Irr (mm)']
-vars_collapse_time = ['Area (m^2)']
+vars_collapse_ofe = ['Y', 'J', 'M', 'D', 'Date', 'P (mm)', 'RM (mm)', 
+                     'Ep (mm)', 'Es (mm)', 'Er (mm)', 'Dp (mm)', 
+                     'Snow-Water (mm)',]  # value across OFEs is the same for each day (not calculated by OFE)
+vars_collapse_time = ['Area (m^2)']   # value of these repeat for every day
 
 
-def parse_float(x):
-    try:
-        return float(x)
-    except:
-        return float('nan')
+_nan = float('nan')
 
 
 class HillWat:
@@ -62,6 +62,9 @@ class HillWat:
         data['Date'] = []
         data['M'] = []
         data['D'] = []
+        data['Water Year'] = []
+
+        date_indx = []
 
         for L in lines[iend + 2:]:
             L = L.split()
@@ -72,15 +75,21 @@ class HillWat:
                 if k in uint_types:
                     data[k].append(int(v))
                 else:
-                    data[k].append(parse_float(v))
+                    data[k].append(try_parse_float(v, _nan))
 
             assert 'Y' in data, (data, lines)
             year = data['Y'][-1]
-            julday = data['J'][-1]
-            dt = datetime(year, 1, 1) + timedelta(julday - 1)
+            julian = data['J'][-1]
+            wy = determine_wateryear(year, julian)
+            ofe = data['OFE (#)'][-1]
+            dt = datetime(year, 1, 1) + timedelta(julian - 1)
             data['Date'].append(np.datetime64(dt))
             data['M'].append(dt.month)
             data['D'].append(dt.day)
+            data['Water Year'].append(wy)
+
+            if ofe == 1:
+                date_indx.append((year, dt.month, dt.day, julian, wy))
 
         # cast data values as np.arrays
         for (k, v) in data.items():
@@ -114,8 +123,20 @@ class HillWat:
         self.header = header
         self.total_area = total_area
         self.num_ofes = num_ofes
+        self.days_in_sim = days_in_sim
 
+        date_indx = np.array(date_indx)
+        self._year_indx = date_indx[:, 0]
+        self._month_indx = date_indx[:,1]
+        self._day_indx = date_indx[:,2]
+        self._julian_indx = date_indx[:,3]
+        self._wy_indx = date_indx[:,4]
+        self.watbal = None
+                       
     def as_dict(self):
+        if self.num_ofes > 1:
+            raise NotImplementedError()
+
         data = self.data
         header = data.keys()
         d = {}
@@ -147,41 +168,57 @@ class HillWat:
 
         return i0 + 1, iend
 
-def watershed_swe(wd):
-    wat_fns = glob(_join(wd, 'wepp/output/*.wat.dat'))
+    def _calculate_daily_watbal(self, watbal_measures, units='m^3'):
+        assert units in ('m^3', 'mm')
+        days_in_sim = self.days_in_sim
+        ofe_areas = self.data['Area (m^2)']
+        total_area = self.total_area
+        num_ofes = self.num_ofes
+        data = self.data
 
-    total_area = 0.0
-    cumulative_swe = None
-    for wat_fn in wat_fns:
-        wat = HillWat(wat_fn)
-        area = wat.data['Area (m^2)'][0]
-        total_area += area
-       
-        # calc swe in m^3 
-        swe = wat.data['Snow-Water (mm)'] * 0.001 * area
-        if cumulative_swe is None:
-            cumulative_swe = swe
-        else:
-            cumulative_swe += swe
+        d = pd.DataFrame()
+        d['Year'] = self._year_indx
+        d['Month'] = self._month_indx
+        d['Day'] = self._day_indx
+        d['Julian'] = self._julian_indx
+        d['Water Year'] = self._wy_indx
+        
+        for _vars in watbal_measures:
+           key = f'{_vars} ({units})' 
+           d[key] = np.zeros(days_in_sim)
+           for var in _vars.split('+'):
+               var_mm = f'{var} (mm)'
+               assert var_mm in self.data, f'{var_mm} not in self.data'
+               if var_mm in vars_collapse_ofe:
+                   y = data[var_mm] * total_area
+               else:
+                   y = np.sum(data[var_mm] * ofe_areas, axis=1)
+               y = np.reshape(y, (-1, 1))
+               d[key] += y[:, 0]
+          
+           if units == 'm^3':
+               d[key] *= 0.001        
+           else:
+#               d[key] *= 0.001  # m^3
+               d[key] /= total_area  # m
+#               d[key] *= 1000.0  # to mm
+        
+        return d
+      
+    def calculate_daily_watbal(self, watbal_measures=
+        ('P', 'RM', 'Ep', 'Es+Er', 'Dp', 'QOFE', 
+         'latqcc', 'Total-Soil Water', 'Snow-Water')):
+        return  self._calculate_daily_watbal(watbal_measures)
 
-    return cumulative_swe / total_area * 1000
+    def calculate_annual_watbal(self, watbal_measures=
+        ('P', 'QOFE', 'latqcc', 'Ep+Es+Er', 'Dp'), units='mm'):
 
+        watbal = self._calculate_daily_watbal(watbal_measures, units=units)
 
-if __name__ == "__main__":
-    from pprint import pprint
-    from glob import glob
-    from os.path import join as _join
+        total_area = self.total_area
 
-    import sys
+        d = watbal.pivot_table(index='Water Year', 
+                               values=[f'{m} (mm)' for m in watbal_measures], 
+                               aggfunc=np.sum)
+        return d 
 
-    print(watershed_swe('/geodata/weppcloud_runs/srivas42-greatest-ballad'))
-    sys.exit()
-
-    test_wd = '/geodata/weppcloud_runs/srivas42-greatest-ballad/wepp/output'
-
-    fns = glob(_join(test_wd, '*.wat.dat'))
-    for fn in fns:
-        print(fn)
-        wat = HillWat(fn)
-        pprint(wat.data.keys())
-        input()
