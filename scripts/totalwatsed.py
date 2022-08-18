@@ -60,7 +60,7 @@ class TotalWatSed2(object):
             if wepp.has_phosphorus:
                 phos_opts = wepp.phosphorus_opts
 
-        output_dir = _join(wd, 'wepp/output')
+        output_dir = _join(wd, 'wepp', 'output')
         pkl_fn = _join(output_dir, 'totwatsed2.pkl')
         if _exists(pkl_fn):
             self.d = pd.read_pickle(pkl_fn)
