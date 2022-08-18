@@ -226,7 +226,7 @@ if __name__ == "__main__":
     run_watershed(runs_dir, output_dir)
     print('completed watershed run')
 
-    totwatsed = TotalWatSed2(output_dir, 
+    totwatsed = TotalWatSed2(wd, 
                              get_baseflow_opts(runs_dir), 
                              get_phosphorus_opts(runs_dir))
     totwatsed.export(_join(output_dir, 'totalwatsed2.csv'))
