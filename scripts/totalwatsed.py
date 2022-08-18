@@ -23,13 +23,14 @@ import pandas as pd
 
 from all_your_base import determine_wateryear
 
+from hill_pass import HillPass
+from hill_wat import HillWat
+
 NCPU = multiprocessing.cpu_count() - 1
 if NCPU < 1:
     NCPU = 1
 
 def _read_hill_wat_sed(pass_fn):
-    from .hill_pass import HillPass
-    from .hill_wat import HillWat
 
     wat_fn = pass_fn.replace('.pass.dat', '.wat.dat')
     hill_wat = HillWat(wat_fn)
