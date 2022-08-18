@@ -20,7 +20,7 @@ from multiprocessing import Pool
 import numpy as np
 import pandas as pd
 
-from wepppy.all_your_base import determine_wateryear
+from all_your_base import determine_wateryear
 
 NCPU = 2
 
