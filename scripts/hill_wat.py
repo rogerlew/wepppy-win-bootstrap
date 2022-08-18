@@ -15,7 +15,6 @@ import numpy as np
 import os
 
 import pandas as pd
-from deprecated import deprecated
 
 from all_your_base import try_parse_float
 from all_your_base import determine_wateryear
