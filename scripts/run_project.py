@@ -49,7 +49,7 @@ def get_baseflow_opts(runs_dir):
  
     
 def get_phosphorus_opts(runs_dir):
-    fn = _join(self.runs_dir, 'phosphorus.txt')
+    fn = _join(runs_dir, 'phosphorus.txt')
     if not exists(fn):
         return None
     
