@@ -22,11 +22,9 @@ import pandas as pd
 
 from deprecated import deprecated
 
-from wepppy.all_your_base.hydro import determine_wateryear
-from wepppy.wepp.out import watershed_swe
-from wepppy.all_your_base import NCPU
+from wepppy.all_your_base import determine_wateryear
 
-NCPU = math.ceil(NCPU * 0.6)
+NCPU = 2
 
 
 def _read_hill_wat_sed(pass_fn):
