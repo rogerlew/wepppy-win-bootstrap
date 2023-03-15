@@ -33,6 +33,8 @@ USE_MULTIPROCESSING = True
 
 wepp_exe = "../bin/wepppy-win-bootstrap.exe"
 
+
+# no longer used
 def get_baseflow_opts(runs_dir):
     fn = _join(runs_dir, 'gwcoeff.txt')
     if not exists(fn):
@@ -48,6 +50,7 @@ def get_baseflow_opts(runs_dir):
     return BaseflowOpts(gwstorage=gwstorage, bfcoeff=bfcoeff, dscoeff=dscoeff, bfthreshold=bfthreshold)
  
     
+# no longer used
 def get_phosphorus_opts(runs_dir):
     fn = _join(runs_dir, 'phosphorus.txt')
     if not exists(fn):
@@ -229,9 +232,8 @@ if __name__ == "__main__":
     run_watershed(runs_dir, output_dir)
     print('completed watershed run')
 
-    totwatsed = TotalWatSed2(wd, 
-                             get_baseflow_opts(runs_dir), 
-                             get_phosphorus_opts(runs_dir))
+    totwatsed = TotalWatSed2(wd)
+    
     totwatsed.export(_join(output_dir, 'totalwatsed2.csv'))
     
     if wy_calc_start_year is not None:
