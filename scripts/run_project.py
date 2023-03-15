@@ -55,6 +55,9 @@ def get_phosphorus_opts(runs_dir):
     
     with open(fn, 'r') as fp:
         lines = fp.readlines()
+        
+    if lines[0].lower().startswith('phosphorus'):
+        lines = lines[1:]
     
     surf_runoff = float(lines[0].split()[0]) 
     lateral_flow = float(lines[1].split()[0]) 
