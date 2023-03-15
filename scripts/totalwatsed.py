@@ -88,10 +88,15 @@ class TotalWatSed2(object):
 
         if baseflow_opts is None:
             baseflow_opts = get_baseflow_opts(wd)
+        else:
+            baseflow_opts = BaseflowOpts()
+            
 
         if phos_opts is None:
             phos_opts = get_phosphorus_opts(wd)
-
+        else:
+            phos_opts = PhosphorusOpts()
+            
         output_dir = _join(wd, 'wepp', 'output')
         pkl_fn = _join(output_dir, 'totwatsed2.pkl')
         if _exists(pkl_fn):
