@@ -30,6 +30,42 @@ NCPU = multiprocessing.cpu_count() - 1
 if NCPU < 1:
     NCPU = 1
 
+    
+# no longer used
+def get_baseflow_opts(runs_dir):
+    fn = _join(runs_dir, 'gwcoeff.txt')
+    if not exists(fn):
+        return None
+    
+    with open(fn, 'r') as fp:
+        lines = fp.readlines()
+    
+    gwstorage = float(lines[0].split()[0]) 
+    bfcoeff = float(lines[1].split()[0]) 
+    dscoeff = float(lines[2].split()[0]) 
+    bfthreshold = float(lines[3].split()[0]) 
+    return BaseflowOpts(gwstorage=gwstorage, bfcoeff=bfcoeff, dscoeff=dscoeff, bfthreshold=bfthreshold)
+ 
+    
+# no longer used
+def get_phosphorus_opts(runs_dir):
+    fn = _join(runs_dir, 'phosphorus.txt')
+    if not exists(fn):
+        return None
+    
+    with open(fn, 'r') as fp:
+        lines = fp.readlines()
+        
+    if lines[0].lower().startswith('phosphorus'):
+        lines = lines[1:]
+    
+    surf_runoff = float(lines[0].split()[0]) 
+    lateral_flow = float(lines[1].split()[0]) 
+    baseflow = float(lines[2].split()[0]) 
+    sediment = float(lines[3].split()[0]) 
+    return PhosphorusOpts(surf_runoff=surf_runoff, lateral_flow=lateral_flow, baseflow=baseflow, sediment=sediment)
+        
+    
 def _read_hill_wat_sed(pass_fn):
 
     wat_fn = pass_fn.replace('.pass.dat', '.wat.dat')
@@ -51,15 +87,10 @@ class TotalWatSed2(object):
     def __init__(self, wd, baseflow_opts=None, phos_opts=None):
 
         if baseflow_opts is None:
-            from wepppy.nodb import Ron, Wepp
-            wepp = Wepp.getInstance(wd)
-            baseflow_opts = wepp.baseflow_opts
+            baseflow_opts = get_baseflow_opts(wd)
 
-        if baseflow_opts is None:
-            from wepppy.nodb import Ron, Wepp
-            wepp = Wepp.getInstance(wd)
-            if wepp.has_phosphorus:
-                phos_opts = wepp.phosphorus_opts
+        if phos_opts is None:
+            phos_opts = get_phosphorus_opts(wd)
 
         output_dir = _join(wd, 'wepp', 'output')
         pkl_fn = _join(output_dir, 'totwatsed2.pkl')
