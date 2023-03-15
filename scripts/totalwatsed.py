@@ -35,7 +35,7 @@ if NCPU < 1:
 def get_baseflow_opts(runs_dir):
     fn = _join(runs_dir, 'gwcoeff.txt')
     if not _exists(fn):
-        return None
+        return BaseflowOpts()
     
     with open(fn, 'r') as fp:
         lines = fp.readlines()
@@ -51,7 +51,7 @@ def get_baseflow_opts(runs_dir):
 def get_phosphorus_opts(runs_dir):
     fn = _join(runs_dir, 'phosphorus.txt')
     if not _exists(fn):
-        return None
+        return PhosphorusOpts()
     
     with open(fn, 'r') as fp:
         lines = fp.readlines()
@@ -88,14 +88,14 @@ class TotalWatSed2(object):
 
         if baseflow_opts is None:
             baseflow_opts = get_baseflow_opts(wd)
-        else:
-            baseflow_opts = BaseflowOpts()
+            
+        assert baseflow_opts is not None
             
 
         if phos_opts is None:
             phos_opts = get_phosphorus_opts(wd)
-        else:
-            phos_opts = PhosphorusOpts()
+            
+        assert phos_opts is not None
             
         output_dir = _join(wd, 'wepp', 'output')
         pkl_fn = _join(output_dir, 'totwatsed2.pkl')
