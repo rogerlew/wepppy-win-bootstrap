@@ -34,41 +34,6 @@ USE_MULTIPROCESSING = True
 wepp_exe = "../bin/wepppy-win-bootstrap.exe"
 
 
-# no longer used
-def get_baseflow_opts(runs_dir):
-    fn = _join(runs_dir, 'gwcoeff.txt')
-    if not exists(fn):
-        return None
-    
-    with open(fn, 'r') as fp:
-        lines = fp.readlines()
-    
-    gwstorage = float(lines[0].split()[0]) 
-    bfcoeff = float(lines[1].split()[0]) 
-    dscoeff = float(lines[2].split()[0]) 
-    bfthreshold = float(lines[3].split()[0]) 
-    return BaseflowOpts(gwstorage=gwstorage, bfcoeff=bfcoeff, dscoeff=dscoeff, bfthreshold=bfthreshold)
- 
-    
-# no longer used
-def get_phosphorus_opts(runs_dir):
-    fn = _join(runs_dir, 'phosphorus.txt')
-    if not exists(fn):
-        return None
-    
-    with open(fn, 'r') as fp:
-        lines = fp.readlines()
-        
-    if lines[0].lower().startswith('phosphorus'):
-        lines = lines[1:]
-    
-    surf_runoff = float(lines[0].split()[0]) 
-    lateral_flow = float(lines[1].split()[0]) 
-    baseflow = float(lines[2].split()[0]) 
-    sediment = float(lines[3].split()[0]) 
-    return PhosphorusOpts(surf_runoff=surf_runoff, lateral_flow=lateral_flow, baseflow=baseflow, sediment=sediment)
-        
-    
 def run_hillslope(wepp_id, runs_dir):
     t0 = time()
 
