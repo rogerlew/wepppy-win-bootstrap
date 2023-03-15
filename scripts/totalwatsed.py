@@ -34,7 +34,7 @@ if NCPU < 1:
 # no longer used
 def get_baseflow_opts(runs_dir):
     fn = _join(runs_dir, 'gwcoeff.txt')
-    if not exists(fn):
+    if not _exists(fn):
         return None
     
     with open(fn, 'r') as fp:
@@ -50,7 +50,7 @@ def get_baseflow_opts(runs_dir):
 # no longer used
 def get_phosphorus_opts(runs_dir):
     fn = _join(runs_dir, 'phosphorus.txt')
-    if not exists(fn):
+    if not _exists(fn):
         return None
     
     with open(fn, 'r') as fp:
