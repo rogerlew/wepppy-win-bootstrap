@@ -20,6 +20,15 @@ def determine_wateryear(y, j=None, mo=None):
     return y
 
 
+def isfloat(x):
+    # noinspection PyBroadException
+    try:
+        float(x)
+    except Exception:
+        return False
+    return True
+    
+
 def isint(x):
     # noinspection PyBroadException
     try:

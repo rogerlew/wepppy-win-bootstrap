@@ -1,4 +1,4 @@
-
+from all_your_base import isfloat
 
 class BaseflowOpts(object):
     def __init__(self, gwstorage=None, bfcoeff=None, dscoeff=None, bfthreshold=None):

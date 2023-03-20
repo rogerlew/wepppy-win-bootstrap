@@ -26,6 +26,8 @@ from all_your_base import determine_wateryear
 from hill_pass import HillPass
 from hill_wat import HillWat
 
+from nodb_stubs import BaseflowOpts, PhosphorusOpts
+
 NCPU = multiprocessing.cpu_count() - 1
 if NCPU < 1:
     NCPU = 1
