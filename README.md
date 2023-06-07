@@ -8,7 +8,7 @@ This project assumes:
     
     
 ## Downloading a project with wget (preferred)
-Use the wget_download_weppcloud_project.py script and provide the run_id and local destination directory as arguments. The included wget.exe must be in your path if the batch file is called from outside of the scripts folder.
+Use the wget_download_weppcloud_project.bat script and provide the run_id and local destination directory as arguments. Please cd to the scripts folder to run the batch script. This will ensure it uses the included wget.exe and not the alias that Windows has with incompatible command parameters.
 
 e.g.
 ```
