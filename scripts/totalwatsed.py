@@ -179,7 +179,7 @@ class TotalWatSed2(object):
                 d['Soluble Reactive P (kg/ha)'] = d['Soluble Reactive P (kg)'] / totarea_ha
 
         # Determine Water Year Column
-        _wy = np.zeros(d.shape[0], dtype=np.int)
+        _wy = np.zeros(d.shape[0], dtype=np.int64)
         for i, (j, y) in enumerate(zip(d['Julian'], d['Year'])):
             _wy[i] = determine_wateryear(y, j=j)
         d['Water Year'] = _wy
