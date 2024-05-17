@@ -1,2 +1,4 @@
 echo downloading %1 %2
-wget.exe -rv -nH --cut-dirs=5 -p --directory-prefix=%2 --header="raw: True"  https://wepp.cloud/weppcloud/runs/%1/cfg/browse/ 
+wget.exe https://wepp.cloud/weppcloud/runs/%1/cfg/aria2c.spec --output-document=%1_aria2c.spec --max-redirect=0 
+
+aria2c -j 10 --allow-overwrite true -d %2 --input-file=%1_aria2c.spec
