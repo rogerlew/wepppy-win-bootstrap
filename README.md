@@ -12,7 +12,7 @@ Use the wget_download_weppcloud_project.bat script and provide the run_id and lo
 
 e.g.
 ```
-./wget_download_weppcloud_project_noprep.bat rlew-mucky-pepperoni C:\Users\roger\
+./wget_download_weppcloud_project_noprep.bat rlew-mucky-pepperoni C:\Users\roger\rlew-mucky-pepperoni
 ```
 
 The `_noprep` downloads the project as is without first creating the arc exports. Recent project should already have this and not require building the arc exports.
@@ -20,7 +20,7 @@ The `_noprep` downloads the project as is without first creating the arc exports
 If you need to trigger the arc_exports please use the other script
 
 ```
-./wget_download_weppcloud_project.bat rlew-mucky-pepperoni C:\Users\roger\
+./wget_download_weppcloud_project.bat rlew-mucky-pepperoni C:\Users\roger\rlew-mucky-pepperoni
 ```
 
 ## Downloading a project with python script
