@@ -32,6 +32,7 @@ if NCPU < 1:
 USE_MULTIPROCESSING = True
 
 wepp_exe = "../bin/wepppy-win-bootstrap.exe"
+wepp_reveg_exe = "../bin/wepp_reveg.exe"
 
 
 def run_hillslope(wepp_id, runs_dir):
@@ -116,7 +117,9 @@ if __name__ == "__main__":
     parser.add_argument('--wy_calc_start_year',   type=int, 
                         help='run WY Calc postprocessing routine')   
     parser.add_argument('--no_multiprocessing',
-                        help='Disable multiprocessing', action='store_true')    
+                        help='Disable multiprocessing', action='store_true')  
+    parser.add_argument('--revegetation',
+                        help='Use WEPP Revegetation EXE', action='store_true')    
     parser.add_argument('--pmetpara_prep',
                         help='Build pmetpara.txt', action='store_true')    
     parser.add_argument('--phosphorus_prep',
@@ -135,6 +138,10 @@ if __name__ == "__main__":
     if no_multiprocessing:
         USE_MULTIPROCESSING = False
         
+    revegetation = (args.revegetation, False)[args.revegetation is None]
+    if revegetation:
+        wepp_exe = wepp_reveg_exe
+    
     run_pmetpara_prep = (args.pmetpara_prep, False)[args.pmetpara_prep is None]
     run_phosphorus_prep = (args.phosphorus_prep, False)[args.phosphorus_prep is None]
     run_gwcoeff_prep = (args.gwcoeff_prep, False)[args.gwcoeff_prep is None]
