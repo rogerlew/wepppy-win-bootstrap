@@ -69,6 +69,14 @@ e.g.
 python3 run_project.py C:\Users\roger\rlew-mucky-pepperoni --wy_calc_start_year 1989
 ```
 
+### Running Reveg for 9005 Soils
+
+To run the reveg wepp binary provide --reveg
+
+```
+python run_project.py C:\Users\roger\Downloads\reasonable-acquirer --reveg
+```
+
 ### pmetpara.txt prep
 
 The pmetpara preparation can be enabled by providing the --pmetpara_prep flag. The parameters are hard coded in the run_project.py script. `mid_season_crop_coeff` and `p_coeff` can be float values or dictionaries with the plant loop names and values cooresponding to the coefficients. See line 156 of run_project.py
