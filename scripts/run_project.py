@@ -31,16 +31,19 @@ if NCPU < 1:
     
 USE_MULTIPROCESSING = True
 
-wepp_exe = "../bin/wepppy-win-bootstrap.exe"
-wepp_reveg_exe = "../bin/wepp_reveg.exe"
+_thisdir = os.path.dirname(__file__)
 
+wepp_exe = os.path.abspath(_join(_thisdir, "../bin/wepppy-win-bootstrap.exe"))
+wepp_reveg_exe = os.path.abspath(_join(_thisdir, "../bin/wepp_reveg.exe"))
+
+assert exists(wepp_exe), f"Can't find wepp executable {wepp_exe}"
+assert exists(wepp_reveg_exe), f"Can't find wepp executable {wepp_reveg_exe}"
 
 def run_hillslope(wepp_id, runs_dir):
-    t0 = time()
+    global wepp_exe
+    cmd = [wepp_exe]
 
-    cmd = [os.path.abspath(wepp_exe)]
-    
-    assert exists(cmd[0]), f"Can't find wepp executable {cmd[0]}"
+    t0 = time()
 
     assert exists(_join(runs_dir, 'p%i.man' % wepp_id))
     assert exists(_join(runs_dir, 'p%i.slp' % wepp_id))
@@ -67,14 +70,13 @@ def run_hillslope(wepp_id, runs_dir):
 
 
 def run_watershed(runs_dir, output_dir):
+    global wepp_exe
+    cmd = [wepp_exe]
+
     print('runs_dir', runs_dir)
 
     t0 = time()
-
-    cmd = [os.path.abspath(wepp_exe)]
     
-    assert exists(cmd[0]), f"Can't find wepp executable {cmd[0]}"
-
     assert exists(_join(runs_dir, 'pw0.str'))
     assert exists(_join(runs_dir, 'pw0.chn'))
     assert exists(_join(runs_dir, 'pw0.imp'))
