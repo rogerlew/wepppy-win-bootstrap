@@ -39,6 +39,8 @@ def run_hillslope(wepp_id, runs_dir):
     t0 = time()
 
     cmd = [os.path.abspath(wepp_exe)]
+    
+    assert exists(cmd[0]), f"Can't find wepp executable {cmd[0]}"
 
     assert exists(_join(runs_dir, 'p%i.man' % wepp_id))
     assert exists(_join(runs_dir, 'p%i.slp' % wepp_id))
@@ -70,6 +72,8 @@ def run_watershed(runs_dir, output_dir):
     t0 = time()
 
     cmd = [os.path.abspath(wepp_exe)]
+    
+    assert exists(cmd[0]), f"Can't find wepp executable {cmd[0]}"
 
     assert exists(_join(runs_dir, 'pw0.str'))
     assert exists(_join(runs_dir, 'pw0.chn'))
