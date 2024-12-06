@@ -17,7 +17,13 @@ import math
 from datetime import datetime, timedelta
 from glob import glob
 import multiprocessing
-from multiprocessing import Pool
+from concurrent.futures import (
+    ThreadPoolExecutor, 
+    as_completed, 
+    wait, 
+    FIRST_EXCEPTION
+)
+
 import numpy as np
 import pandas as pd
 
@@ -27,6 +33,8 @@ from hill_pass import HillPass
 from hill_wat import HillWat
 
 from nodb_stubs import BaseflowOpts, PhosphorusOpts
+
+
 
 NCPU = multiprocessing.cpu_count() - 1
 if NCPU < 1:
@@ -108,9 +116,9 @@ class TotalWatSed2(object):
 
         pass_fns = glob(_join(output_dir, 'H*.pass.dat'))
         
-        pool = Pool(processes=NCPU)
-        results = pool.map(_read_hill_wat_sed, pass_fns)
-        pool.close()
+
+        with ThreadPoolExecutor(max_workers=NCPU) as executor:
+            results = list(executor.map(_read_hill_wat_sed, pass_fns))
 
         d = None
         totarea_m2 = 0.0
