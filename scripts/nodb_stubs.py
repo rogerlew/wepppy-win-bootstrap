@@ -45,6 +45,9 @@ class BaseflowOpts(object):
             .format(self)
         )
 
+    def __repr__(self):
+        return f'BaseflowOpts(gwstorage={self.gwstorage}, bfcoeff={self.bfcoeff}, dscoeff={self.dscoeff}, bfthreshold={self.bfthreshold})'
+
 
 def validate_phosphorus_txt(fn):
 
@@ -111,3 +114,6 @@ class PhosphorusOpts(object):
                     lateral_flow=self.lateral_flow,
                     baseflow=self.baseflow,
                     sediment=self.sediment)
+                    
+    def __repr__(self):
+        return f'PhosphorusOpts(surf_runoff={self.surf_runoff}, lateral_flow={self.lateral_flow}, baseflow={self.baseflow}, sediment={self.sediment})'

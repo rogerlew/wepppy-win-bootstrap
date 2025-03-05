@@ -41,7 +41,6 @@ if NCPU < 1:
     NCPU = 1
 
     
-# no longer used
 def get_baseflow_opts(runs_dir):
     fn = _join(runs_dir, 'gwcoeff.txt')
     if not _exists(fn):
@@ -54,10 +53,11 @@ def get_baseflow_opts(runs_dir):
     bfcoeff = float(lines[1].split()[0]) 
     dscoeff = float(lines[2].split()[0]) 
     bfthreshold = float(lines[3].split()[0]) 
-    return BaseflowOpts(gwstorage=gwstorage, bfcoeff=bfcoeff, dscoeff=dscoeff, bfthreshold=bfthreshold)
+    res = BaseflowOpts(gwstorage=gwstorage, bfcoeff=bfcoeff, dscoeff=dscoeff, bfthreshold=bfthreshold)
+    print(repr(res))
+    return res
  
     
-# no longer used
 def get_phosphorus_opts(runs_dir):
     fn = _join(runs_dir, 'phosphorus.txt')
     if not _exists(fn):
@@ -73,7 +73,9 @@ def get_phosphorus_opts(runs_dir):
     lateral_flow = float(lines[1].split()[0]) 
     baseflow = float(lines[2].split()[0]) 
     sediment = float(lines[3].split()[0]) 
-    return PhosphorusOpts(surf_runoff=surf_runoff, lateral_flow=lateral_flow, baseflow=baseflow, sediment=sediment)
+    res = PhosphorusOpts(surf_runoff=surf_runoff, lateral_flow=lateral_flow, baseflow=baseflow, sediment=sediment)
+    print(repr(res))
+    return res
         
     
 def _read_hill_wat_sed(pass_fn):
@@ -95,15 +97,16 @@ def _read_hill_wat_sed(pass_fn):
 
 class TotalWatSed2(object):
     def __init__(self, wd, baseflow_opts=None, phos_opts=None):
+        runs_dir = _join(wd, 'wepp', 'runs')
 
         if baseflow_opts is None:
-            baseflow_opts = get_baseflow_opts(wd)
+            baseflow_opts = get_baseflow_opts(runs_dir)
             
         assert baseflow_opts is not None
             
 
         if phos_opts is None:
-            phos_opts = get_phosphorus_opts(wd)
+            phos_opts = get_phosphorus_opts(runs_dir)
             
         assert phos_opts is not None
             
