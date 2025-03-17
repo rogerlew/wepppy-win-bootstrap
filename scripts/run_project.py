@@ -221,8 +221,8 @@ if __name__ == "__main__":
     if USE_MULTIPROCESSING:
         wait(futures, return_when=FIRST_EXCEPTION)
     
-    run_watershed(runs_dir, output_dir)
-    print('completed watershed run')
+    res, elapsed = run_watershed(runs_dir, output_dir)
+    print(f'completed watershed run in {elapsed}')
 
     totwatsed = TotalWatSed2(wd)
     
