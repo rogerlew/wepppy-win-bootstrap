@@ -9,6 +9,16 @@ import argparse
 import subprocess
 import multiprocessing
 import shutil
+import platform
+
+# Check if the platform is macOS
+is_macos = platform.system() == "Darwin"
+if is_macos:
+    print("Running on macOS:", is_macos)
+
+is_arm64 = platform.machine() == "arm64"
+if is_arm64:
+    print("Running on ARM64:", is_arm64)
 
 from concurrent.futures import (
     ThreadPoolExecutor, 
@@ -35,6 +45,10 @@ _thisdir = os.path.dirname(__file__)
 
 wepp_exe = os.path.abspath(_join(_thisdir, "../bin/wepppy-win-bootstrap.exe"))
 wepp_reveg_exe = os.path.abspath(_join(_thisdir, "../bin/wepp_reveg.exe"))
+
+
+if is_macos and is_arm64:
+    wepp_exe = os.path.abspath(_join(_thisdir, "../bin/wepp.arm64.mac"))
 
 assert exists(wepp_exe), f"Can't find wepp executable {wepp_exe}"
 assert exists(wepp_reveg_exe), f"Can't find wepp executable {wepp_reveg_exe}"
