@@ -20,6 +20,18 @@ is_arm64 = platform.machine() == "arm64"
 if is_arm64:
     print("Running on ARM64:", is_arm64)
 
+
+is_linux = platform.system() == 'Linux'
+if is_linux:
+    print("Running on Linux", is_linux)
+
+is_x86_64 = platform.machine() == "x86_64"
+if is_x86_64:
+    print("Running on x86_64")
+
+print(platform.system())
+print(platform.machine())
+
 from concurrent.futures import (
     ThreadPoolExecutor, 
     as_completed, 
@@ -46,9 +58,11 @@ _thisdir = os.path.dirname(__file__)
 wepp_exe = os.path.abspath(_join(_thisdir, "../bin/wepppy-win-bootstrap.exe"))
 wepp_reveg_exe = os.path.abspath(_join(_thisdir, "../bin/wepp_reveg.exe"))
 
-
 if is_macos and is_arm64:
     wepp_exe = os.path.abspath(_join(_thisdir, "../bin/wepp.arm64.mac"))
+
+if is_linux and is_x86_64:
+    wepp_exe = os.path.abspath(_join(_thisdir, "../bin/wepp_a557997"))
 
 assert exists(wepp_exe), f"Can't find wepp executable {wepp_exe}"
 assert exists(wepp_reveg_exe), f"Can't find wepp executable {wepp_reveg_exe}"
