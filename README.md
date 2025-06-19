@@ -116,6 +116,13 @@ brew install --cask anaconda
 source ~/.zshrc
 ```
 
+# Ubuntu
+
+### install curl and aria2
+```
+sudo apt install curl aria2
+```
+
 ## Download project
 ```
 cd scripts
