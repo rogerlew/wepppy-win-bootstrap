@@ -12,7 +12,7 @@ Use the wget_download_weppcloud_project.bat script and provide the run_id and lo
 
 e.g.
 ```
-./wget_download_weppcloud_project_noprep.bat rlew-mucky-pepperoni C:\Users\roger\
+./wget_download_weppcloud_project_noprep.bat rlew-mucky-pepperoni C:\Users\roger\rlew-mucky-pepperoni
 ```
 
 The `_noprep` downloads the project as is without first creating the arc exports. Recent project should already have this and not require building the arc exports.
@@ -20,7 +20,7 @@ The `_noprep` downloads the project as is without first creating the arc exports
 If you need to trigger the arc_exports please use the other script
 
 ```
-./wget_download_weppcloud_project.bat rlew-mucky-pepperoni C:\Users\roger\
+./wget_download_weppcloud_project.bat rlew-mucky-pepperoni C:\Users\roger\rlew-mucky-pepperoni
 ```
 
 ## Downloading a project with python script
@@ -69,6 +69,14 @@ e.g.
 python3 run_project.py C:\Users\roger\rlew-mucky-pepperoni --wy_calc_start_year 1989
 ```
 
+### Running Reveg for 9005 Soils
+
+To run the reveg wepp binary provide --reveg
+
+```
+python run_project.py C:\Users\roger\Downloads\reasonable-acquirer --reveg
+```
+
 ### pmetpara.txt prep
 
 The pmetpara preparation can be enabled by providing the --pmetpara_prep flag. The parameters are hard coded in the run_project.py script. `mid_season_crop_coeff` and `p_coeff` can be float values or dictionaries with the plant loop names and values cooresponding to the coefficients. See line 156 of run_project.py
@@ -93,4 +101,35 @@ Adds a fourth parameter 0.0000 to the last line of the plant cropland loop
 python.exe .\run_project.py C:\Users\roger\Downloads\lt_obs_Blackwood_BC1_10336660_CurCond.2020.cl532.observed.ki5krcs.no_pmet.wepp_ui --wy_calc_start_year 1989 --pmetpara_prep --phosphorus_prep --gwcoeff_prep --anu_man_mod
 ```
 
-# Observed
+# Mac OS-X Apple Silicon
+
+
+### install curl and aria2c
+```
+brew install aria2c
+```
+
+### install anaconda
+```
+brew install --cask anaconda
+/opt/homebrew/anaconda3/bin/conda init zsh
+source ~/.zshrc
+```
+
+# Ubuntu
+
+### install curl and aria2
+```
+sudo apt install curl aria2
+```
+
+## Download project
+```
+cd scripts
+wget_download_weppcloud_project.sh unsupported-watercolor ~/runs/unsupported-watercolor
+```
+
+## run project
+```
+ python run_project.py ~/runs/unsupported-watercolor
+```

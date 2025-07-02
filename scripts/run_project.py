@@ -9,6 +9,28 @@ import argparse
 import subprocess
 import multiprocessing
 import shutil
+import platform
+
+# Check if the platform is macOS
+is_macos = platform.system() == "Darwin"
+if is_macos:
+    print("Running on macOS:", is_macos)
+
+is_arm64 = platform.machine() == "arm64"
+if is_arm64:
+    print("Running on ARM64:", is_arm64)
+
+
+is_linux = platform.system() == 'Linux'
+if is_linux:
+    print("Running on Linux", is_linux)
+
+is_x86_64 = platform.machine() == "x86_64"
+if is_x86_64:
+    print("Running on x86_64")
+
+print(platform.system())
+print(platform.machine())
 
 from concurrent.futures import (
     ThreadPoolExecutor, 
@@ -31,13 +53,25 @@ if NCPU < 1:
     
 USE_MULTIPROCESSING = True
 
-wepp_exe = "../bin/wepppy-win-bootstrap.exe"
+_thisdir = os.path.dirname(__file__)
 
+wepp_exe = os.path.abspath(_join(_thisdir, "../bin/wepppy-win-bootstrap.exe"))
+wepp_reveg_exe = os.path.abspath(_join(_thisdir, "../bin/wepp_reveg.exe"))
+
+if is_macos and is_arm64:
+    wepp_exe = os.path.abspath(_join(_thisdir, "../bin/wepp.arm64.mac"))
+
+if is_linux and is_x86_64:
+    wepp_exe = os.path.abspath(_join(_thisdir, "../bin/wepp_a557997"))
+
+assert exists(wepp_exe), f"Can't find wepp executable {wepp_exe}"
+assert exists(wepp_reveg_exe), f"Can't find wepp executable {wepp_reveg_exe}"
 
 def run_hillslope(wepp_id, runs_dir):
-    t0 = time()
+    global wepp_exe
+    cmd = [wepp_exe]
 
-    cmd = [os.path.abspath(wepp_exe)]
+    t0 = time()
 
     assert exists(_join(runs_dir, 'p%i.man' % wepp_id))
     assert exists(_join(runs_dir, 'p%i.slp' % wepp_id))
@@ -64,12 +98,13 @@ def run_hillslope(wepp_id, runs_dir):
 
 
 def run_watershed(runs_dir, output_dir):
+    global wepp_exe
+    cmd = [wepp_exe]
+
     print('runs_dir', runs_dir)
 
     t0 = time()
-
-    cmd = [os.path.abspath(wepp_exe)]
-
+    
     assert exists(_join(runs_dir, 'pw0.str'))
     assert exists(_join(runs_dir, 'pw0.chn'))
     assert exists(_join(runs_dir, 'pw0.imp'))
@@ -116,7 +151,9 @@ if __name__ == "__main__":
     parser.add_argument('--wy_calc_start_year',   type=int, 
                         help='run WY Calc postprocessing routine')   
     parser.add_argument('--no_multiprocessing',
-                        help='Disable multiprocessing', action='store_true')    
+                        help='Disable multiprocessing', action='store_true')  
+    parser.add_argument('--revegetation',
+                        help='Use WEPP Revegetation EXE', action='store_true')    
     parser.add_argument('--pmetpara_prep',
                         help='Build pmetpara.txt', action='store_true')    
     parser.add_argument('--phosphorus_prep',
@@ -135,6 +172,10 @@ if __name__ == "__main__":
     if no_multiprocessing:
         USE_MULTIPROCESSING = False
         
+    revegetation = (args.revegetation, False)[args.revegetation is None]
+    if revegetation:
+        wepp_exe = wepp_reveg_exe
+    
     run_pmetpara_prep = (args.pmetpara_prep, False)[args.pmetpara_prep is None]
     run_phosphorus_prep = (args.phosphorus_prep, False)[args.phosphorus_prep is None]
     run_gwcoeff_prep = (args.gwcoeff_prep, False)[args.gwcoeff_prep is None]
@@ -194,8 +235,8 @@ if __name__ == "__main__":
     if USE_MULTIPROCESSING:
         wait(futures, return_when=FIRST_EXCEPTION)
     
-    run_watershed(runs_dir, output_dir)
-    print('completed watershed run')
+    res, elapsed = run_watershed(runs_dir, output_dir)
+    print(f'completed watershed run in {elapsed}')
 
     totwatsed = TotalWatSed2(wd)
     
