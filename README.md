@@ -5,8 +5,28 @@ This project assumes:
   - You are on windows
   - You have Python3 installed
     - If you want to run the wy_calc postprocessing you will need numpy, scipy, pandas
-    
-    
+
+## JWT Authentication (PowerUsers)
+
+Some projects require JWT authentication to download. PowerUsers can obtain a JWT
+token from their profile page on WEPPcloud (accessible from the Interfaces page or
+from the "More" dropdown menu).
+
+To request PowerUser status, email rogerlew@uidaho.edu.
+
+### Setup
+
+Save your JWT token to the file `~/.weppcloud_jwt`:
+
+- **Windows:** `%USERPROFILE%\.weppcloud_jwt`
+- **Mac/Linux:** `~/.weppcloud_jwt`
+
+The file should contain only the JWT token string (no quotes, no extra whitespace).
+
+The download scripts will automatically detect and use the token when the file exists.
+If the file is not present, the scripts will download without authentication (which
+will work for public projects).
+
 ## Downloading a project with wget (preferred)
 Use the wget_download_weppcloud_project.bat script and provide the run_id and local destination directory as arguments. Please cd to the scripts folder to run the batch script. This will ensure it uses the included wget.exe and not the alias that Windows has with incompatible command parameters.
 

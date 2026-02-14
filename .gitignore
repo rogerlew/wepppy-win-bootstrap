@@ -1,3 +1,4 @@
 .~*
 ~*
 *.pyc
+.weppcloud_jwt
