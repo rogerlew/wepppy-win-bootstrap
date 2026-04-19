@@ -129,15 +129,11 @@ def run_watershed(runs_dir, output_dir):
     assert exists(_join(runs_dir, 'pw0.run'))
 
     run_fn = _join(runs_dir, 'pw0.run')
-    clean_run_fn = _sanitize_run_file(run_fn)
-    try:
-        with open(clean_run_fn, encoding="ascii") as _run:
-            with open(_join(runs_dir, 'pw0.err'), 'w', encoding="ascii") as _log:
-                p = subprocess.Popen(cmd, stdin=_run, stdout=_log, stderr=_log, cwd=runs_dir)
-                p.wait()
-    finally:
-        if exists(clean_run_fn):
-            os.remove(clean_run_fn)
+    # Preserve watershed run-file blank lines: they are meaningful prompt separators.
+    with open(run_fn, encoding="ascii") as _run:
+        with open(_join(runs_dir, 'pw0.err'), 'w', encoding="ascii") as _log:
+            p = subprocess.Popen(cmd, stdin=_run, stdout=_log, stderr=_log, cwd=runs_dir)
+            p.wait()
 
     log_fn = _join(runs_dir, 'pw0.err')
 
