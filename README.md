@@ -153,3 +153,9 @@ wget_download_weppcloud_project.sh unsupported-watercolor ~/runs/unsupported-wat
 ```
  python run_project.py ~/runs/unsupported-watercolor
 ```
+
+## License
+
+Repository-authored code is licensed under the [MIT License](LICENSE).
+Bundled third-party code, executables, and datasets retain their respective
+license terms and copyright notices.
