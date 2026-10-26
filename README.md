@@ -1,6 +1,15 @@
 # wepppy-win-bootstrap
 Acquire and Run weppcloud projects on Windows
 
+## Current WEPP bootstrap binary contract
+
+- Current bootstrap source lineage: `wepp_260430`.
+- Required binary filename in this repo: `bin/wepppy-win-bootstrap.exe`.
+- Build host for this lane: `blarhg` (Windows).
+
+If you rebuild from `wepp_260430`, publish the executable with this exact name;
+`scripts/run_project.py` resolves this fixed path/name.
+
 This project assumes:
   - You are on windows
   - You have Python3 installed
@@ -27,45 +36,51 @@ The download scripts will automatically detect and use the token when the file e
 If the file is not present, the scripts will download without authentication (which
 will work for public projects).
 
-## Downloading a project with wget (preferred)
-Use the wget_download_weppcloud_project.bat script and provide the run_id and local destination directory as arguments. Please cd to the scripts folder to run the batch script. This will ensure it uses the included wget.exe and not the alias that Windows has with incompatible command parameters.
+## Downloading a project with aria2c
 
-e.g.
-```
-./wget_download_weppcloud_project_noprep.bat rlew-mucky-pepperoni C:\Users\roger\rlew-mucky-pepperoni
-```
+Use [wget_download_weppcloud_project_noprep.bat](scripts/wget_download_weppcloud_project_noprep.bat)
+on Windows. Despite its name, this script uses the bundled `wget.exe` only to fetch
+`/weppcloud/runs/<run_id>/cfg/aria2c.spec`; `aria2c.exe` downloads the files listed
+in that manifest with up to 10 concurrent downloads.
 
-The `_noprep` downloads the project as is without first creating the arc exports. Recent project should already have this and not require building the arc exports.
+From PowerShell or Command Prompt, change to the repository's `scripts` directory
+so the bundled executables can be found. Replace `YOUR_RUN_ID` with a current run
+ID and choose a destination path without spaces:
 
-If you need to trigger the arc_exports please use the other script
-
-```
-./wget_download_weppcloud_project.bat rlew-mucky-pepperoni C:\Users\roger\rlew-mucky-pepperoni
-```
-
-## Downloading a project with python script
-
-Use the download_weppcloud_project.py script and provide the run_id and local destination directory as arguments
-
-e.g.
-```
-python3 download_weppcloud_project.py rlew-mucky-pepperoni C:\Users\roger\
+```powershell
+cd scripts
+.\wget_download_weppcloud_project_noprep.bat YOUR_RUN_ID C:\WEPP\YOUR_RUN_ID
 ```
 
-This will download the zip to C:\Users\roger\rlew-mucky-pepperoni.zip and extract the project to C:\Users\roger\rlew-mucky-pepperoni
+The script downloads existing project files as is; it does not generate exports.
+If you need exports, generate them in WEPPcloud before downloading. The old
+recursive-wget preparation script has been removed because it used a legacy
+prep-details endpoint and crawled HTML browse pages.
 
-To not extract the project provide the --no_extract flag
+### Checking the download
 
-e.g.
-```
-python3 download_weppcloud_project.py rlew-mucky-pepperoni C:\Users\roger\ --no_extract
-```
+Check that the manifest request succeeds, aria2c reports completed downloads,
+and the expected project files exist in the destination. The batch script
+currently continues after a failed manifest request and can return exit code 0
+with `No files to download`; that message alone does not confirm success.
 
-To not remove the zip after extracting provide the --remove flag
+- **HTTP 401:** Check the JWT setup above and your access to the run.
+- **HTTP 404:** Verify the run ID and manifest URL.
+- **HTTP 500 or a stalled manifest request:** Report the run URL and downloader
+  output so the server request can be investigated. aria2c cannot download the
+  project until a valid manifest is available.
 
-```
-python3 download_weppcloud_project.py rlew-mucky-pepperoni C:\Users\roger\ --remove
-```
+Windows validation on October 26, 2026 reached the manifest request for
+`animal-misgiving` using JWT authentication, but the request stalled. A separate
+curl request timed out after 45 seconds without receiving data. A successful
+end-to-end download has not yet been verified.
+
+## Legacy Python downloader
+
+[download_weppcloud_project.py](scripts/download_weppcloud_project.py) still uses
+the legacy `/weppcloud/runs/<run_id>/0/archive/` endpoint. HTTP 404 failures have
+been reported with this downloader; use the aria2c workflow above for project
+downloads.
 
 ## Running a project
 
@@ -143,10 +158,15 @@ source ~/.zshrc
 sudo apt install curl aria2
 ```
 
-## Download project
-```
+## Download project with aria2c
+
+Replace `YOUR_RUN_ID` with a current run ID. The shell script uses curl to fetch
+the manifest and aria2c to download its files. The JWT setup and manifest
+troubleshooting above also apply.
+
+```bash
 cd scripts
-wget_download_weppcloud_project.sh unsupported-watercolor ~/runs/unsupported-watercolor
+bash ./wget_download_weppcloud_project.sh YOUR_RUN_ID ~/runs/YOUR_RUN_ID
 ```
 
 ## run project
