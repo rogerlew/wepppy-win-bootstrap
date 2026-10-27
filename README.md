@@ -138,31 +138,27 @@ python3 run_project.py C:\Users\roger\rlew-mucky-pepperoni --wy_calc_start_year 
 
 ### Selecting the WEPP executable
 
-The runner prints the watershed and hillslope executable paths before running.
-These commands select the default matched 261027 pair on Windows or Linux:
+`--wepp_exec` selects a **registered matched release**, never an individual
+executable. Windows and Linux x86_64 default to `wepp_261027`:
 
 ```bash
 python scripts/run_project.py /path/to/project --numcpu 1
 python scripts/run_project.py /path/to/project --wepp_exec wepp_261027 --numcpu 1
 ```
 
-On Windows, use your project path, for example `C:\WEPP\my-project`; the `.exe`
-extension is added automatically for bundled names. Bare names resolve under
-this repository's `bin` directory. Use an absolute path or `./relative/path` for
-an external executable. Quote paths containing spaces.
+On Windows, use your project path, for example `C:\WEPP\my-project`. Use the
+release name `wepp_261027` without `.exe`; the runner selects the platform's
+watershed and hillslope binaries together and prints both paths.
 
-For a custom matched pair:
+Both binaries must match the release's pinned SHA-256 checksums. A missing or
+replaced binary fails before existing outputs are cleared. Arbitrary executable
+paths and independent hillslope overrides are not supported. Adding a release
+requires registering and validating both binaries together in
+`scripts/wepp_executables.py`; matching filenames alone are insufficient.
 
-```bash
-python scripts/run_project.py /path/to/project --wepp_exec /path/to/wepp --wepp_hill_exec /path/to/wepp_hill
-```
-
-For 261027, omitting `--wepp_hill_exec` selects its sibling hillslope binary.
-For other explicit executables, omitting it uses that executable for both modes.
-You are responsible for matching custom builds and platform compatibility.
-Missing executables are rejected before the output directory is cleared.
-`--revegetation` cannot be combined with executable overrides.
-
+Legacy `wepp_reveg` on Windows and `wepp.arm64.mac` on macOS ARM64 use the same
+registered executable for both modes. `--revegetation` remains a Windows alias
+for selecting `wepp_reveg` and cannot be combined with `--wepp_exec`.
 ### Running Reveg for 9005 Soils
 
 To run the reveg wepp binary provide --revegetation

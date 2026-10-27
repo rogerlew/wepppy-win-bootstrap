@@ -90,17 +90,20 @@ Source release and complete medium-run evidence: [wepp-forest commit 10fe9af69](
 
 ## Windows and Linux selection follow-up
 
-The bootstrap also vendors the original validated Linux `wepp_261027` and
+The bootstrap vendors the original validated Linux `wepp_261027` and
 `wepp_261027_hill` binaries with unchanged JSON sidecars and SHA-256 hashes.
-Both Windows and Linux x86_64 now default to 261027. `--wepp_exec` selects a
-bundled name or explicit path; `--wepp_hill_exec` can select the matching custom
-hillslope executable. Both resolved paths are printed before execution. The
-legacy macOS ARM64 default remains separate.
+Both Windows and Linux x86_64 default to 261027. `--wepp_exec` selects a registered
+release as an indivisible watershed/hillslope pair. Both binaries are verified
+against pinned SHA-256 checksums before outputs are cleared. Independent
+hillslope overrides and arbitrary executable paths are rejected. The legacy
+macOS ARM64 and Windows revegetation releases each use one registered executable
+for both modes.
 
-Validation: native Linux default selection and native Windows explicit 261027
-selection each completed the four-year single-daily project through CSV export.
+Validation includes native Linux default selection and native Windows explicit
+261027 selection completing the four-year single-daily project through CSV export.
 Linux ELF interpreters and runtime dependency resolution were verified. Selection
-tests cover both platform defaults, provenance, custom pairs, relative paths,
-unsupported defaults, missing binaries and preservation of existing output on
-selection errors. The existing 3,443-file medium parity evidence applies to the
-identical binaries; no model rebuild was performed.
+tests cover platform defaults and provenance, unsupported releases and platforms,
+missing or replaced pair members, removal of the hillslope override, and
+preservation of existing outputs on selection errors. The existing 3,443-file
+medium parity evidence applies to the identical binaries; no model rebuild was
+performed.

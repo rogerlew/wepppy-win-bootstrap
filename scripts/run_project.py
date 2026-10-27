@@ -158,9 +158,7 @@ if __name__ == "__main__":
                         help='Disable multiprocessing', action='store_true')  
     selection = parser.add_mutually_exclusive_group()
     selection.add_argument('--wepp_exec', '--wepp-exec',
-                           help='Bundled name or executable path (default: wepp_261027 on Windows/Linux x86_64)')
-    parser.add_argument('--wepp_hill_exec', '--wepp-hill-exec',
-                        help='Hillslope executable path; defaults to the matching 261027 hill binary or the selected custom executable')
+                           help='Registered matched release (default: wepp_261027 on Windows/Linux x86_64); executable paths are not accepted')
     selection.add_argument('--revegetation',
                         help='Use WEPP Revegetation EXE', action='store_true')    
     parser.add_argument('--pmetpara_prep',
@@ -182,13 +180,11 @@ if __name__ == "__main__":
         USE_MULTIPROCESSING = False
         
     revegetation = (args.revegetation, False)[args.revegetation is None]
-    if revegetation and args.wepp_hill_exec:
-        parser.error('--revegetation cannot be combined with --wepp_hill_exec')
     if revegetation and platform.system() != 'Windows':
         parser.error('The bundled revegetation executable requires Windows')
     try:
         wepp_exe, wepp_hill_exe = select_executables(
-            'wepp_reveg' if revegetation else args.wepp_exec, args.wepp_hill_exec)
+            'wepp_reveg' if revegetation else args.wepp_exec)
     except ValueError as error:
         parser.error(str(error))
     print(f'Watershed executable: {wepp_exe}')
