@@ -138,27 +138,42 @@ python3 run_project.py C:\Users\roger\rlew-mucky-pepperoni --wy_calc_start_year 
 
 ### Selecting the WEPP executable
 
-`--wepp_exec` selects a **registered matched release**, never an individual
-executable. Windows and Linux x86_64 default to `wepp_261027`:
+Use `--wepp_exec RELEASE` to select a **matched watershed and hillslope release**.
+The default is `wepp_261027` on Windows and Linux x86_64, so this argument is
+optional. `--wepp-exec` is an equivalent spelling.
 
-```bash
-python scripts/run_project.py /path/to/project --numcpu 1
-python scripts/run_project.py /path/to/project --wepp_exec wepp_261027 --numcpu 1
+Run these examples from the repository root. On Windows:
+
+```powershell
+python scripts/run_project.py "C:\WEPP\my-project" --wepp_exec wepp_261027 --numcpu 1
 ```
 
-On Windows, use your project path, for example `C:\WEPP\my-project`. Use the
-release name `wepp_261027` without `.exe`; the runner selects the platform's
-watershed and hillslope binaries together and prints both paths.
+On Linux:
 
-Both binaries must match the release's pinned SHA-256 checksums. A missing or
-replaced binary fails before existing outputs are cleared. Arbitrary executable
-paths and independent hillslope overrides are not supported. Adding a release
-requires registering and validating both binaries together in
-`scripts/wepp_executables.py`; matching filenames alone are insufficient.
+```bash
+python scripts/run_project.py ~/runs/my-project --wepp_exec wepp_261027 --numcpu 1
+```
 
-Legacy `wepp_reveg` on Windows and `wepp.arm64.mac` on macOS ARM64 use the same
-registered executable for both modes. `--revegetation` remains a Windows alias
-for selecting `wepp_reveg` and cannot be combined with `--wepp_exec`.
+Omitting `--wepp_exec wepp_261027` selects the same pair on either platform.
+Use the release name without `.exe` or a filesystem path. The runner selects
+both platform-specific binaries automatically and prints their paths.
+
+| Release name | Supported platform | Selection |
+| --- | --- | --- |
+| `wepp_261027` | Windows and Linux x86_64 | Default matched watershed/hillslope pair |
+| `wepp_reveg` | Windows x86_64 | Legacy revegetation executable for both modes |
+| `wepp.arm64.mac` | macOS ARM64 | Legacy default executable for both modes |
+
+There is no `--wepp_hill_exec` option: the hillslope binary cannot be selected
+independently. Both binaries must match the release's pinned SHA-256 checksums.
+An unsupported release, missing binary or checksum mismatch fails before existing
+outputs are cleared. Regenerate hillslope PASS files with the selected release;
+do not reuse PASS files from another build.
+
+`--revegetation` remains a Windows alias for selecting `wepp_reveg` and cannot
+be combined with `--wepp_exec`. New releases must have both binaries validated
+and registered together in `scripts/wepp_executables.py` before they can be
+selected.
 ### Running Reveg for 9005 Soils
 
 To run the reveg wepp binary provide --revegetation
