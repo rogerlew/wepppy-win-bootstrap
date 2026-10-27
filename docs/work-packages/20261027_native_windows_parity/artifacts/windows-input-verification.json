@@ -1,0 +1,50 @@
+[
+  {
+    "tag": "261010",
+    "lane": "plain",
+    "checked": 29,
+    "mismatches": []
+  },
+  {
+    "tag": "261010",
+    "lane": "checked",
+    "checked": 29,
+    "mismatches": []
+  },
+  {
+    "tag": "261010",
+    "lane": "radtrig",
+    "checked": 29,
+    "mismatches": []
+  },
+  {
+    "tag": "261026",
+    "lane": "plain",
+    "checked": 29,
+    "mismatches": []
+  },
+  {
+    "tag": "261026",
+    "lane": "checked",
+    "checked": 29,
+    "mismatches": []
+  },
+  {
+    "tag": "261026",
+    "lane": "crop-checked",
+    "checked": 29,
+    "mismatches": []
+  },
+  {
+    "tag": "261026",
+    "lane": "radtrig",
+    "checked": 29,
+    "mismatches": []
+  },
+  {
+    "tag": "261026",
+    "lane": "observe-radiation",
+    "checked": 19,
+    "mismatches": []
+  }
+]

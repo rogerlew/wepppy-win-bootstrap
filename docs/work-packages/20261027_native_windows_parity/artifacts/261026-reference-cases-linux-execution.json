@@ -1,0 +1,16 @@
+[
+  {
+    "case": "single-daily",
+    "card": "p1.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "watch-p24",
+    "card": "p24.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  }
+]

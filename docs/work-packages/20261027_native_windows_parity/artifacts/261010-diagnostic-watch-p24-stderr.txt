@@ -1,0 +1,17 @@
+At line 72 of file pmetcoef.for
+Fortran runtime error: Index '7' of dimension 1 of array 'kcb' above upper bound of 6
+
+Error termination. Backtrace:
+#0  0x79dc7b023e59 in ???
+#1  0x79dc7b024a71 in ???
+#2  0x79dc7b025082 in ???
+#3  0x4c9274 in pmetcoef_
+	at /tmp/native-parity-20261027/261010/diagnostic/src/pmetcoef.for:72
+#4  0x460f60 in infile_
+	at /tmp/native-parity-20261027/261010/diagnostic/src/infile.for:1547
+#5  0x413eec in contin_
+	at /tmp/native-parity-20261027/261010/diagnostic/src/contin.for:435
+#6  0x476235 in MAIN__
+	at /tmp/native-parity-20261027/261010/diagnostic/src/main.for:381
+#7  0x402368 in main
+	at /tmp/native-parity-20261027/261010/diagnostic/src/main.for:585

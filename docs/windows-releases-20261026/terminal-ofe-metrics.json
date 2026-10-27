@@ -1,0 +1,78 @@
+[
+  {
+    "case": "watch-p24",
+    "ofe": 14,
+    "days": 16437,
+    "note": "Cumulative reported depths for terminal OFE; not watershed closure or whole-watershed flow totals",
+    "fields": {
+      "runoff_QOFE_mm": {
+        "linux_sum": 48786.502454699985,
+        "windows_sum": 48772.961433928984,
+        "relative_delta": -0.00027755670297485214,
+        "max_daily_abs_delta": 31.81919
+      },
+      "transpiration_mm": {
+        "linux_sum": 1906.0099999999713,
+        "windows_sum": 2133.440000000013,
+        "relative_delta": 0.11932256389003461,
+        "max_daily_abs_delta": 0.32
+      },
+      "soil_evaporation_mm": {
+        "linux_sum": 7330.660000000015,
+        "windows_sum": 7345.040000000018,
+        "relative_delta": 0.0019616241920922275,
+        "max_daily_abs_delta": 3.39
+      },
+      "percolation_mm": {
+        "linux_sum": 15408.466852806205,
+        "windows_sum": 15264.289230748664,
+        "relative_delta": -0.009357038791389124,
+        "max_daily_abs_delta": 6.985088999999999
+      },
+      "lateral_flow_mm": {
+        "linux_sum": 42169.98000000009,
+        "windows_sum": 42002.55000000008,
+        "relative_delta": -0.003970359957486515,
+        "max_daily_abs_delta": 48.99
+      }
+    }
+  },
+  {
+    "case": "watch-p49",
+    "ofe": 13,
+    "days": 36525,
+    "note": "Cumulative reported depths for terminal OFE; not watershed closure or whole-watershed flow totals",
+    "fields": {
+      "runoff_QOFE_mm": {
+        "linux_sum": 393055.6446863428,
+        "windows_sum": 393063.5716814426,
+        "relative_delta": 2.016761546864167e-05,
+        "max_daily_abs_delta": 1.8986300000000043
+      },
+      "transpiration_mm": {
+        "linux_sum": 36799.2299999995,
+        "windows_sum": 36970.51999999969,
+        "relative_delta": 0.0046547169601155345,
+        "max_daily_abs_delta": 2.5500000000000003
+      },
+      "soil_evaporation_mm": {
+        "linux_sum": 267.9599999999537,
+        "windows_sum": 222.42999999997625,
+        "relative_delta": -0.16991341991336517,
+        "max_daily_abs_delta": 0.02
+      },
+      "percolation_mm": {
+        "linux_sum": 0.0,
+        "windows_sum": 0.0,
+        "relative_delta": null,
+        "max_daily_abs_delta": 0.0
+      },
+      "lateral_flow_mm": {
+        "linux_sum": 909360.7100000494,
+        "windows_sum": 908651.130000048,
+        "relative_delta": -0.0007803064198819772,
+        "max_daily_abs_delta": 2.490000000000002
+      }
+    }
+  }
+]

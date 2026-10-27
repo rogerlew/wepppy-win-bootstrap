@@ -1,0 +1,240 @@
+[
+  {
+    "name": "single-daily",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p1.run"
+      },
+      {
+        "role": "watershed",
+        "file": "pw0.run"
+      }
+    ]
+  },
+  {
+    "name": "single-hourly",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p1.run"
+      },
+      {
+        "role": "watershed",
+        "file": "pw0.run"
+      }
+    ]
+  },
+  {
+    "name": "equal-daily",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p1.run"
+      },
+      {
+        "role": "watershed",
+        "file": "pw0.run"
+      }
+    ]
+  },
+  {
+    "name": "equal-hourly",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p1.run"
+      },
+      {
+        "role": "watershed",
+        "file": "pw0.run"
+      }
+    ]
+  },
+  {
+    "name": "upper60-daily",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p1.run"
+      },
+      {
+        "role": "watershed",
+        "file": "pw0.run"
+      }
+    ]
+  },
+  {
+    "name": "upper60-hourly",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p1.run"
+      },
+      {
+        "role": "watershed",
+        "file": "pw0.run"
+      }
+    ]
+  },
+  {
+    "name": "lower60-daily",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p1.run"
+      },
+      {
+        "role": "watershed",
+        "file": "pw0.run"
+      }
+    ]
+  },
+  {
+    "name": "lower60-hourly",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p1.run"
+      },
+      {
+        "role": "watershed",
+        "file": "pw0.run"
+      }
+    ]
+  },
+  {
+    "name": "three-daily",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p1.run"
+      },
+      {
+        "role": "watershed",
+        "file": "pw0.run"
+      }
+    ]
+  },
+  {
+    "name": "three-hourly",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p1.run"
+      },
+      {
+        "role": "watershed",
+        "file": "pw0.run"
+      }
+    ]
+  },
+  {
+    "name": "watch-p24",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p24.run"
+      }
+    ]
+  },
+  {
+    "name": "watch-p1408",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p1408.run"
+      }
+    ]
+  },
+  {
+    "name": "watch-p258",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p258.run"
+      }
+    ]
+  },
+  {
+    "name": "watch-p1319",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p1319.run"
+      }
+    ]
+  },
+  {
+    "name": "watch-p13",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p13.run"
+      }
+    ]
+  },
+  {
+    "name": "watch-p14",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p14.run"
+      }
+    ]
+  },
+  {
+    "name": "watch-p25",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p25.run"
+      }
+    ]
+  },
+  {
+    "name": "watch-p27",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p27.run"
+      }
+    ]
+  },
+  {
+    "name": "watch-p40",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p40.run"
+      }
+    ]
+  },
+  {
+    "name": "watch-p43",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p43.run"
+      }
+    ]
+  },
+  {
+    "name": "watch-p45",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p45.run"
+      }
+    ]
+  },
+  {
+    "name": "watch-p49",
+    "cards": [
+      {
+        "role": "hill",
+        "file": "p49.run"
+      }
+    ]
+  }
+]

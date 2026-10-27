@@ -1,0 +1,2278 @@
+[
+  {
+    "tag": "261010",
+    "lane": "windows-base",
+    "case": "single-daily",
+    "domain": "all",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261010/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261010/plain-cases/single-daily/output",
+      "include_globs": [
+        "H1.*"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 7,
+      "candidate_file_count": 7,
+      "common_file_count": 7,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 4,
+      "changed_count": 3,
+      "status_counts": {
+        "identical": 4,
+        "numeric_diff_exceeds_tol": 2,
+        "numeric_diff_within_tol": 1
+      },
+      "max_abs_any": 3600.0,
+      "max_rel_any": 0.09117539362870732,
+      "top_changed_files": [
+        {
+          "path": "H1.pass.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 1731,
+          "line_count_candidate": 1731,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 13119,
+          "numeric_values_exceeding_tolerance": 12,
+          "max_abs_diff": 3600.0,
+          "max_rel_diff": 0.09091388493381852
+        },
+        {
+          "path": "H1.element.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 241,
+          "line_count_candidate": 241,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 6216,
+          "numeric_values_exceeding_tolerance": 6,
+          "max_abs_diff": 1.0,
+          "max_rel_diff": 0.09117539362870732
+        },
+        {
+          "path": "H1.wat.dat",
+          "status": "numeric_diff_within_tol",
+          "line_count_baseline": 1489,
+          "line_count_candidate": 1489,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 36527,
+          "numeric_values_exceeding_tolerance": 0,
+          "max_abs_diff": 9.999999999621423e-06,
+          "max_rel_diff": 7.356416540894539e-07
+        }
+      ],
+      "strict_pass": false
+    }
+  },
+  {
+    "tag": "261010",
+    "lane": "windows-base",
+    "case": "single-daily",
+    "domain": "water",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261010/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261010/plain-cases/single-daily/output",
+      "include_globs": [
+        "*.wat.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 1,
+      "candidate_file_count": 1,
+      "common_file_count": 1,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 0,
+      "changed_count": 1,
+      "status_counts": {
+        "numeric_diff_within_tol": 1
+      },
+      "max_abs_any": 9.999999999621423e-06,
+      "max_rel_any": 7.356416540894539e-07,
+      "top_changed_files": [
+        {
+          "path": "H1.wat.dat",
+          "status": "numeric_diff_within_tol",
+          "line_count_baseline": 1489,
+          "line_count_candidate": 1489,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 36527,
+          "numeric_values_exceeding_tolerance": 0,
+          "max_abs_diff": 9.999999999621423e-06,
+          "max_rel_diff": 7.356416540894539e-07
+        }
+      ],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261010",
+    "lane": "windows-base",
+    "case": "single-daily",
+    "domain": "erosion",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261010/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261010/plain-cases/single-daily/output",
+      "include_globs": [
+        "*.ebe.dat",
+        "*.loss.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.1,
+      "baseline_file_count": 2,
+      "candidate_file_count": 2,
+      "common_file_count": 2,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 2,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 2
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261010",
+    "lane": "windows-base",
+    "case": "watch-p24",
+    "domain": "all",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261010/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261010/plain-cases/watch-p24/output",
+      "include_globs": [
+        "*"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 7,
+      "candidate_file_count": 7,
+      "common_file_count": 7,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 0,
+      "changed_count": 7,
+      "status_counts": {
+        "structure_diff": 3,
+        "numeric_diff_exceeds_tol": 4
+      },
+      "max_abs_any": 62640.0,
+      "max_rel_any": 1.0,
+      "top_changed_files": [
+        {
+          "path": "H24.pass.dat",
+          "status": "structure_diff",
+          "line_count_baseline": 16973,
+          "line_count_candidate": 16977,
+          "line_count_mismatch": 4,
+          "numeric_arity_mismatch_lines": 1473,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 73447,
+          "numeric_values_exceeding_tolerance": 30417,
+          "max_abs_diff": 62640.0,
+          "max_rel_diff": 1.0
+        },
+        {
+          "path": "H24.element.dat",
+          "status": "structure_diff",
+          "line_count_baseline": 20932,
+          "line_count_candidate": 21030,
+          "line_count_mismatch": 98,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 544182,
+          "numeric_values_exceeding_tolerance": 75985,
+          "max_abs_diff": 303.34900000000005,
+          "max_rel_diff": 1.0
+        },
+        {
+          "path": "H24.ebe.dat",
+          "status": "structure_diff",
+          "line_count_baseline": 444,
+          "line_count_candidate": 451,
+          "line_count_mismatch": 7,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 6179,
+          "numeric_values_exceeding_tolerance": 2451,
+          "max_abs_diff": 277.3,
+          "max_rel_diff": 1.0
+        }
+      ],
+      "strict_pass": false
+    }
+  },
+  {
+    "tag": "261010",
+    "lane": "windows-base",
+    "case": "watch-p24",
+    "domain": "water",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261010/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261010/plain-cases/watch-p24/output",
+      "include_globs": [
+        "*.wat.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 1,
+      "candidate_file_count": 1,
+      "common_file_count": 1,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 0,
+      "changed_count": 1,
+      "status_counts": {
+        "numeric_diff_exceeds_tol": 1
+      },
+      "max_abs_any": 98.29000000000002,
+      "max_rel_any": 1.0,
+      "top_changed_files": [
+        {
+          "path": "H24.wat.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 230146,
+          "line_count_candidate": 230146,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 5752952,
+          "numeric_values_exceeding_tolerance": 63172,
+          "max_abs_diff": 98.29000000000002,
+          "max_rel_diff": 1.0
+        }
+      ],
+      "strict_pass": false
+    }
+  },
+  {
+    "tag": "261010",
+    "lane": "windows-base",
+    "case": "watch-p24",
+    "domain": "erosion",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261010/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261010/plain-cases/watch-p24/output",
+      "include_globs": [
+        "*.ebe.dat",
+        "*.loss.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.1,
+      "baseline_file_count": 2,
+      "candidate_file_count": 2,
+      "common_file_count": 2,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 0,
+      "changed_count": 2,
+      "status_counts": {
+        "structure_diff": 1,
+        "numeric_diff_exceeds_tol": 1
+      },
+      "max_abs_any": 277.3,
+      "max_rel_any": 1.0,
+      "top_changed_files": [
+        {
+          "path": "H24.ebe.dat",
+          "status": "structure_diff",
+          "line_count_baseline": 444,
+          "line_count_candidate": 451,
+          "line_count_mismatch": 7,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 6179,
+          "numeric_values_exceeding_tolerance": 2255,
+          "max_abs_diff": 277.3,
+          "max_rel_diff": 1.0
+        },
+        {
+          "path": "H24.loss.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 651,
+          "line_count_candidate": 651,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 4475,
+          "numeric_values_exceeding_tolerance": 5,
+          "max_abs_diff": 3.3259999999999996,
+          "max_rel_diff": 0.3441639072847682
+        }
+      ],
+      "strict_pass": false
+    }
+  },
+  {
+    "tag": "261010",
+    "lane": "linux-radtrig",
+    "case": "single-daily",
+    "domain": "all",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261010/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261010/radtrig-cases/single-daily/output",
+      "include_globs": [
+        "H1.*"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 7,
+      "candidate_file_count": 7,
+      "common_file_count": 7,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 4,
+      "changed_count": 3,
+      "status_counts": {
+        "identical": 4,
+        "numeric_diff_exceeds_tol": 2,
+        "numeric_diff_within_tol": 1
+      },
+      "max_abs_any": 3600.0,
+      "max_rel_any": 0.09117539362870732,
+      "top_changed_files": [
+        {
+          "path": "H1.pass.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 1731,
+          "line_count_candidate": 1731,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 13119,
+          "numeric_values_exceeding_tolerance": 12,
+          "max_abs_diff": 3600.0,
+          "max_rel_diff": 0.09091388493381852
+        },
+        {
+          "path": "H1.element.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 241,
+          "line_count_candidate": 241,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 6216,
+          "numeric_values_exceeding_tolerance": 6,
+          "max_abs_diff": 1.0,
+          "max_rel_diff": 0.09117539362870732
+        },
+        {
+          "path": "H1.wat.dat",
+          "status": "numeric_diff_within_tol",
+          "line_count_baseline": 1489,
+          "line_count_candidate": 1489,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 36527,
+          "numeric_values_exceeding_tolerance": 0,
+          "max_abs_diff": 9.999999999621423e-06,
+          "max_rel_diff": 3.662102222317958e-07
+        }
+      ],
+      "strict_pass": false
+    }
+  },
+  {
+    "tag": "261010",
+    "lane": "linux-radtrig",
+    "case": "single-daily",
+    "domain": "water",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261010/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261010/radtrig-cases/single-daily/output",
+      "include_globs": [
+        "*.wat.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 1,
+      "candidate_file_count": 1,
+      "common_file_count": 1,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 0,
+      "changed_count": 1,
+      "status_counts": {
+        "numeric_diff_within_tol": 1
+      },
+      "max_abs_any": 9.999999999621423e-06,
+      "max_rel_any": 3.662102222317958e-07,
+      "top_changed_files": [
+        {
+          "path": "H1.wat.dat",
+          "status": "numeric_diff_within_tol",
+          "line_count_baseline": 1489,
+          "line_count_candidate": 1489,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 36527,
+          "numeric_values_exceeding_tolerance": 0,
+          "max_abs_diff": 9.999999999621423e-06,
+          "max_rel_diff": 3.662102222317958e-07
+        }
+      ],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261010",
+    "lane": "linux-radtrig",
+    "case": "single-daily",
+    "domain": "erosion",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261010/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261010/radtrig-cases/single-daily/output",
+      "include_globs": [
+        "*.ebe.dat",
+        "*.loss.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.1,
+      "baseline_file_count": 2,
+      "candidate_file_count": 2,
+      "common_file_count": 2,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 2,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 2
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261010",
+    "lane": "linux-radtrig",
+    "case": "watch-p24",
+    "domain": "all",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261010/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261010/radtrig-cases/watch-p24/output",
+      "include_globs": [
+        "*"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 7,
+      "candidate_file_count": 7,
+      "common_file_count": 7,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 7,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 7
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261010",
+    "lane": "linux-radtrig",
+    "case": "watch-p24",
+    "domain": "water",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261010/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261010/radtrig-cases/watch-p24/output",
+      "include_globs": [
+        "*.wat.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 1,
+      "candidate_file_count": 1,
+      "common_file_count": 1,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 1,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 1
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261010",
+    "lane": "linux-radtrig",
+    "case": "watch-p24",
+    "domain": "erosion",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261010/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261010/radtrig-cases/watch-p24/output",
+      "include_globs": [
+        "*.ebe.dat",
+        "*.loss.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.1,
+      "baseline_file_count": 2,
+      "candidate_file_count": 2,
+      "common_file_count": 2,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 2,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 2
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261010",
+    "lane": "windows-radtrig",
+    "case": "single-daily",
+    "domain": "all",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261010/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261010/radtrig-cases/single-daily/output",
+      "include_globs": [
+        "H1.*"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 7,
+      "candidate_file_count": 7,
+      "common_file_count": 7,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 4,
+      "changed_count": 3,
+      "status_counts": {
+        "identical": 4,
+        "numeric_diff_exceeds_tol": 2,
+        "numeric_diff_within_tol": 1
+      },
+      "max_abs_any": 3600.0,
+      "max_rel_any": 0.09117539362870732,
+      "top_changed_files": [
+        {
+          "path": "H1.pass.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 1731,
+          "line_count_candidate": 1731,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 13119,
+          "numeric_values_exceeding_tolerance": 12,
+          "max_abs_diff": 3600.0,
+          "max_rel_diff": 0.09091388493381852
+        },
+        {
+          "path": "H1.element.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 241,
+          "line_count_candidate": 241,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 6216,
+          "numeric_values_exceeding_tolerance": 6,
+          "max_abs_diff": 1.0,
+          "max_rel_diff": 0.09117539362870732
+        },
+        {
+          "path": "H1.wat.dat",
+          "status": "numeric_diff_within_tol",
+          "line_count_baseline": 1489,
+          "line_count_candidate": 1489,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 36527,
+          "numeric_values_exceeding_tolerance": 0,
+          "max_abs_diff": 9.999999999621423e-06,
+          "max_rel_diff": 7.356416540894539e-07
+        }
+      ],
+      "strict_pass": false
+    }
+  },
+  {
+    "tag": "261010",
+    "lane": "windows-radtrig",
+    "case": "single-daily",
+    "domain": "water",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261010/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261010/radtrig-cases/single-daily/output",
+      "include_globs": [
+        "*.wat.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 1,
+      "candidate_file_count": 1,
+      "common_file_count": 1,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 0,
+      "changed_count": 1,
+      "status_counts": {
+        "numeric_diff_within_tol": 1
+      },
+      "max_abs_any": 9.999999999621423e-06,
+      "max_rel_any": 7.356416540894539e-07,
+      "top_changed_files": [
+        {
+          "path": "H1.wat.dat",
+          "status": "numeric_diff_within_tol",
+          "line_count_baseline": 1489,
+          "line_count_candidate": 1489,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 36527,
+          "numeric_values_exceeding_tolerance": 0,
+          "max_abs_diff": 9.999999999621423e-06,
+          "max_rel_diff": 7.356416540894539e-07
+        }
+      ],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261010",
+    "lane": "windows-radtrig",
+    "case": "single-daily",
+    "domain": "erosion",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261010/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261010/radtrig-cases/single-daily/output",
+      "include_globs": [
+        "*.ebe.dat",
+        "*.loss.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.1,
+      "baseline_file_count": 2,
+      "candidate_file_count": 2,
+      "common_file_count": 2,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 2,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 2
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261010",
+    "lane": "windows-radtrig",
+    "case": "watch-p24",
+    "domain": "all",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261010/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261010/radtrig-cases/watch-p24/output",
+      "include_globs": [
+        "*"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 7,
+      "candidate_file_count": 7,
+      "common_file_count": 7,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 0,
+      "changed_count": 7,
+      "status_counts": {
+        "structure_diff": 3,
+        "numeric_diff_exceeds_tol": 4
+      },
+      "max_abs_any": 62640.0,
+      "max_rel_any": 1.0,
+      "top_changed_files": [
+        {
+          "path": "H24.pass.dat",
+          "status": "structure_diff",
+          "line_count_baseline": 16973,
+          "line_count_candidate": 16977,
+          "line_count_mismatch": 4,
+          "numeric_arity_mismatch_lines": 1473,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 73447,
+          "numeric_values_exceeding_tolerance": 30417,
+          "max_abs_diff": 62640.0,
+          "max_rel_diff": 1.0
+        },
+        {
+          "path": "H24.element.dat",
+          "status": "structure_diff",
+          "line_count_baseline": 20932,
+          "line_count_candidate": 21030,
+          "line_count_mismatch": 98,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 544182,
+          "numeric_values_exceeding_tolerance": 75985,
+          "max_abs_diff": 303.34900000000005,
+          "max_rel_diff": 1.0
+        },
+        {
+          "path": "H24.ebe.dat",
+          "status": "structure_diff",
+          "line_count_baseline": 444,
+          "line_count_candidate": 451,
+          "line_count_mismatch": 7,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 6179,
+          "numeric_values_exceeding_tolerance": 2451,
+          "max_abs_diff": 277.3,
+          "max_rel_diff": 1.0
+        }
+      ],
+      "strict_pass": false
+    }
+  },
+  {
+    "tag": "261010",
+    "lane": "windows-radtrig",
+    "case": "watch-p24",
+    "domain": "water",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261010/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261010/radtrig-cases/watch-p24/output",
+      "include_globs": [
+        "*.wat.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 1,
+      "candidate_file_count": 1,
+      "common_file_count": 1,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 0,
+      "changed_count": 1,
+      "status_counts": {
+        "numeric_diff_exceeds_tol": 1
+      },
+      "max_abs_any": 98.29000000000002,
+      "max_rel_any": 1.0,
+      "top_changed_files": [
+        {
+          "path": "H24.wat.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 230146,
+          "line_count_candidate": 230146,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 5752952,
+          "numeric_values_exceeding_tolerance": 63172,
+          "max_abs_diff": 98.29000000000002,
+          "max_rel_diff": 1.0
+        }
+      ],
+      "strict_pass": false
+    }
+  },
+  {
+    "tag": "261010",
+    "lane": "windows-radtrig",
+    "case": "watch-p24",
+    "domain": "erosion",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261010/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261010/radtrig-cases/watch-p24/output",
+      "include_globs": [
+        "*.ebe.dat",
+        "*.loss.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.1,
+      "baseline_file_count": 2,
+      "candidate_file_count": 2,
+      "common_file_count": 2,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 0,
+      "changed_count": 2,
+      "status_counts": {
+        "structure_diff": 1,
+        "numeric_diff_exceeds_tol": 1
+      },
+      "max_abs_any": 277.3,
+      "max_rel_any": 1.0,
+      "top_changed_files": [
+        {
+          "path": "H24.ebe.dat",
+          "status": "structure_diff",
+          "line_count_baseline": 444,
+          "line_count_candidate": 451,
+          "line_count_mismatch": 7,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 6179,
+          "numeric_values_exceeding_tolerance": 2255,
+          "max_abs_diff": 277.3,
+          "max_rel_diff": 1.0
+        },
+        {
+          "path": "H24.loss.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 651,
+          "line_count_candidate": 651,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 4475,
+          "numeric_values_exceeding_tolerance": 5,
+          "max_abs_diff": 3.3259999999999996,
+          "max_rel_diff": 0.3441639072847682
+        }
+      ],
+      "strict_pass": false
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "windows-base",
+    "case": "single-daily",
+    "domain": "all",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261026/plain-cases/single-daily/output",
+      "include_globs": [
+        "H1.*"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 7,
+      "candidate_file_count": 7,
+      "common_file_count": 7,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 4,
+      "changed_count": 3,
+      "status_counts": {
+        "identical": 4,
+        "numeric_diff_exceeds_tol": 2,
+        "numeric_diff_within_tol": 1
+      },
+      "max_abs_any": 3600.0,
+      "max_rel_any": 0.09117539362870732,
+      "top_changed_files": [
+        {
+          "path": "H1.pass.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 1731,
+          "line_count_candidate": 1731,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 13119,
+          "numeric_values_exceeding_tolerance": 12,
+          "max_abs_diff": 3600.0,
+          "max_rel_diff": 0.09091388493381852
+        },
+        {
+          "path": "H1.element.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 241,
+          "line_count_candidate": 241,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 6216,
+          "numeric_values_exceeding_tolerance": 6,
+          "max_abs_diff": 1.0,
+          "max_rel_diff": 0.09117539362870732
+        },
+        {
+          "path": "H1.wat.dat",
+          "status": "numeric_diff_within_tol",
+          "line_count_baseline": 1489,
+          "line_count_candidate": 1489,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 36527,
+          "numeric_values_exceeding_tolerance": 0,
+          "max_abs_diff": 9.999999999621423e-06,
+          "max_rel_diff": 7.356416540894539e-07
+        }
+      ],
+      "strict_pass": false
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "windows-base",
+    "case": "single-daily",
+    "domain": "water",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261026/plain-cases/single-daily/output",
+      "include_globs": [
+        "*.wat.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 1,
+      "candidate_file_count": 1,
+      "common_file_count": 1,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 0,
+      "changed_count": 1,
+      "status_counts": {
+        "numeric_diff_within_tol": 1
+      },
+      "max_abs_any": 9.999999999621423e-06,
+      "max_rel_any": 7.356416540894539e-07,
+      "top_changed_files": [
+        {
+          "path": "H1.wat.dat",
+          "status": "numeric_diff_within_tol",
+          "line_count_baseline": 1489,
+          "line_count_candidate": 1489,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 36527,
+          "numeric_values_exceeding_tolerance": 0,
+          "max_abs_diff": 9.999999999621423e-06,
+          "max_rel_diff": 7.356416540894539e-07
+        }
+      ],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "windows-base",
+    "case": "single-daily",
+    "domain": "erosion",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261026/plain-cases/single-daily/output",
+      "include_globs": [
+        "*.ebe.dat",
+        "*.loss.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.1,
+      "baseline_file_count": 2,
+      "candidate_file_count": 2,
+      "common_file_count": 2,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 2,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 2
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "windows-base",
+    "case": "watch-p24",
+    "domain": "all",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261026/plain-cases/watch-p24/output",
+      "include_globs": [
+        "*"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 7,
+      "candidate_file_count": 7,
+      "common_file_count": 7,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 0,
+      "changed_count": 7,
+      "status_counts": {
+        "structure_diff": 3,
+        "numeric_diff_exceeds_tol": 4
+      },
+      "max_abs_any": 79919.91762,
+      "max_rel_any": 1.0,
+      "top_changed_files": [
+        {
+          "path": "H24.pass.dat",
+          "status": "structure_diff",
+          "line_count_baseline": 16971,
+          "line_count_candidate": 16973,
+          "line_count_mismatch": 2,
+          "numeric_arity_mismatch_lines": 1355,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 73246,
+          "numeric_values_exceeding_tolerance": 29823,
+          "max_abs_diff": 79919.91762,
+          "max_rel_diff": 1.0
+        },
+        {
+          "path": "H24.element.dat",
+          "status": "structure_diff",
+          "line_count_baseline": 20918,
+          "line_count_candidate": 21016,
+          "line_count_mismatch": 98,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 543818,
+          "numeric_values_exceeding_tolerance": 75946,
+          "max_abs_diff": 303.312,
+          "max_rel_diff": 1.0
+        },
+        {
+          "path": "H24.ebe.dat",
+          "status": "structure_diff",
+          "line_count_baseline": 443,
+          "line_count_candidate": 450,
+          "line_count_mismatch": 7,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 6165,
+          "numeric_values_exceeding_tolerance": 2448,
+          "max_abs_diff": 277.3,
+          "max_rel_diff": 1.0
+        }
+      ],
+      "strict_pass": false
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "windows-base",
+    "case": "watch-p24",
+    "domain": "water",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261026/plain-cases/watch-p24/output",
+      "include_globs": [
+        "*.wat.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 1,
+      "candidate_file_count": 1,
+      "common_file_count": 1,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 0,
+      "changed_count": 1,
+      "status_counts": {
+        "numeric_diff_exceeds_tol": 1
+      },
+      "max_abs_any": 98.23000000000002,
+      "max_rel_any": 1.0,
+      "top_changed_files": [
+        {
+          "path": "H24.wat.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 230146,
+          "line_count_candidate": 230146,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 5752952,
+          "numeric_values_exceeding_tolerance": 63557,
+          "max_abs_diff": 98.23000000000002,
+          "max_rel_diff": 1.0
+        }
+      ],
+      "strict_pass": false
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "windows-base",
+    "case": "watch-p24",
+    "domain": "erosion",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261026/plain-cases/watch-p24/output",
+      "include_globs": [
+        "*.ebe.dat",
+        "*.loss.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.1,
+      "baseline_file_count": 2,
+      "candidate_file_count": 2,
+      "common_file_count": 2,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 0,
+      "changed_count": 2,
+      "status_counts": {
+        "structure_diff": 1,
+        "numeric_diff_exceeds_tol": 1
+      },
+      "max_abs_any": 277.3,
+      "max_rel_any": 1.0,
+      "top_changed_files": [
+        {
+          "path": "H24.ebe.dat",
+          "status": "structure_diff",
+          "line_count_baseline": 443,
+          "line_count_candidate": 450,
+          "line_count_mismatch": 7,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 6165,
+          "numeric_values_exceeding_tolerance": 2252,
+          "max_abs_diff": 277.3,
+          "max_rel_diff": 1.0
+        },
+        {
+          "path": "H24.loss.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 651,
+          "line_count_candidate": 651,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 4475,
+          "numeric_values_exceeding_tolerance": 6,
+          "max_abs_diff": 3.3259999999999996,
+          "max_rel_diff": 0.3441639072847682
+        }
+      ],
+      "strict_pass": false
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "linux-rebuild",
+    "case": "single-daily",
+    "domain": "all",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261026/baseline-cases/single-daily/output",
+      "include_globs": [
+        "H1.*"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 7,
+      "candidate_file_count": 7,
+      "common_file_count": 7,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 7,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 7
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "linux-rebuild",
+    "case": "single-daily",
+    "domain": "water",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261026/baseline-cases/single-daily/output",
+      "include_globs": [
+        "*.wat.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 1,
+      "candidate_file_count": 1,
+      "common_file_count": 1,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 1,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 1
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "linux-rebuild",
+    "case": "single-daily",
+    "domain": "erosion",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261026/baseline-cases/single-daily/output",
+      "include_globs": [
+        "*.ebe.dat",
+        "*.loss.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.1,
+      "baseline_file_count": 2,
+      "candidate_file_count": 2,
+      "common_file_count": 2,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 2,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 2
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "linux-rebuild",
+    "case": "watch-p24",
+    "domain": "all",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261026/baseline-cases/watch-p24/output",
+      "include_globs": [
+        "*"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 7,
+      "candidate_file_count": 7,
+      "common_file_count": 7,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 7,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 7
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "linux-rebuild",
+    "case": "watch-p24",
+    "domain": "water",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261026/baseline-cases/watch-p24/output",
+      "include_globs": [
+        "*.wat.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 1,
+      "candidate_file_count": 1,
+      "common_file_count": 1,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 1,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 1
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "linux-rebuild",
+    "case": "watch-p24",
+    "domain": "erosion",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261026/baseline-cases/watch-p24/output",
+      "include_globs": [
+        "*.ebe.dat",
+        "*.loss.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.1,
+      "baseline_file_count": 2,
+      "candidate_file_count": 2,
+      "common_file_count": 2,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 2,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 2
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "linux-observe",
+    "case": "single-daily",
+    "domain": "all",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261026/observe-cases/single-daily/output",
+      "include_globs": [
+        "H1.*"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 7,
+      "candidate_file_count": 7,
+      "common_file_count": 7,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 7,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 7
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "linux-observe",
+    "case": "single-daily",
+    "domain": "water",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261026/observe-cases/single-daily/output",
+      "include_globs": [
+        "*.wat.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 1,
+      "candidate_file_count": 1,
+      "common_file_count": 1,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 1,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 1
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "linux-observe",
+    "case": "single-daily",
+    "domain": "erosion",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261026/observe-cases/single-daily/output",
+      "include_globs": [
+        "*.ebe.dat",
+        "*.loss.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.1,
+      "baseline_file_count": 2,
+      "candidate_file_count": 2,
+      "common_file_count": 2,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 2,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 2
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "windows-observe",
+    "case": "single-daily",
+    "domain": "all",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261026/observe-cases/single-daily/output",
+      "include_globs": [
+        "H1.*"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 7,
+      "candidate_file_count": 7,
+      "common_file_count": 7,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 4,
+      "changed_count": 3,
+      "status_counts": {
+        "identical": 4,
+        "numeric_diff_exceeds_tol": 2,
+        "numeric_diff_within_tol": 1
+      },
+      "max_abs_any": 3600.0,
+      "max_rel_any": 0.09117539362870732,
+      "top_changed_files": [
+        {
+          "path": "H1.pass.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 1731,
+          "line_count_candidate": 1731,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 13119,
+          "numeric_values_exceeding_tolerance": 12,
+          "max_abs_diff": 3600.0,
+          "max_rel_diff": 0.09091388493381852
+        },
+        {
+          "path": "H1.element.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 241,
+          "line_count_candidate": 241,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 6216,
+          "numeric_values_exceeding_tolerance": 6,
+          "max_abs_diff": 1.0,
+          "max_rel_diff": 0.09117539362870732
+        },
+        {
+          "path": "H1.wat.dat",
+          "status": "numeric_diff_within_tol",
+          "line_count_baseline": 1489,
+          "line_count_candidate": 1489,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 36527,
+          "numeric_values_exceeding_tolerance": 0,
+          "max_abs_diff": 9.999999999621423e-06,
+          "max_rel_diff": 7.356416540894539e-07
+        }
+      ],
+      "strict_pass": false
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "windows-observe",
+    "case": "single-daily",
+    "domain": "water",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261026/observe-cases/single-daily/output",
+      "include_globs": [
+        "*.wat.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 1,
+      "candidate_file_count": 1,
+      "common_file_count": 1,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 0,
+      "changed_count": 1,
+      "status_counts": {
+        "numeric_diff_within_tol": 1
+      },
+      "max_abs_any": 9.999999999621423e-06,
+      "max_rel_any": 7.356416540894539e-07,
+      "top_changed_files": [
+        {
+          "path": "H1.wat.dat",
+          "status": "numeric_diff_within_tol",
+          "line_count_baseline": 1489,
+          "line_count_candidate": 1489,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 36527,
+          "numeric_values_exceeding_tolerance": 0,
+          "max_abs_diff": 9.999999999621423e-06,
+          "max_rel_diff": 7.356416540894539e-07
+        }
+      ],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "windows-observe",
+    "case": "single-daily",
+    "domain": "erosion",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261026/observe-cases/single-daily/output",
+      "include_globs": [
+        "*.ebe.dat",
+        "*.loss.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.1,
+      "baseline_file_count": 2,
+      "candidate_file_count": 2,
+      "common_file_count": 2,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 2,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 2
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "linux-radtrig",
+    "case": "single-daily",
+    "domain": "all",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261026/radtrig-cases/single-daily/output",
+      "include_globs": [
+        "H1.*"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 7,
+      "candidate_file_count": 7,
+      "common_file_count": 7,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 4,
+      "changed_count": 3,
+      "status_counts": {
+        "identical": 4,
+        "numeric_diff_exceeds_tol": 2,
+        "numeric_diff_within_tol": 1
+      },
+      "max_abs_any": 3600.0,
+      "max_rel_any": 0.09117539362870732,
+      "top_changed_files": [
+        {
+          "path": "H1.pass.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 1731,
+          "line_count_candidate": 1731,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 13119,
+          "numeric_values_exceeding_tolerance": 12,
+          "max_abs_diff": 3600.0,
+          "max_rel_diff": 0.09091388493381852
+        },
+        {
+          "path": "H1.element.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 241,
+          "line_count_candidate": 241,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 6216,
+          "numeric_values_exceeding_tolerance": 6,
+          "max_abs_diff": 1.0,
+          "max_rel_diff": 0.09117539362870732
+        },
+        {
+          "path": "H1.wat.dat",
+          "status": "numeric_diff_within_tol",
+          "line_count_baseline": 1489,
+          "line_count_candidate": 1489,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 36527,
+          "numeric_values_exceeding_tolerance": 0,
+          "max_abs_diff": 9.999999999621423e-06,
+          "max_rel_diff": 3.662102222317958e-07
+        }
+      ],
+      "strict_pass": false
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "linux-radtrig",
+    "case": "single-daily",
+    "domain": "water",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261026/radtrig-cases/single-daily/output",
+      "include_globs": [
+        "*.wat.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 1,
+      "candidate_file_count": 1,
+      "common_file_count": 1,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 0,
+      "changed_count": 1,
+      "status_counts": {
+        "numeric_diff_within_tol": 1
+      },
+      "max_abs_any": 9.999999999621423e-06,
+      "max_rel_any": 3.662102222317958e-07,
+      "top_changed_files": [
+        {
+          "path": "H1.wat.dat",
+          "status": "numeric_diff_within_tol",
+          "line_count_baseline": 1489,
+          "line_count_candidate": 1489,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 36527,
+          "numeric_values_exceeding_tolerance": 0,
+          "max_abs_diff": 9.999999999621423e-06,
+          "max_rel_diff": 3.662102222317958e-07
+        }
+      ],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "linux-radtrig",
+    "case": "single-daily",
+    "domain": "erosion",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261026/radtrig-cases/single-daily/output",
+      "include_globs": [
+        "*.ebe.dat",
+        "*.loss.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.1,
+      "baseline_file_count": 2,
+      "candidate_file_count": 2,
+      "common_file_count": 2,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 2,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 2
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "linux-radtrig",
+    "case": "watch-p24",
+    "domain": "all",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261026/radtrig-cases/watch-p24/output",
+      "include_globs": [
+        "*"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 7,
+      "candidate_file_count": 7,
+      "common_file_count": 7,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 7,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 7
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "linux-radtrig",
+    "case": "watch-p24",
+    "domain": "water",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261026/radtrig-cases/watch-p24/output",
+      "include_globs": [
+        "*.wat.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 1,
+      "candidate_file_count": 1,
+      "common_file_count": 1,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 1,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 1
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "linux-radtrig",
+    "case": "watch-p24",
+    "domain": "erosion",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/261026/radtrig-cases/watch-p24/output",
+      "include_globs": [
+        "*.ebe.dat",
+        "*.loss.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.1,
+      "baseline_file_count": 2,
+      "candidate_file_count": 2,
+      "common_file_count": 2,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 2,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 2
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "windows-radtrig",
+    "case": "single-daily",
+    "domain": "all",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261026/radtrig-cases/single-daily/output",
+      "include_globs": [
+        "H1.*"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 7,
+      "candidate_file_count": 7,
+      "common_file_count": 7,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 4,
+      "changed_count": 3,
+      "status_counts": {
+        "identical": 4,
+        "numeric_diff_exceeds_tol": 2,
+        "numeric_diff_within_tol": 1
+      },
+      "max_abs_any": 3600.0,
+      "max_rel_any": 0.09117539362870732,
+      "top_changed_files": [
+        {
+          "path": "H1.pass.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 1731,
+          "line_count_candidate": 1731,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 13119,
+          "numeric_values_exceeding_tolerance": 12,
+          "max_abs_diff": 3600.0,
+          "max_rel_diff": 0.09091388493381852
+        },
+        {
+          "path": "H1.element.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 241,
+          "line_count_candidate": 241,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 6216,
+          "numeric_values_exceeding_tolerance": 6,
+          "max_abs_diff": 1.0,
+          "max_rel_diff": 0.09117539362870732
+        },
+        {
+          "path": "H1.wat.dat",
+          "status": "numeric_diff_within_tol",
+          "line_count_baseline": 1489,
+          "line_count_candidate": 1489,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 36527,
+          "numeric_values_exceeding_tolerance": 0,
+          "max_abs_diff": 9.999999999621423e-06,
+          "max_rel_diff": 7.356416540894539e-07
+        }
+      ],
+      "strict_pass": false
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "windows-radtrig",
+    "case": "single-daily",
+    "domain": "water",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261026/radtrig-cases/single-daily/output",
+      "include_globs": [
+        "*.wat.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 1,
+      "candidate_file_count": 1,
+      "common_file_count": 1,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 0,
+      "changed_count": 1,
+      "status_counts": {
+        "numeric_diff_within_tol": 1
+      },
+      "max_abs_any": 9.999999999621423e-06,
+      "max_rel_any": 7.356416540894539e-07,
+      "top_changed_files": [
+        {
+          "path": "H1.wat.dat",
+          "status": "numeric_diff_within_tol",
+          "line_count_baseline": 1489,
+          "line_count_candidate": 1489,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 36527,
+          "numeric_values_exceeding_tolerance": 0,
+          "max_abs_diff": 9.999999999621423e-06,
+          "max_rel_diff": 7.356416540894539e-07
+        }
+      ],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "windows-radtrig",
+    "case": "single-daily",
+    "domain": "erosion",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/single-daily/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261026/radtrig-cases/single-daily/output",
+      "include_globs": [
+        "*.ebe.dat",
+        "*.loss.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.1,
+      "baseline_file_count": 2,
+      "candidate_file_count": 2,
+      "common_file_count": 2,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 2,
+      "changed_count": 0,
+      "status_counts": {
+        "identical": 2
+      },
+      "max_abs_any": 0.0,
+      "max_rel_any": 0.0,
+      "top_changed_files": [],
+      "strict_pass": true
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "windows-radtrig",
+    "case": "watch-p24",
+    "domain": "all",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261026/radtrig-cases/watch-p24/output",
+      "include_globs": [
+        "*"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 7,
+      "candidate_file_count": 7,
+      "common_file_count": 7,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 0,
+      "changed_count": 7,
+      "status_counts": {
+        "structure_diff": 3,
+        "numeric_diff_exceeds_tol": 4
+      },
+      "max_abs_any": 79919.91762,
+      "max_rel_any": 1.0,
+      "top_changed_files": [
+        {
+          "path": "H24.pass.dat",
+          "status": "structure_diff",
+          "line_count_baseline": 16971,
+          "line_count_candidate": 16973,
+          "line_count_mismatch": 2,
+          "numeric_arity_mismatch_lines": 1355,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 73246,
+          "numeric_values_exceeding_tolerance": 29823,
+          "max_abs_diff": 79919.91762,
+          "max_rel_diff": 1.0
+        },
+        {
+          "path": "H24.element.dat",
+          "status": "structure_diff",
+          "line_count_baseline": 20918,
+          "line_count_candidate": 21016,
+          "line_count_mismatch": 98,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 543818,
+          "numeric_values_exceeding_tolerance": 75946,
+          "max_abs_diff": 303.312,
+          "max_rel_diff": 1.0
+        },
+        {
+          "path": "H24.ebe.dat",
+          "status": "structure_diff",
+          "line_count_baseline": 443,
+          "line_count_candidate": 450,
+          "line_count_mismatch": 7,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 6165,
+          "numeric_values_exceeding_tolerance": 2448,
+          "max_abs_diff": 277.3,
+          "max_rel_diff": 1.0
+        }
+      ],
+      "strict_pass": false
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "windows-radtrig",
+    "case": "watch-p24",
+    "domain": "water",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261026/radtrig-cases/watch-p24/output",
+      "include_globs": [
+        "*.wat.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.01,
+      "baseline_file_count": 1,
+      "candidate_file_count": 1,
+      "common_file_count": 1,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 0,
+      "changed_count": 1,
+      "status_counts": {
+        "numeric_diff_exceeds_tol": 1
+      },
+      "max_abs_any": 98.23000000000002,
+      "max_rel_any": 1.0,
+      "top_changed_files": [
+        {
+          "path": "H24.wat.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 230146,
+          "line_count_candidate": 230146,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 5752952,
+          "numeric_values_exceeding_tolerance": 63557,
+          "max_abs_diff": 98.23000000000002,
+          "max_rel_diff": 1.0
+        }
+      ],
+      "strict_pass": false
+    }
+  },
+  {
+    "tag": "261026",
+    "lane": "windows-radtrig",
+    "case": "watch-p24",
+    "domain": "erosion",
+    "result": {
+      "baseline_dir": "/tmp/native-parity-20261027/261026/reference-cases/watch-p24/output",
+      "candidate_dir": "/tmp/native-parity-20261027/windows/results/261026/radtrig-cases/watch-p24/output",
+      "include_globs": [
+        "*.ebe.dat",
+        "*.loss.dat"
+      ],
+      "exclude_globs": [],
+      "abs_tolerance": 1e-09,
+      "rel_tolerance": 0.1,
+      "baseline_file_count": 2,
+      "candidate_file_count": 2,
+      "common_file_count": 2,
+      "only_baseline_count": 0,
+      "only_candidate_count": 0,
+      "only_baseline_examples": [],
+      "only_candidate_examples": [],
+      "identical_count": 0,
+      "changed_count": 2,
+      "status_counts": {
+        "structure_diff": 1,
+        "numeric_diff_exceeds_tol": 1
+      },
+      "max_abs_any": 277.3,
+      "max_rel_any": 1.0,
+      "top_changed_files": [
+        {
+          "path": "H24.ebe.dat",
+          "status": "structure_diff",
+          "line_count_baseline": 443,
+          "line_count_candidate": 450,
+          "line_count_mismatch": 7,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 6165,
+          "numeric_values_exceeding_tolerance": 2252,
+          "max_abs_diff": 277.3,
+          "max_rel_diff": 1.0
+        },
+        {
+          "path": "H24.loss.dat",
+          "status": "numeric_diff_exceeds_tol",
+          "line_count_baseline": 651,
+          "line_count_candidate": 651,
+          "line_count_mismatch": 0,
+          "numeric_arity_mismatch_lines": 0,
+          "text_mismatch_lines": 0,
+          "numeric_values_compared": 4475,
+          "numeric_values_exceeding_tolerance": 6,
+          "max_abs_diff": 3.3259999999999996,
+          "max_rel_diff": 0.3441639072847682
+        }
+      ],
+      "strict_pass": false
+    }
+  }
+]

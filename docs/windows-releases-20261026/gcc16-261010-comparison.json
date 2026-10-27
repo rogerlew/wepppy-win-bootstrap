@@ -1,0 +1,3345 @@
+{
+  "baseline": "/tmp/wepp-parity-linux-261010",
+  "candidate": "/tmp/wepp-parity-win-hill-legacy-261010",
+  "cases": [
+    {
+      "case": "single-daily",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/single-daily/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/single-daily/output",
+        "include_globs": [
+          "H1.*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 4,
+        "changed_count": 3,
+        "status_counts": {
+          "identical": 4,
+          "numeric_diff_exceeds_tol": 2,
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 3600.0,
+        "max_rel_any": 0.09117539362870732,
+        "top_changed_files": [
+          {
+            "path": "H1.pass.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 1731,
+            "line_count_candidate": 1731,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 13119,
+            "numeric_values_exceeding_tolerance": 12,
+            "max_abs_diff": 3600.0,
+            "max_rel_diff": 0.09091388493381852
+          },
+          {
+            "path": "H1.element.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 241,
+            "line_count_candidate": 241,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 6216,
+            "numeric_values_exceeding_tolerance": 6,
+            "max_abs_diff": 1.0,
+            "max_rel_diff": 0.09117539362870732
+          },
+          {
+            "path": "H1.wat.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 1489,
+            "line_count_candidate": 1489,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 36527,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 9.999999999621423e-06,
+            "max_rel_diff": 7.356416540894539e-07
+          }
+        ],
+        "strict_pass": false
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/single-daily/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/single-daily/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 1,
+        "status_counts": {
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 9.999999999621423e-06,
+        "max_rel_any": 7.356416540894539e-07,
+        "top_changed_files": [
+          {
+            "path": "H1.wat.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 1489,
+            "line_count_candidate": 1489,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 36527,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 9.999999999621423e-06,
+            "max_rel_diff": 7.356416540894539e-07
+          }
+        ],
+        "strict_pass": true
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/single-daily/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/single-daily/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 2,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 2
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      }
+    },
+    {
+      "case": "single-hourly",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/single-hourly/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/single-hourly/output",
+        "include_globs": [
+          "H1.*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 6,
+        "changed_count": 1,
+        "status_counts": {
+          "identical": 6,
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 9.999999999976694e-05,
+        "max_rel_any": 1.3739660905236229e-05,
+        "top_changed_files": [
+          {
+            "path": "H1.pass.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 1467,
+            "line_count_candidate": 1467,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 11611,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 9.999999999976694e-05,
+            "max_rel_diff": 1.3739660905236229e-05
+          }
+        ],
+        "strict_pass": true
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/single-hourly/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/single-hourly/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 1,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 1
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/single-hourly/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/single-hourly/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 2,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 2
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      }
+    },
+    {
+      "case": "equal-daily",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/equal-daily/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/equal-daily/output",
+        "include_globs": [
+          "H1.*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 4,
+        "changed_count": 3,
+        "status_counts": {
+          "identical": 4,
+          "numeric_diff_exceeds_tol": 2,
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 3600.0,
+        "max_rel_any": 0.0977741362829441,
+        "top_changed_files": [
+          {
+            "path": "H1.pass.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 1763,
+            "line_count_candidate": 1763,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 13815,
+            "numeric_values_exceeding_tolerance": 18,
+            "max_abs_diff": 3600.0,
+            "max_rel_diff": 0.0977741362829441
+          },
+          {
+            "path": "H1.element.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 500,
+            "line_count_candidate": 500,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 12950,
+            "numeric_values_exceeding_tolerance": 24,
+            "max_abs_diff": 1.0,
+            "max_rel_diff": 0.09107946026986519
+          },
+          {
+            "path": "H1.wat.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 2950,
+            "line_count_candidate": 2950,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 73052,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 2.999999999886427e-05,
+            "max_rel_diff": 1.353661111851959e-05
+          }
+        ],
+        "strict_pass": false
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/equal-daily/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/equal-daily/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 1,
+        "status_counts": {
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 2.999999999886427e-05,
+        "max_rel_any": 1.353661111851959e-05,
+        "top_changed_files": [
+          {
+            "path": "H1.wat.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 2950,
+            "line_count_candidate": 2950,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 73052,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 2.999999999886427e-05,
+            "max_rel_diff": 1.353661111851959e-05
+          }
+        ],
+        "strict_pass": true
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/equal-daily/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/equal-daily/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 2,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 2
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      }
+    },
+    {
+      "case": "equal-hourly",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/equal-hourly/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/equal-hourly/output",
+        "include_globs": [
+          "H1.*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 6,
+        "changed_count": 1,
+        "status_counts": {
+          "identical": 6,
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 9.999999999976694e-05,
+        "max_rel_any": 6.055468087673477e-05,
+        "top_changed_files": [
+          {
+            "path": "H1.pass.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 1467,
+            "line_count_candidate": 1467,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 11611,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 9.999999999976694e-05,
+            "max_rel_diff": 6.055468087673477e-05
+          }
+        ],
+        "strict_pass": true
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/equal-hourly/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/equal-hourly/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 1,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 1
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/equal-hourly/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/equal-hourly/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 2,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 2
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      }
+    },
+    {
+      "case": "upper60-daily",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/upper60-daily/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/upper60-daily/output",
+        "include_globs": [
+          "H1.*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 4,
+        "changed_count": 3,
+        "status_counts": {
+          "identical": 4,
+          "numeric_diff_exceeds_tol": 2,
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 3600.0,
+        "max_rel_any": 0.09771683418757908,
+        "top_changed_files": [
+          {
+            "path": "H1.pass.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 1777,
+            "line_count_candidate": 1777,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 13981,
+            "numeric_values_exceeding_tolerance": 18,
+            "max_abs_diff": 3600.0,
+            "max_rel_diff": 0.09771683418757908
+          },
+          {
+            "path": "H1.element.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 506,
+            "line_count_candidate": 506,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 13106,
+            "numeric_values_exceeding_tolerance": 24,
+            "max_abs_diff": 1.0,
+            "max_rel_diff": 0.09111193752324288
+          },
+          {
+            "path": "H1.wat.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 2950,
+            "line_count_candidate": 2950,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 73052,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 1.4900000000039881e-05,
+            "max_rel_diff": 1.6383666140221247e-05
+          }
+        ],
+        "strict_pass": false
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/upper60-daily/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/upper60-daily/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 1,
+        "status_counts": {
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 1.4900000000039881e-05,
+        "max_rel_any": 1.6383666140221247e-05,
+        "top_changed_files": [
+          {
+            "path": "H1.wat.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 2950,
+            "line_count_candidate": 2950,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 73052,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 1.4900000000039881e-05,
+            "max_rel_diff": 1.6383666140221247e-05
+          }
+        ],
+        "strict_pass": true
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/upper60-daily/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/upper60-daily/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 2,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 2
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      }
+    },
+    {
+      "case": "upper60-hourly",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/upper60-hourly/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/upper60-hourly/output",
+        "include_globs": [
+          "H1.*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 6,
+        "changed_count": 1,
+        "status_counts": {
+          "identical": 6,
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 9.999999999976694e-05,
+        "max_rel_any": 3.2188495831538226e-05,
+        "top_changed_files": [
+          {
+            "path": "H1.pass.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 1467,
+            "line_count_candidate": 1467,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 11611,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 9.999999999976694e-05,
+            "max_rel_diff": 3.2188495831538226e-05
+          }
+        ],
+        "strict_pass": true
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/upper60-hourly/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/upper60-hourly/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 1,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 1
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/upper60-hourly/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/upper60-hourly/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 2,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 2
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      }
+    },
+    {
+      "case": "lower60-daily",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/lower60-daily/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/lower60-daily/output",
+        "include_globs": [
+          "H1.*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 4,
+        "changed_count": 3,
+        "status_counts": {
+          "identical": 4,
+          "numeric_diff_exceeds_tol": 2,
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 3600.0,
+        "max_rel_any": 0.09783980922990605,
+        "top_changed_files": [
+          {
+            "path": "H1.pass.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 1763,
+            "line_count_candidate": 1763,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 13703,
+            "numeric_values_exceeding_tolerance": 18,
+            "max_abs_diff": 3600.0,
+            "max_rel_diff": 0.09783980922990605
+          },
+          {
+            "path": "H1.element.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 498,
+            "line_count_candidate": 498,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 12898,
+            "numeric_values_exceeding_tolerance": 24,
+            "max_abs_diff": 1.0,
+            "max_rel_diff": 0.09104704097116852
+          },
+          {
+            "path": "H1.wat.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 2950,
+            "line_count_candidate": 2950,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 73052,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 1.9999999999242846e-05,
+            "max_rel_diff": 1.3133919573183741e-05
+          }
+        ],
+        "strict_pass": false
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/lower60-daily/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/lower60-daily/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 1,
+        "status_counts": {
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 1.9999999999242846e-05,
+        "max_rel_any": 1.3133919573183741e-05,
+        "top_changed_files": [
+          {
+            "path": "H1.wat.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 2950,
+            "line_count_candidate": 2950,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 73052,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 1.9999999999242846e-05,
+            "max_rel_diff": 1.3133919573183741e-05
+          }
+        ],
+        "strict_pass": true
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/lower60-daily/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/lower60-daily/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 2,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 2
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      }
+    },
+    {
+      "case": "lower60-hourly",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/lower60-hourly/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/lower60-hourly/output",
+        "include_globs": [
+          "H1.*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 6,
+        "changed_count": 1,
+        "status_counts": {
+          "identical": 6,
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 0.0010000000000012221,
+        "max_rel_any": 7.634170547357799e-05,
+        "top_changed_files": [
+          {
+            "path": "H1.pass.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 1467,
+            "line_count_candidate": 1467,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 11611,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.0010000000000012221,
+            "max_rel_diff": 7.634170547357799e-05
+          }
+        ],
+        "strict_pass": true
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/lower60-hourly/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/lower60-hourly/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 1,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 1
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/lower60-hourly/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/lower60-hourly/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 2,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 2
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      }
+    },
+    {
+      "case": "three-daily",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/three-daily/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/three-daily/output",
+        "include_globs": [
+          "H1.*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 3,
+        "changed_count": 4,
+        "status_counts": {
+          "identical": 3,
+          "numeric_diff_exceeds_tol": 2,
+          "numeric_diff_within_tol": 2
+        },
+        "max_abs_any": 3600.0,
+        "max_rel_any": 0.09797474030341526,
+        "top_changed_files": [
+          {
+            "path": "H1.pass.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 1763,
+            "line_count_candidate": 1763,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 13847,
+            "numeric_values_exceeding_tolerance": 18,
+            "max_abs_diff": 3600.0,
+            "max_rel_diff": 0.09797474030341526
+          },
+          {
+            "path": "H1.element.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 761,
+            "line_count_candidate": 761,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 19736,
+            "numeric_values_exceeding_tolerance": 36,
+            "max_abs_diff": 1.0,
+            "max_rel_diff": 0.09104477611940306
+          },
+          {
+            "path": "H1.soil.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 4389,
+            "line_count_candidate": 4389,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 65745,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.010000000000005116,
+            "max_rel_diff": 0.00027144408251913993
+          },
+          {
+            "path": "H1.wat.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 4411,
+            "line_count_candidate": 4411,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 109577,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 1.9999999999242846e-05,
+            "max_rel_diff": 0.00020988661621137213
+          }
+        ],
+        "strict_pass": false
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/three-daily/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/three-daily/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 1,
+        "status_counts": {
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 1.9999999999242846e-05,
+        "max_rel_any": 0.00020988661621137213,
+        "top_changed_files": [
+          {
+            "path": "H1.wat.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 4411,
+            "line_count_candidate": 4411,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 109577,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 1.9999999999242846e-05,
+            "max_rel_diff": 0.00020988661621137213
+          }
+        ],
+        "strict_pass": true
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/three-daily/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/three-daily/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 2,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 2
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      }
+    },
+    {
+      "case": "three-hourly",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/three-hourly/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/three-hourly/output",
+        "include_globs": [
+          "H1.*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 5,
+        "changed_count": 2,
+        "status_counts": {
+          "identical": 5,
+          "numeric_diff_within_tol": 2
+        },
+        "max_abs_any": 0.009999999999999787,
+        "max_rel_any": 0.0035211267605633053,
+        "top_changed_files": [
+          {
+            "path": "H1.wat.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 4411,
+            "line_count_candidate": 4411,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 109577,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.009999999999999787,
+            "max_rel_diff": 0.0035211267605633053
+          },
+          {
+            "path": "H1.pass.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 1467,
+            "line_count_candidate": 1467,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 11611,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.0001000000000015433,
+            "max_rel_diff": 2.9341862034629052e-05
+          }
+        ],
+        "strict_pass": true
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/three-hourly/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/three-hourly/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 1,
+        "status_counts": {
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 0.009999999999999787,
+        "max_rel_any": 0.0035211267605633053,
+        "top_changed_files": [
+          {
+            "path": "H1.wat.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 4411,
+            "line_count_candidate": 4411,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 109577,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.009999999999999787,
+            "max_rel_diff": 0.0035211267605633053
+          }
+        ],
+        "strict_pass": true
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/three-hourly/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/three-hourly/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 2,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 2
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      }
+    },
+    {
+      "case": "watch-p24",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p24/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p24/output",
+        "include_globs": [
+          "*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 7,
+        "status_counts": {
+          "structure_diff": 3,
+          "numeric_diff_exceeds_tol": 4
+        },
+        "max_abs_any": 62640.0,
+        "max_rel_any": 1.0,
+        "top_changed_files": [
+          {
+            "path": "H24.pass.dat",
+            "status": "structure_diff",
+            "line_count_baseline": 16973,
+            "line_count_candidate": 16977,
+            "line_count_mismatch": 4,
+            "numeric_arity_mismatch_lines": 1473,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 73447,
+            "numeric_values_exceeding_tolerance": 30417,
+            "max_abs_diff": 62640.0,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H24.element.dat",
+            "status": "structure_diff",
+            "line_count_baseline": 20932,
+            "line_count_candidate": 21030,
+            "line_count_mismatch": 98,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 544182,
+            "numeric_values_exceeding_tolerance": 75985,
+            "max_abs_diff": 303.34900000000005,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H24.ebe.dat",
+            "status": "structure_diff",
+            "line_count_baseline": 444,
+            "line_count_candidate": 451,
+            "line_count_mismatch": 7,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 6179,
+            "numeric_values_exceeding_tolerance": 2451,
+            "max_abs_diff": 277.3,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H24.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 230146,
+            "line_count_candidate": 230146,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 5752952,
+            "numeric_values_exceeding_tolerance": 63172,
+            "max_abs_diff": 98.29000000000002,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H24.soil.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 230124,
+            "line_count_candidate": 230124,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 3451770,
+            "numeric_values_exceeding_tolerance": 34474,
+            "max_abs_diff": 25.04,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H24.loss.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 651,
+            "line_count_candidate": 651,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 4475,
+            "numeric_values_exceeding_tolerance": 6,
+            "max_abs_diff": 3.3259999999999996,
+            "max_rel_diff": 0.3441639072847682
+          },
+          {
+            "path": "H24.plot.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 1404,
+            "line_count_candidate": 1404,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 4201,
+            "numeric_values_exceeding_tolerance": 1,
+            "max_abs_diff": 3.3259999999999996,
+            "max_rel_diff": 0.3441639072847682
+          }
+        ],
+        "strict_pass": false
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p24/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p24/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 1,
+        "status_counts": {
+          "numeric_diff_exceeds_tol": 1
+        },
+        "max_abs_any": 98.29000000000002,
+        "max_rel_any": 1.0,
+        "top_changed_files": [
+          {
+            "path": "H24.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 230146,
+            "line_count_candidate": 230146,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 5752952,
+            "numeric_values_exceeding_tolerance": 63172,
+            "max_abs_diff": 98.29000000000002,
+            "max_rel_diff": 1.0
+          }
+        ],
+        "strict_pass": false
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p24/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p24/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 2,
+        "status_counts": {
+          "structure_diff": 1,
+          "numeric_diff_exceeds_tol": 1
+        },
+        "max_abs_any": 277.3,
+        "max_rel_any": 1.0,
+        "top_changed_files": [
+          {
+            "path": "H24.ebe.dat",
+            "status": "structure_diff",
+            "line_count_baseline": 444,
+            "line_count_candidate": 451,
+            "line_count_mismatch": 7,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 6179,
+            "numeric_values_exceeding_tolerance": 2255,
+            "max_abs_diff": 277.3,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H24.loss.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 651,
+            "line_count_candidate": 651,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 4475,
+            "numeric_values_exceeding_tolerance": 5,
+            "max_abs_diff": 3.3259999999999996,
+            "max_rel_diff": 0.3441639072847682
+          }
+        ],
+        "strict_pass": false
+      }
+    },
+    {
+      "case": "watch-p1408",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p1408/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p1408/output",
+        "include_globs": [
+          "*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 3,
+        "changed_count": 4,
+        "status_counts": {
+          "identical": 3,
+          "numeric_diff_within_tol": 3,
+          "numeric_diff_exceeds_tol": 1
+        },
+        "max_abs_any": 0.010000000000104592,
+        "max_rel_any": 0.02439024390243891,
+        "top_changed_files": [
+          {
+            "path": "H1408.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 36553,
+            "line_count_candidate": 36553,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 913127,
+            "numeric_values_exceeding_tolerance": 1,
+            "max_abs_diff": 0.010000000000104592,
+            "max_rel_diff": 0.02439024390243891
+          },
+          {
+            "path": "H1408.soil.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 36531,
+            "line_count_candidate": 36531,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 547875,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.010000000000005116,
+            "max_rel_diff": 0.0030120481927710203
+          },
+          {
+            "path": "H1408.pass.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 36595,
+            "line_count_candidate": 36595,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 154191,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.009999999999990905,
+            "max_rel_diff": 9.000090000905106e-05
+          },
+          {
+            "path": "H1408.element.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 2439,
+            "line_count_candidate": 2439,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 63364,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.00100000000009004,
+            "max_rel_diff": 3.2276805887214174e-05
+          }
+        ],
+        "strict_pass": false
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p1408/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p1408/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 1,
+        "status_counts": {
+          "numeric_diff_exceeds_tol": 1
+        },
+        "max_abs_any": 0.010000000000104592,
+        "max_rel_any": 0.02439024390243891,
+        "top_changed_files": [
+          {
+            "path": "H1408.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 36553,
+            "line_count_candidate": 36553,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 913127,
+            "numeric_values_exceeding_tolerance": 1,
+            "max_abs_diff": 0.010000000000104592,
+            "max_rel_diff": 0.02439024390243891
+          }
+        ],
+        "strict_pass": false
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p1408/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p1408/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 2,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 2
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      }
+    },
+    {
+      "case": "watch-p258",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p258/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p258/output",
+        "include_globs": [
+          "*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 3,
+        "changed_count": 4,
+        "status_counts": {
+          "identical": 3,
+          "numeric_diff_within_tol": 3,
+          "numeric_diff_exceeds_tol": 1
+        },
+        "max_abs_any": 2.509999999999998,
+        "max_rel_any": 0.1087521663778162,
+        "top_changed_files": [
+          {
+            "path": "H258.soil.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 36531,
+            "line_count_candidate": 36531,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 547875,
+            "numeric_values_exceeding_tolerance": 5,
+            "max_abs_diff": 2.509999999999998,
+            "max_rel_diff": 0.1087521663778162
+          },
+          {
+            "path": "H258.pass.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 36587,
+            "line_count_candidate": 36587,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 242823,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.6200000000000045,
+            "max_rel_diff": 0.0018404537774559062
+          },
+          {
+            "path": "H258.wat.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 36553,
+            "line_count_candidate": 36553,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 913127,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.01999999999998181,
+            "max_rel_diff": 0.0016949152542374024
+          },
+          {
+            "path": "H258.element.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 2429,
+            "line_count_candidate": 2429,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 63104,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.009999999999990905,
+            "max_rel_diff": 2.92455809926854e-05
+          }
+        ],
+        "strict_pass": false
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p258/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p258/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 1,
+        "status_counts": {
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 0.01999999999998181,
+        "max_rel_any": 0.0016949152542374024,
+        "top_changed_files": [
+          {
+            "path": "H258.wat.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 36553,
+            "line_count_candidate": 36553,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 913127,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.01999999999998181,
+            "max_rel_diff": 0.0016949152542374024
+          }
+        ],
+        "strict_pass": true
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p258/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p258/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 2,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 2
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      }
+    },
+    {
+      "case": "watch-p1319",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p1319/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p1319/output",
+        "include_globs": [
+          "*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 3,
+        "changed_count": 4,
+        "status_counts": {
+          "identical": 3,
+          "numeric_diff_within_tol": 1,
+          "numeric_diff_exceeds_tol": 3
+        },
+        "max_abs_any": 2.5,
+        "max_rel_any": 0.5394736842105263,
+        "top_changed_files": [
+          {
+            "path": "H1319.pass.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 36579,
+            "line_count_candidate": 36579,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 267155,
+            "numeric_values_exceeding_tolerance": 2,
+            "max_abs_diff": 2.5,
+            "max_rel_diff": 0.01368555060471037
+          },
+          {
+            "path": "H1319.soil.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 36531,
+            "line_count_candidate": 36531,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 547875,
+            "numeric_values_exceeding_tolerance": 11,
+            "max_abs_diff": 1.4600000000000009,
+            "max_rel_diff": 0.059664694280078936
+          },
+          {
+            "path": "H1319.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 36553,
+            "line_count_candidate": 36553,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 913127,
+            "numeric_values_exceeding_tolerance": 2,
+            "max_abs_diff": 0.41000000000000003,
+            "max_rel_diff": 0.5394736842105263
+          },
+          {
+            "path": "H1319.element.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 2427,
+            "line_count_candidate": 2427,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 63052,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.27899999999999636,
+            "max_rel_diff": 0.0006358974358974276
+          }
+        ],
+        "strict_pass": false
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p1319/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p1319/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 1,
+        "status_counts": {
+          "numeric_diff_exceeds_tol": 1
+        },
+        "max_abs_any": 0.41000000000000003,
+        "max_rel_any": 0.5394736842105263,
+        "top_changed_files": [
+          {
+            "path": "H1319.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 36553,
+            "line_count_candidate": 36553,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 913127,
+            "numeric_values_exceeding_tolerance": 2,
+            "max_abs_diff": 0.41000000000000003,
+            "max_rel_diff": 0.5394736842105263
+          }
+        ],
+        "strict_pass": false
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p1319/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p1319/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 2,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 2
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      }
+    },
+    {
+      "case": "watch-p13",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p13/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p13/output",
+        "include_globs": [
+          "*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 2,
+        "changed_count": 5,
+        "status_counts": {
+          "identical": 2,
+          "numeric_diff_exceeds_tol": 4,
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 3600.0,
+        "max_rel_any": 1.0,
+        "top_changed_files": [
+          {
+            "path": "H13.pass.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 38591,
+            "line_count_candidate": 38591,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 249959,
+            "numeric_values_exceeding_tolerance": 4,
+            "max_abs_diff": 3600.0,
+            "max_rel_diff": 0.16666666666666666
+          },
+          {
+            "path": "H13.soil.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 292206,
+            "line_count_candidate": 292206,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 4383000,
+            "numeric_values_exceeding_tolerance": 106,
+            "max_abs_diff": 3.5,
+            "max_rel_diff": 0.20689655172413784
+          },
+          {
+            "path": "H13.element.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 28810,
+            "line_count_candidate": 28810,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 749010,
+            "numeric_values_exceeding_tolerance": 18,
+            "max_abs_diff": 1.6820000000000022,
+            "max_rel_diff": 0.19354838709677413
+          },
+          {
+            "path": "H13.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 292228,
+            "line_count_candidate": 292228,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 7305002,
+            "numeric_values_exceeding_tolerance": 286,
+            "max_abs_diff": 1.6799999999999997,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H13.loss.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 394,
+            "line_count_candidate": 394,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 2498,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.02999999999974534,
+            "max_rel_diff": 5.737794277075282e-06
+          }
+        ],
+        "strict_pass": false
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p13/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p13/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 1,
+        "status_counts": {
+          "numeric_diff_exceeds_tol": 1
+        },
+        "max_abs_any": 1.6799999999999997,
+        "max_rel_any": 1.0,
+        "top_changed_files": [
+          {
+            "path": "H13.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 292228,
+            "line_count_candidate": 292228,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 7305002,
+            "numeric_values_exceeding_tolerance": 286,
+            "max_abs_diff": 1.6799999999999997,
+            "max_rel_diff": 1.0
+          }
+        ],
+        "strict_pass": false
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p13/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p13/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 1,
+        "changed_count": 1,
+        "status_counts": {
+          "identical": 1,
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 0.02999999999974534,
+        "max_rel_any": 5.737794277075282e-06,
+        "top_changed_files": [
+          {
+            "path": "H13.loss.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 394,
+            "line_count_candidate": 394,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 2498,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.02999999999974534,
+            "max_rel_diff": 5.737794277075282e-06
+          }
+        ],
+        "strict_pass": true
+      }
+    },
+    {
+      "case": "watch-p14",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p14/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p14/output",
+        "include_globs": [
+          "*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 3,
+        "changed_count": 4,
+        "status_counts": {
+          "identical": 3,
+          "numeric_diff_within_tol": 1,
+          "numeric_diff_exceeds_tol": 3
+        },
+        "max_abs_any": 12.06000000000006,
+        "max_rel_any": 0.2137931034482759,
+        "top_changed_files": [
+          {
+            "path": "H14.pass.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 36537,
+            "line_count_candidate": 36537,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 215769,
+            "numeric_values_exceeding_tolerance": 42,
+            "max_abs_diff": 12.06000000000006,
+            "max_rel_diff": 0.21340945390287835
+          },
+          {
+            "path": "H14.soil.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 73056,
+            "line_count_candidate": 73056,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 1095750,
+            "numeric_values_exceeding_tolerance": 44,
+            "max_abs_diff": 2.3200000000000003,
+            "max_rel_diff": 0.14060606060606062
+          },
+          {
+            "path": "H14.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 73078,
+            "line_count_candidate": 73078,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 1826252,
+            "numeric_values_exceeding_tolerance": 58,
+            "max_abs_diff": 1.0,
+            "max_rel_diff": 0.2137931034482759
+          },
+          {
+            "path": "H14.element.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 4808,
+            "line_count_candidate": 4808,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 124958,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.13299999999999557,
+            "max_rel_diff": 0.0017362924281983756
+          }
+        ],
+        "strict_pass": false
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p14/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p14/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 1,
+        "status_counts": {
+          "numeric_diff_exceeds_tol": 1
+        },
+        "max_abs_any": 1.0,
+        "max_rel_any": 0.2137931034482759,
+        "top_changed_files": [
+          {
+            "path": "H14.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 73078,
+            "line_count_candidate": 73078,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 1826252,
+            "numeric_values_exceeding_tolerance": 58,
+            "max_abs_diff": 1.0,
+            "max_rel_diff": 0.2137931034482759
+          }
+        ],
+        "strict_pass": false
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p14/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p14/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 2,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 2
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      }
+    },
+    {
+      "case": "watch-p25",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p25/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p25/output",
+        "include_globs": [
+          "*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 3,
+        "changed_count": 4,
+        "status_counts": {
+          "identical": 3,
+          "numeric_diff_within_tol": 4
+        },
+        "max_abs_any": 0.10000000000013642,
+        "max_rel_any": 0.006060606060606067,
+        "top_changed_files": [
+          {
+            "path": "H25.pass.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 36535,
+            "line_count_candidate": 36535,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 214695,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.10000000000013642,
+            "max_rel_diff": 0.00024733496574418985
+          },
+          {
+            "path": "H25.wat.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 73078,
+            "line_count_candidate": 73078,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 1826252,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.010000000000019327,
+            "max_rel_diff": 0.006060606060606067
+          },
+          {
+            "path": "H25.soil.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 73056,
+            "line_count_candidate": 73056,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 1095750,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.00999999999999801,
+            "max_rel_diff": 0.0005099439061702198
+          },
+          {
+            "path": "H25.element.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 4806,
+            "line_count_candidate": 4806,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 124906,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.0010000000000047748,
+            "max_rel_diff": 1.997283694171266e-05
+          }
+        ],
+        "strict_pass": true
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p25/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p25/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 1,
+        "status_counts": {
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 0.010000000000019327,
+        "max_rel_any": 0.006060606060606067,
+        "top_changed_files": [
+          {
+            "path": "H25.wat.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 73078,
+            "line_count_candidate": 73078,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 1826252,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.010000000000019327,
+            "max_rel_diff": 0.006060606060606067
+          }
+        ],
+        "strict_pass": true
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p25/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p25/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 2,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 2
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      }
+    },
+    {
+      "case": "watch-p27",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p27/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p27/output",
+        "include_globs": [
+          "*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 3,
+        "changed_count": 4,
+        "status_counts": {
+          "identical": 3,
+          "numeric_diff_exceeds_tol": 4
+        },
+        "max_abs_any": 4.7000000000000455,
+        "max_rel_any": 0.5,
+        "top_changed_files": [
+          {
+            "path": "H27.pass.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 36537,
+            "line_count_candidate": 36537,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 220377,
+            "numeric_values_exceeding_tolerance": 26,
+            "max_abs_diff": 4.7000000000000455,
+            "max_rel_diff": 0.13960428871449104
+          },
+          {
+            "path": "H27.soil.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 182631,
+            "line_count_candidate": 182631,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 2739375,
+            "numeric_values_exceeding_tolerance": 35,
+            "max_abs_diff": 2.469999999999999,
+            "max_rel_diff": 0.30769230769230776
+          },
+          {
+            "path": "H27.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 182653,
+            "line_count_candidate": 182653,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 4565627,
+            "numeric_values_exceeding_tolerance": 184,
+            "max_abs_diff": 1.289999999999992,
+            "max_rel_diff": 0.5
+          },
+          {
+            "path": "H27.element.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 12017,
+            "line_count_candidate": 12017,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 312392,
+            "numeric_values_exceeding_tolerance": 1,
+            "max_abs_diff": 1.2560000000000002,
+            "max_rel_diff": 0.017797426741483876
+          }
+        ],
+        "strict_pass": false
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p27/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p27/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 1,
+        "status_counts": {
+          "numeric_diff_exceeds_tol": 1
+        },
+        "max_abs_any": 1.289999999999992,
+        "max_rel_any": 0.5,
+        "top_changed_files": [
+          {
+            "path": "H27.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 182653,
+            "line_count_candidate": 182653,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 4565627,
+            "numeric_values_exceeding_tolerance": 184,
+            "max_abs_diff": 1.289999999999992,
+            "max_rel_diff": 0.5
+          }
+        ],
+        "strict_pass": false
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p27/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p27/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 2,
+        "changed_count": 0,
+        "status_counts": {
+          "identical": 2
+        },
+        "max_abs_any": 0.0,
+        "max_rel_any": 0.0,
+        "top_changed_files": [],
+        "strict_pass": true
+      }
+    },
+    {
+      "case": "watch-p40",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p40/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p40/output",
+        "include_globs": [
+          "*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 1,
+        "changed_count": 6,
+        "status_counts": {
+          "structure_diff": 3,
+          "numeric_diff_within_tol": 1,
+          "identical": 1,
+          "numeric_diff_exceeds_tol": 2
+        },
+        "max_abs_any": 86400.0,
+        "max_rel_any": 1.0,
+        "top_changed_files": [
+          {
+            "path": "H40.pass.dat",
+            "status": "structure_diff",
+            "line_count_baseline": 45819,
+            "line_count_candidate": 45821,
+            "line_count_mismatch": 2,
+            "numeric_arity_mismatch_lines": 6143,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 285511,
+            "numeric_values_exceeding_tolerance": 56795,
+            "max_abs_diff": 86400.0,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H40.element.dat",
+            "status": "structure_diff",
+            "line_count_baseline": 54498,
+            "line_count_candidate": 54506,
+            "line_count_mismatch": 8,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 1416898,
+            "numeric_values_exceeding_tolerance": 89317,
+            "max_abs_diff": 308.34299999999996,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H40.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 292228,
+            "line_count_candidate": 292228,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 7305002,
+            "numeric_values_exceeding_tolerance": 366,
+            "max_abs_diff": 116.07111,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H40.ebe.dat",
+            "status": "structure_diff",
+            "line_count_baseline": 4742,
+            "line_count_candidate": 4743,
+            "line_count_mismatch": 1,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 66351,
+            "numeric_values_exceeding_tolerance": 7851,
+            "max_abs_diff": 111.5,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H40.soil.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 292206,
+            "line_count_candidate": 292206,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 4383000,
+            "numeric_values_exceeding_tolerance": 136,
+            "max_abs_diff": 37.620000000000005,
+            "max_rel_diff": 0.9731012658227848
+          },
+          {
+            "path": "H40.loss.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 394,
+            "line_count_candidate": 394,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 2498,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 20.900000000001455,
+            "max_rel_diff": 0.0009844826777929208
+          }
+        ],
+        "strict_pass": false
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p40/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p40/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 1,
+        "status_counts": {
+          "numeric_diff_exceeds_tol": 1
+        },
+        "max_abs_any": 116.07111,
+        "max_rel_any": 1.0,
+        "top_changed_files": [
+          {
+            "path": "H40.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 292228,
+            "line_count_candidate": 292228,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 7305002,
+            "numeric_values_exceeding_tolerance": 366,
+            "max_abs_diff": 116.07111,
+            "max_rel_diff": 1.0
+          }
+        ],
+        "strict_pass": false
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p40/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p40/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 2,
+        "status_counts": {
+          "structure_diff": 1,
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 111.5,
+        "max_rel_any": 1.0,
+        "top_changed_files": [
+          {
+            "path": "H40.ebe.dat",
+            "status": "structure_diff",
+            "line_count_baseline": 4742,
+            "line_count_candidate": 4743,
+            "line_count_mismatch": 1,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 66351,
+            "numeric_values_exceeding_tolerance": 5552,
+            "max_abs_diff": 111.5,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H40.loss.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 394,
+            "line_count_candidate": 394,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 2498,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 20.900000000001455,
+            "max_rel_diff": 0.0009844826777929208
+          }
+        ],
+        "strict_pass": false
+      }
+    },
+    {
+      "case": "watch-p43",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p43/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p43/output",
+        "include_globs": [
+          "*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 1,
+        "changed_count": 6,
+        "status_counts": {
+          "structure_diff": 3,
+          "numeric_diff_within_tol": 1,
+          "identical": 1,
+          "numeric_diff_exceeds_tol": 2
+        },
+        "max_abs_any": 86400.0,
+        "max_rel_any": 1.0,
+        "top_changed_files": [
+          {
+            "path": "H43.pass.dat",
+            "status": "structure_diff",
+            "line_count_baseline": 72037,
+            "line_count_candidate": 72031,
+            "line_count_mismatch": 6,
+            "numeric_arity_mismatch_lines": 18966,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 481467,
+            "numeric_values_exceeding_tolerance": 164162,
+            "max_abs_diff": 86400.0,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H43.ebe.dat",
+            "status": "structure_diff",
+            "line_count_baseline": 17940,
+            "line_count_candidate": 17936,
+            "line_count_mismatch": 4,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 251067,
+            "numeric_values_exceeding_tolerance": 34768,
+            "max_abs_diff": 589.1,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H43.element.dat",
+            "status": "structure_diff",
+            "line_count_baseline": 210619,
+            "line_count_candidate": 210575,
+            "line_count_mismatch": 44,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 5474900,
+            "numeric_values_exceeding_tolerance": 439833,
+            "max_abs_diff": 315.99899999999997,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H43.soil.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 401781,
+            "line_count_candidate": 401781,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 6026625,
+            "numeric_values_exceeding_tolerance": 24137,
+            "max_abs_diff": 180.0,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H43.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 401803,
+            "line_count_candidate": 401803,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 10044377,
+            "numeric_values_exceeding_tolerance": 31202,
+            "max_abs_diff": 5.530000000000001,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H43.loss.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 514,
+            "line_count_candidate": 514,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 3421,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 2.0,
+            "max_rel_diff": 0.0002731494127287626
+          }
+        ],
+        "strict_pass": false
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p43/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p43/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 1,
+        "status_counts": {
+          "numeric_diff_exceeds_tol": 1
+        },
+        "max_abs_any": 5.530000000000001,
+        "max_rel_any": 1.0,
+        "top_changed_files": [
+          {
+            "path": "H43.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 401803,
+            "line_count_candidate": 401803,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 10044377,
+            "numeric_values_exceeding_tolerance": 31202,
+            "max_abs_diff": 5.530000000000001,
+            "max_rel_diff": 1.0
+          }
+        ],
+        "strict_pass": false
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p43/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p43/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 2,
+        "status_counts": {
+          "structure_diff": 1,
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 589.1,
+        "max_rel_any": 1.0,
+        "top_changed_files": [
+          {
+            "path": "H43.ebe.dat",
+            "status": "structure_diff",
+            "line_count_baseline": 17940,
+            "line_count_candidate": 17936,
+            "line_count_mismatch": 4,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 251067,
+            "numeric_values_exceeding_tolerance": 31987,
+            "max_abs_diff": 589.1,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H43.loss.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 514,
+            "line_count_candidate": 514,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 3421,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 2.0,
+            "max_rel_diff": 0.0002731494127287626
+          }
+        ],
+        "strict_pass": false
+      }
+    },
+    {
+      "case": "watch-p45",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p45/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p45/output",
+        "include_globs": [
+          "*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 1,
+        "changed_count": 6,
+        "status_counts": {
+          "numeric_diff_exceeds_tol": 4,
+          "numeric_diff_within_tol": 1,
+          "structure_diff": 1,
+          "identical": 1
+        },
+        "max_abs_any": 3600.0,
+        "max_rel_any": 1.0,
+        "top_changed_files": [
+          {
+            "path": "H45.pass.dat",
+            "status": "structure_diff",
+            "line_count_baseline": 54641,
+            "line_count_candidate": 54641,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 84,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 433493,
+            "numeric_values_exceeding_tolerance": 3353,
+            "max_abs_diff": 3600.0,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H45.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 438328,
+            "line_count_candidate": 438328,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 10957502,
+            "numeric_values_exceeding_tolerance": 83145,
+            "max_abs_diff": 7.310000000000002,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H45.element.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 132122,
+            "line_count_candidate": 132122,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 3435122,
+            "numeric_values_exceeding_tolerance": 1680,
+            "max_abs_diff": 5.714000000000002,
+            "max_rel_diff": 0.33351035581518856
+          },
+          {
+            "path": "H45.soil.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 438306,
+            "line_count_candidate": 438306,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 6574500,
+            "numeric_values_exceeding_tolerance": 72061,
+            "max_abs_diff": 3.629999999999999,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H45.loss.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 531,
+            "line_count_candidate": 531,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 3702,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.3499999999985448,
+            "max_rel_diff": 3.866303234159139e-05
+          },
+          {
+            "path": "H45.ebe.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 9203,
+            "line_count_candidate": 9203,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 128805,
+            "numeric_values_exceeding_tolerance": 20,
+            "max_abs_diff": 0.2999999999999998,
+            "max_rel_diff": 0.5
+          }
+        ],
+        "strict_pass": false
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p45/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p45/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 1,
+        "status_counts": {
+          "numeric_diff_exceeds_tol": 1
+        },
+        "max_abs_any": 7.310000000000002,
+        "max_rel_any": 1.0,
+        "top_changed_files": [
+          {
+            "path": "H45.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 438328,
+            "line_count_candidate": 438328,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 10957502,
+            "numeric_values_exceeding_tolerance": 83145,
+            "max_abs_diff": 7.310000000000002,
+            "max_rel_diff": 1.0
+          }
+        ],
+        "strict_pass": false
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p45/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p45/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 2,
+        "status_counts": {
+          "numeric_diff_exceeds_tol": 1,
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 0.3499999999985448,
+        "max_rel_any": 0.5,
+        "top_changed_files": [
+          {
+            "path": "H45.loss.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 531,
+            "line_count_candidate": 531,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 3702,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.3499999999985448,
+            "max_rel_diff": 3.866303234159139e-05
+          },
+          {
+            "path": "H45.ebe.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 9203,
+            "line_count_candidate": 9203,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 128805,
+            "numeric_values_exceeding_tolerance": 5,
+            "max_abs_diff": 0.2999999999999998,
+            "max_rel_diff": 0.5
+          }
+        ],
+        "strict_pass": false
+      }
+    },
+    {
+      "case": "watch-p49",
+      "all_outputs_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p49/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p49/output",
+        "include_globs": [
+          "*"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 7,
+        "candidate_file_count": 7,
+        "common_file_count": 7,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 1,
+        "changed_count": 6,
+        "status_counts": {
+          "numeric_diff_exceeds_tol": 4,
+          "numeric_diff_within_tol": 1,
+          "structure_diff": 1,
+          "identical": 1
+        },
+        "max_abs_any": 86400.0,
+        "max_rel_any": 1.0,
+        "top_changed_files": [
+          {
+            "path": "H49.pass.dat",
+            "status": "structure_diff",
+            "line_count_baseline": 47235,
+            "line_count_candidate": 47237,
+            "line_count_mismatch": 2,
+            "numeric_arity_mismatch_lines": 11248,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 265127,
+            "numeric_values_exceeding_tolerance": 95502,
+            "max_abs_diff": 86400.0,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H49.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 474853,
+            "line_count_candidate": 474853,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 11870627,
+            "numeric_values_exceeding_tolerance": 125845,
+            "max_abs_diff": 6.940000000000012,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H49.element.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 102117,
+            "line_count_candidate": 102117,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 2654992,
+            "numeric_values_exceeding_tolerance": 2536,
+            "max_abs_diff": 5.451999999999998,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H49.soil.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 474831,
+            "line_count_candidate": 474831,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 7122375,
+            "numeric_values_exceeding_tolerance": 79339,
+            "max_abs_diff": 2.6100000000000065,
+            "max_rel_diff": 0.9411764705882353
+          },
+          {
+            "path": "H49.ebe.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 5852,
+            "line_count_candidate": 5852,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 81891,
+            "numeric_values_exceeding_tolerance": 12,
+            "max_abs_diff": 1.0,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H49.loss.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 566,
+            "line_count_candidate": 566,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 4003,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.3999999999978172,
+            "max_rel_diff": 2.4077819512643032e-05
+          }
+        ],
+        "strict_pass": false
+      },
+      "water_1pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p49/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p49/output",
+        "include_globs": [
+          "*.wat.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.01,
+        "baseline_file_count": 1,
+        "candidate_file_count": 1,
+        "common_file_count": 1,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 1,
+        "status_counts": {
+          "numeric_diff_exceeds_tol": 1
+        },
+        "max_abs_any": 6.940000000000012,
+        "max_rel_any": 1.0,
+        "top_changed_files": [
+          {
+            "path": "H49.wat.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 474853,
+            "line_count_candidate": 474853,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 11870627,
+            "numeric_values_exceeding_tolerance": 125845,
+            "max_abs_diff": 6.940000000000012,
+            "max_rel_diff": 1.0
+          }
+        ],
+        "strict_pass": false
+      },
+      "erosion_10pct": {
+        "baseline_dir": "/tmp/wepp-parity-linux-261010/watch-p49/output",
+        "candidate_dir": "/tmp/wepp-parity-win-hill-legacy-261010/watch-p49/output",
+        "include_globs": [
+          "*.ebe.dat",
+          "*.loss.dat"
+        ],
+        "exclude_globs": [],
+        "abs_tolerance": 1e-09,
+        "rel_tolerance": 0.1,
+        "baseline_file_count": 2,
+        "candidate_file_count": 2,
+        "common_file_count": 2,
+        "only_baseline_count": 0,
+        "only_candidate_count": 0,
+        "only_baseline_examples": [],
+        "only_candidate_examples": [],
+        "identical_count": 0,
+        "changed_count": 2,
+        "status_counts": {
+          "numeric_diff_exceeds_tol": 1,
+          "numeric_diff_within_tol": 1
+        },
+        "max_abs_any": 1.0,
+        "max_rel_any": 1.0,
+        "top_changed_files": [
+          {
+            "path": "H49.ebe.dat",
+            "status": "numeric_diff_exceeds_tol",
+            "line_count_baseline": 5852,
+            "line_count_candidate": 5852,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 81891,
+            "numeric_values_exceeding_tolerance": 2,
+            "max_abs_diff": 1.0,
+            "max_rel_diff": 1.0
+          },
+          {
+            "path": "H49.loss.dat",
+            "status": "numeric_diff_within_tol",
+            "line_count_baseline": 566,
+            "line_count_candidate": 566,
+            "line_count_mismatch": 0,
+            "numeric_arity_mismatch_lines": 0,
+            "text_mismatch_lines": 0,
+            "numeric_values_compared": 4003,
+            "numeric_values_exceeding_tolerance": 0,
+            "max_abs_diff": 0.3999999999978172,
+            "max_rel_diff": 2.4077819512643032e-05
+          }
+        ],
+        "strict_pass": false
+      }
+    }
+  ]
+}

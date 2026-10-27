@@ -1,0 +1,11 @@
+Windows
+AMD64
+USE_MULTIPROCESSING True
+project run_id C:\tmp\wepp-windows-261027\bootstrap-smoke\project
+cleaning output dir
+  1 completed run in 0.14359092712402344s
+
+runs_dir C:\tmp\wepp-windows-261027\bootstrap-smoke\project\wepp/runs
+completed watershed run in 1.566042423248291
+BaseflowOpts(gwstorage=0.0, bfcoeff=0.04, dscoeff=0.0, bfthreshold=1.0)
+done

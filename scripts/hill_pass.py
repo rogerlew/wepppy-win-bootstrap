@@ -36,6 +36,13 @@ class HillPass:
         with open(fn) as fp:
             lines = fp.readlines()
 
+        # Version 3 retains the legacy daily records and adds source metadata.
+        # This reader derives daily sediment totals from those legacy records.
+        if lines and lines[0].strip().startswith('WEPP_PASS_COMPONENTS'):
+            if lines[0].strip() != 'WEPP_PASS_COMPONENTS 3':
+                raise ValueError(f"Unsupported PASS components header: {lines[0].strip()}")
+            lines = lines[1:]
+
         wshcli = lines[0]
         nyr, byr = [int(v) for v in lines[1].split()]
         harea = float(lines[2])

@@ -1,0 +1,89 @@
+{
+  "baseline": {
+    "label": "/tmp/wepp-gcc133-probe/single-daily",
+    "resolved_root": "/tmp/wepp-gcc133-probe/single-daily"
+  },
+  "candidate": {
+    "label": "/tmp/wepp-feasibility-scalar-tmpfun",
+    "resolved_root": "/tmp/wepp-feasibility-scalar-tmpfun"
+  },
+  "settings": {
+    "runs_root": "/wc1/runs",
+    "output_subdir": "output",
+    "include_globs": [
+      "H1.*"
+    ],
+    "exclude_globs": [],
+    "abs_tolerance": 0.0,
+    "rel_tolerance": 0.0,
+    "top_n": 20
+  },
+  "raw": {
+    "baseline_dir": "/tmp/wepp-gcc133-probe/single-daily/output",
+    "candidate_dir": "/tmp/wepp-feasibility-scalar-tmpfun/output",
+    "include_globs": [
+      "H1.*"
+    ],
+    "exclude_globs": [],
+    "abs_tolerance": 0.0,
+    "rel_tolerance": 0.0,
+    "baseline_file_count": 7,
+    "candidate_file_count": 7,
+    "common_file_count": 7,
+    "only_baseline_count": 0,
+    "only_candidate_count": 0,
+    "only_baseline_examples": [],
+    "only_candidate_examples": [],
+    "identical_count": 4,
+    "changed_count": 3,
+    "status_counts": {
+      "identical": 4,
+      "numeric_diff_exceeds_tol": 3
+    },
+    "max_abs_any": 3600.0,
+    "max_rel_any": 0.09117539362870732,
+    "top_changed_files": [
+      {
+        "path": "H1.pass.dat",
+        "status": "numeric_diff_exceeds_tol",
+        "line_count_baseline": 1731,
+        "line_count_candidate": 1731,
+        "line_count_mismatch": 0,
+        "numeric_arity_mismatch_lines": 0,
+        "text_mismatch_lines": 0,
+        "numeric_values_compared": 13119,
+        "numeric_values_exceeding_tolerance": 12,
+        "max_abs_diff": 3600.0,
+        "max_rel_diff": 0.09091388493381852
+      },
+      {
+        "path": "H1.element.dat",
+        "status": "numeric_diff_exceeds_tol",
+        "line_count_baseline": 241,
+        "line_count_candidate": 241,
+        "line_count_mismatch": 0,
+        "numeric_arity_mismatch_lines": 0,
+        "text_mismatch_lines": 0,
+        "numeric_values_compared": 6216,
+        "numeric_values_exceeding_tolerance": 6,
+        "max_abs_diff": 1.0,
+        "max_rel_diff": 0.09117539362870732
+      },
+      {
+        "path": "H1.wat.dat",
+        "status": "numeric_diff_exceeds_tol",
+        "line_count_baseline": 1489,
+        "line_count_candidate": 1489,
+        "line_count_mismatch": 0,
+        "numeric_arity_mismatch_lines": 0,
+        "text_mismatch_lines": 0,
+        "numeric_values_compared": 36527,
+        "numeric_values_exceeding_tolerance": 3,
+        "max_abs_diff": 9.999999999621423e-06,
+        "max_rel_diff": 7.356416540894539e-07
+      }
+    ],
+    "strict_pass": false
+  },
+  "strict_pass": false
+}

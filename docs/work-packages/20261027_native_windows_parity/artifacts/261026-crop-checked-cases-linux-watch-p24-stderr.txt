@@ -1,0 +1,13 @@
+At line 1094 of file contin.for
+Fortran runtime error: Index '31' of dimension 1 of array 'ui_epht' above upper bound of 30
+
+Error termination. Backtrace:
+#0  0x7d82e1023e59 in ???
+#1  0x7d82e1024a71 in ???
+#2  0x7d82e1025082 in ???
+#3  0x41b92f in contin_
+	at /tmp/native-parity-20261027/261026/crop-checked/src/contin.for:1094
+#4  0x477325 in MAIN__
+	at /tmp/native-parity-20261027/261026/crop-checked/src/main.for:381
+#5  0x4023b8 in main
+	at /tmp/native-parity-20261027/261026/crop-checked/src/main.for:585

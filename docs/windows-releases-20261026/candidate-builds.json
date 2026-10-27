@@ -1,0 +1,50 @@
+[
+  {
+    "release_tag": "261010",
+    "role": "hillslope",
+    "source_commit": "7471bb5e981d14d0b8c1cdb88a16af305aed1b67",
+    "source_branch": "wepp_260430_negmeltfix_comparator",
+    "candidate_sha256": "4d84ffb13ccbb77c8c77787b5cdd3b27012b7292056be664b37810633bf0c892",
+    "compiler": "GNU Fortran 16.1.0 MSYS2 UCRT64",
+    "linux_reference_sha256": "d8ea3a07a29ef1e754c5362bd7931cc3a93486d75faa32df5c5f2e821c22d698",
+    "source_archive_sha256": "a1e3ea6cdd97b7f71b4963c021afdc8fb432c5c4cba62ad6f488cbbbb52a9fc9",
+    "vendored": false,
+    "status": "candidate; numerical parity not established"
+  },
+  {
+    "release_tag": "261010",
+    "role": "hillslope",
+    "source_commit": "7471bb5e981d14d0b8c1cdb88a16af305aed1b67",
+    "source_branch": "wepp_260430_negmeltfix_comparator",
+    "candidate_sha256": "96f26ed37a6e204b3babfd6d37b01f4ac7b026dfe4550f6eb116efde43b77c2b",
+    "compiler": "GNU Fortran 13.3.0 WinLibs UCRT",
+    "linux_reference_sha256": "d8ea3a07a29ef1e754c5362bd7931cc3a93486d75faa32df5c5f2e821c22d698",
+    "source_archive_sha256": "a1e3ea6cdd97b7f71b4963c021afdc8fb432c5c4cba62ad6f488cbbbb52a9fc9",
+    "vendored": false,
+    "status": "candidate; numerical parity not established"
+  },
+  {
+    "release_tag": "261021",
+    "role": "hillslope",
+    "source_commit": "d354e3c998f81955f9d9e5ca7d01ca56e1a9f04b",
+    "source_branch": "wepp_260430_negmeltfix_comparator",
+    "candidate_sha256": "52d72dc0ca59f6d922beb0be973fc25283b8cad44b870f5daaea14172cc9a09f",
+    "compiler": "GNU Fortran 16.1.0 MSYS2 UCRT64",
+    "linux_reference_sha256": "81591bf0301604aa25002d641e3c8e5d22e15c747b179f1613e7c329233f4965",
+    "source_archive_sha256": "cdbcf4b266e89fe3b6c817698d28e6ae8708a51077f0a422b3331a98193c35a5",
+    "vendored": false,
+    "status": "candidate; numerical parity not established"
+  },
+  {
+    "release_tag": "261021",
+    "role": "hillslope",
+    "source_commit": "d354e3c998f81955f9d9e5ca7d01ca56e1a9f04b",
+    "source_branch": "wepp_260430_negmeltfix_comparator",
+    "candidate_sha256": "4e7532f438fc1e247a84ecb338058605ceac9983910818142381cc563324fd83",
+    "compiler": "GNU Fortran 13.3.0 WinLibs UCRT",
+    "linux_reference_sha256": "81591bf0301604aa25002d641e3c8e5d22e15c747b179f1613e7c329233f4965",
+    "source_archive_sha256": "cdbcf4b266e89fe3b6c817698d28e6ae8708a51077f0a422b3331a98193c35a5",
+    "vendored": false,
+    "status": "candidate; numerical parity not established"
+  }
+]

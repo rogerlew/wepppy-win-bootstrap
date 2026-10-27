@@ -1,0 +1,17 @@
+At line 1094 of file contin.for
+Fortran runtime error: Index '31' of dimension 1 of array 'ui_epht' above upper bound of 30
+
+Error termination. Backtrace:
+
+Could not print backtrace: libbacktrace could not find executable to open
+#0  0xb5777b8a
+#1  0xb5770961
+#2  0xb576c8ba
+#3  0xb5675bf2
+#4  0xb56d2d11
+#5  0xb578f869
+#6  0xb566133f
+#7  0xb5661145
+#8  0x279edda6
+#9  0x28bdee4b
+#10  0xffffffff

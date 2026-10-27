@@ -1,0 +1,68 @@
+[
+  {
+    "tag": "261010",
+    "case": "single-daily",
+    "files": 7,
+    "same_text": [
+      "H1.soil.dat",
+      "H1.pass.dat",
+      "H1.loss.dat",
+      "H1.ebe.dat",
+      "H1.element.dat",
+      "H1.plot.dat"
+    ],
+    "different_text": [
+      "H1.wat.dat"
+    ],
+    "extra": []
+  },
+  {
+    "tag": "261010",
+    "case": "watch-p24",
+    "files": 7,
+    "same_text": [],
+    "different_text": [
+      "H24.soil.dat",
+      "H24.wat.dat",
+      "H24.ebe.dat",
+      "H24.element.dat",
+      "H24.plot.dat",
+      "H24.pass.dat",
+      "H24.loss.dat"
+    ],
+    "extra": []
+  },
+  {
+    "tag": "261026",
+    "case": "single-daily",
+    "files": 7,
+    "same_text": [
+      "H1.soil.dat",
+      "H1.pass.dat",
+      "H1.loss.dat",
+      "H1.ebe.dat",
+      "H1.element.dat",
+      "H1.plot.dat"
+    ],
+    "different_text": [
+      "H1.wat.dat"
+    ],
+    "extra": []
+  },
+  {
+    "tag": "261026",
+    "case": "watch-p24",
+    "files": 7,
+    "same_text": [],
+    "different_text": [
+      "H24.soil.dat",
+      "H24.wat.dat",
+      "H24.ebe.dat",
+      "H24.element.dat",
+      "H24.plot.dat",
+      "H24.pass.dat",
+      "H24.loss.dat"
+    ],
+    "extra": []
+  }
+]

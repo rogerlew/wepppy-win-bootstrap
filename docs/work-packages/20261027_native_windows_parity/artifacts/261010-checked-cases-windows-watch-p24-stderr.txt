@@ -1,0 +1,19 @@
+At line 72 of file pmetcoef.for
+Fortran runtime error: Index '7' of dimension 1 of array 'kcb' above upper bound of 6
+
+Error termination. Backtrace:
+
+Could not print backtrace: libbacktrace could not find executable to open
+#0  0x630a54aa
+#1  0x6309e281
+#2  0x6309a1da
+#3  0x63054031
+#4  0x62fecf3f
+#5  0x62fa2e0d
+#6  0x63001d41
+#7  0x630bd189
+#8  0x62f9133f
+#9  0x62f91145
+#10  0x279edda6
+#11  0x28bdee4b
+#12  0xffffffff

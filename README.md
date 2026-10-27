@@ -3,17 +3,27 @@ Acquire and Run weppcloud projects on Windows
 
 ## Current WEPP bootstrap binary contract
 
-- Current bootstrap source lineage: `wepp_260430`.
-- Required binary filename in this repo: `bin/wepppy-win-bootstrap.exe`.
-- Build host for this lane: `blarhg` (Windows).
+The native Windows release is **wepp_261027**, built with GNU Fortran/GCC 13.3.0
+on blarhg. WSL and a separately installed GNU runtime are not required.
 
-If you rebuild from `wepp_260430`, publish the executable with this exact name;
-`scripts/run_project.py` resolves this fixed path/name.
+- Hillslope executable: `bin/wepp_261027_hill.exe` (32 OFEs).
+- Watershed executable: `bin/wepp_261027.exe` (4,500 hillslopes, 1,500 channels,
+  6,000 elements). Its static BSS is approximately 183 MiB; allow additional
+  memory for execution and concurrent hillslopes.
+- `bin/wepppy-win-bootstrap.exe` is a byte-identical watershed compatibility alias.
+- Each binary has a JSON provenance/checksum sidecar. The runner selects the
+  matched versioned pair. Regenerate hillslope PASS files before watershed runs;
+  do not mix releases. Windows 261010 and 261026 are not distributed.
 
-This project assumes:
-  - You are on windows
-  - You have Python3 installed
-    - If you want to run the wy_calc postprocessing you will need numpy, scipy, pandas
+Validation includes 491 fresh hillslopes and a 211-channel watershed over the
+complete 2016–2024 period. All 3,443 model output files match the new Linux
+261027 baseline after line-ending normalization only. See
+[release validation](docs/windows-release-261027.md) for scope and reproduction.
+Use `--numcpu 1` for a conservative memory/concurrency setting.
+
+This project requires Python 3 with numpy and pandas; optional WY postprocessing
+also requires scipy. Historical Mac/Linux executable selections and the explicit
+revegetation option remain separate legacy releases.
 
 ## JWT Authentication (PowerUsers)
 

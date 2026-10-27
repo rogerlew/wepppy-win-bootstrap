@@ -1,0 +1,50 @@
+--- a/src/radcur.for
++++ b/src/radcur.for
+@@ -19,6 +19,8 @@
+ c
+ c     +++ARGUMENT DECLARATIONS+++
+       real     ratio,rdlat,decl
++      real parsin,parcos
++      external parsin,parcos
+       integer  day,hr
+ c
+ c     +++ARGUMENT DEFINITIONS+++
+@@ -52,8 +54,8 @@
+ 
+       dfact = ((2 * pi) * (day - 81)) / 365
+ 
+-      slrtm = (0.1645 * sin(2 * dfact)) - (0.1255 * cos(dfact)) -
+-     1        (0.025 * sin(dfact))
++      slrtm = (0.1645 * parsin(2 * dfact)) - (0.1255 * parcos(dfact)) -
++     1        (0.025 * parsin(dfact))
+ 
+       hasun = ((hr + slrtm) - 12) * (pi / 12)
+ 
+@@ -65,14 +67,23 @@
+ 
+       harise = hasun + (pi / 24)
+ 
+-      rdsun = 1 + 0.033 * cos((2 * pi * day) / 365)
++      rdsun = 1 + 0.033 * parcos((2 * pi * day) / 365)
+ 
+-      ratio = ((12 * 60) / pi) * solcon * rdsun * (cos(rdlat) *
+-     1         cos(decl) * (sin(harise) - sin(haset)) +
+-     2         (harise - haset) * sin(rdlat) * sin(decl))
++      ratio = ((12 * 60) / pi) * solcon * rdsun * (parcos(rdlat) *
++     1         parcos(decl) * (parsin(harise) - parsin(haset)) +
++     2         (harise - haset) * parsin(rdlat) * parsin(decl))
+ 
+       if (ratio .lt. 0.0) ratio = 0.0
+ 
+       return
+ 
+       end
++
++      real function parsin(x)
++      real x
++      parsin = real(dsin(dble(x)))
++      end
++      real function parcos(x)
++      real x
++      parcos = real(dcos(dble(x)))
++      end

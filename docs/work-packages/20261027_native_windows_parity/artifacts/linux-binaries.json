@@ -1,0 +1,50 @@
+[
+  {
+    "tag": "261010",
+    "lane": "diagnostic",
+    "path": "/tmp/native-parity-20261027/261010/diagnostic/wepp_261010_hill",
+    "sha256": "0a0fcbda549024c119c0896427231ac67e25c7a892361a49127cb217d1750aa2"
+  },
+  {
+    "tag": "261010",
+    "lane": "radtrig",
+    "path": "/tmp/native-parity-20261027/261010/radtrig/wepp_261010_hill",
+    "sha256": "70b017f42d1a44344b844ae5bfecc187b9718ae2e0cc220dc009c34c7a2e78f6"
+  },
+  {
+    "tag": "261026",
+    "lane": "baseline",
+    "path": "/tmp/native-parity-20261027/261026/baseline/wepp_261026_hill",
+    "sha256": "3d0f15a6d6b64a93db53929bae1d4c68fa24258e2100ef272d269b6b8098f6c3"
+  },
+  {
+    "tag": "261026",
+    "lane": "diagnostic",
+    "path": "/tmp/native-parity-20261027/261026/diagnostic/wepp_261026_hill",
+    "sha256": "0194ac285672124deb9b25891758dde02154a053a2b93e02b5df7d89cb3c8f0f"
+  },
+  {
+    "tag": "261026",
+    "lane": "observe",
+    "path": "/tmp/native-parity-20261027/261026/observe/wepp_261026_hill",
+    "sha256": "b71ef9d08710710c3434245b4a51a6b50b04ca3181aadfe1268eabfb33200de6"
+  },
+  {
+    "tag": "261026",
+    "lane": "observe-radiation",
+    "path": "/tmp/native-parity-20261027/261026/observe-radiation/wepp_261026_hill",
+    "sha256": "8aafbd6015ffc89cbea5efc318a45ef0fe357fea39cc97a20a0318ced063e5f4"
+  },
+  {
+    "tag": "261026",
+    "lane": "crop-checked",
+    "path": "/tmp/native-parity-20261027/261026/crop-checked/wepp_261026_hill",
+    "sha256": "0c9ab4195244aa708e1e184612a06b7065c90dac4fb01da88f928d16bdab23fd"
+  },
+  {
+    "tag": "261026",
+    "lane": "radtrig",
+    "path": "/tmp/native-parity-20261027/261026/radtrig/wepp_261026_hill",
+    "sha256": "39a390703f6a7bd212deff277d367ad7f59e6319ac198f1299ccd5b3157bfc16"
+  }
+]

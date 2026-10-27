@@ -1,0 +1,86 @@
+{
+  "binary": "/workdir/wepppy/wepp_runner/bin/wepp_261021",
+  "bss_bytes": 14057566448,
+  "largest_common_blocks": [
+    {
+      "symbol": "inpman1_",
+      "bytes": 6301562000
+    },
+    {
+      "symbol": "rinpt1a_",
+      "bytes": 1801620000
+    },
+    {
+      "symbol": "inpman2_",
+      "bytes": 1801080000
+    },
+    {
+      "symbol": "yield_",
+      "bytes": 1800000000
+    },
+    {
+      "symbol": "cdrain_",
+      "bytes": 900480040
+    },
+    {
+      "symbol": "inpsur_",
+      "bytes": 900060000
+    },
+    {
+      "symbol": "chrt_",
+      "bytes": 87960048
+    },
+    {
+      "symbol": "crpvr1_",
+      "bytes": 72660000
+    },
+    {
+      "symbol": "gully_",
+      "bytes": 36360000
+    },
+    {
+      "symbol": "flgfs_",
+      "bytes": 30000052
+    },
+    {
+      "symbol": "avloss_",
+      "bytes": 18120036
+    },
+    {
+      "symbol": "sedld_",
+      "bytes": 18060412
+    },
+    {
+      "symbol": "slope1_",
+      "bytes": 18060000
+    },
+    {
+      "symbol": "rinpt1_",
+      "bytes": 16200004
+    },
+    {
+      "symbol": "outchn_",
+      "bytes": 13922436
+    },
+    {
+      "symbol": "peren_",
+      "bytes": 13620000
+    },
+    {
+      "symbol": "chpar_",
+      "bytes": 12540008
+    },
+    {
+      "symbol": "slope3_",
+      "bytes": 12060000
+    },
+    {
+      "symbol": "part2_",
+      "bytes": 12000000
+    },
+    {
+      "symbol": "wshed_",
+      "bytes": 9990120
+    }
+  ]
+}

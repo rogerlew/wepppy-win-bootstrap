@@ -1,0 +1,156 @@
+[
+  {
+    "case": "single-daily",
+    "card": "p1.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "single-hourly",
+    "card": "p1.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "equal-daily",
+    "card": "p1.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "equal-hourly",
+    "card": "p1.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "upper60-daily",
+    "card": "p1.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "upper60-hourly",
+    "card": "p1.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "lower60-daily",
+    "card": "p1.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "lower60-hourly",
+    "card": "p1.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "three-daily",
+    "card": "p1.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "three-hourly",
+    "card": "p1.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "watch-p24",
+    "card": "p24.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "watch-p1408",
+    "card": "p1408.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "watch-p258",
+    "card": "p258.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "watch-p1319",
+    "card": "p1319.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "watch-p13",
+    "card": "p13.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "watch-p14",
+    "card": "p14.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "watch-p25",
+    "card": "p25.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "watch-p27",
+    "card": "p27.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "watch-p40",
+    "card": "p40.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "watch-p43",
+    "card": "p43.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "watch-p45",
+    "card": "p45.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "case": "watch-p49",
+    "card": "p49.run",
+    "role": "hill",
+    "returncode": 0,
+    "passed": true
+  }
+]

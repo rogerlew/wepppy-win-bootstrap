@@ -1,0 +1,50 @@
+[
+    {
+        "tag":  "261010",
+        "lane":  "diagnostic",
+        "path":  "C:\\tmp\\native-parity-20261027\\261010\\diagnostic\\wepp_261010_hill.exe",
+        "sha256":  "8190b7aa82b801ad0dc6329c9760d5a58e06dffeabcc45a47e2e62e992470aef"
+    },
+    {
+        "tag":  "261010",
+        "lane":  "radtrig",
+        "path":  "C:\\tmp\\native-parity-20261027\\261010\\radtrig\\wepp_261010_hill.exe",
+        "sha256":  "835f5c775a1359928d6755d2660a86d2f49e4378766e68d0532d0000d1bd2b63"
+    },
+    {
+        "tag":  "261026",
+        "lane":  "baseline",
+        "path":  "C:\\tmp\\native-parity-20261027\\261026\\baseline\\wepp_261026_hill.exe",
+        "sha256":  "4e331b53c269a2144cd93f0629fac59359201d3b3d9277a202f2083093afd0a6"
+    },
+    {
+        "tag":  "261026",
+        "lane":  "diagnostic",
+        "path":  "C:\\tmp\\native-parity-20261027\\261026\\diagnostic\\wepp_261026_hill.exe",
+        "sha256":  "fb7ebd90acfbdae5324da786f605b82634a18addde7678d9c4ea8931e68bf5d5"
+    },
+    {
+        "tag":  "261026",
+        "lane":  "observe",
+        "path":  "C:\\tmp\\native-parity-20261027\\261026\\observe\\wepp_261026_hill.exe",
+        "sha256":  "431684d27766d620a24b1665b78ff590e96a15027e147ffe9a92856b0b64bcec"
+    },
+    {
+        "tag":  "261026",
+        "lane":  "observe-radiation",
+        "path":  "C:\\tmp\\native-parity-20261027\\261026\\observe-radiation\\wepp_261026_hill.exe",
+        "sha256":  "44f5e9bc295b7e9f19e0b17bc0fe77634cd288f20b30f799ce3d574158ca8b3a"
+    },
+    {
+        "tag":  "261026",
+        "lane":  "crop-checked",
+        "path":  "C:\\tmp\\native-parity-20261027\\261026\\crop-checked\\wepp_261026_hill.exe",
+        "sha256":  "a5447c3ccd3d503baa7b20a05d2e696df96935e97940d547276db48a9f3764f3"
+    },
+    {
+        "tag":  "261026",
+        "lane":  "radtrig",
+        "path":  "C:\\tmp\\native-parity-20261027\\261026\\radtrig\\wepp_261026_hill.exe",
+        "sha256":  "cafb91a4df2dbcb62d59f95b0e90dff09ae4df4b60fcbd4ae74ec65854221e2b"
+    }
+]

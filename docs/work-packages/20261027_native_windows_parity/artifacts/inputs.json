@@ -1,0 +1,147 @@
+[
+  {
+    "case": "single-daily",
+    "file": "snow.txt",
+    "sha256": "85216000b7c03edad6ab27b02bde39ca8c6c4f7736450e3974d74fd5aa6904ba"
+  },
+  {
+    "case": "single-daily",
+    "file": "pw0.cli",
+    "sha256": "9607ccf7625b27833a0a77ba0b0c940257ba16883915699ff445bef751ddda4c"
+  },
+  {
+    "case": "single-daily",
+    "file": "p1.sol",
+    "sha256": "12cae8452d0dba99d6c34c186e783440402c9c452491b55fd41b88d35e9d8e01"
+  },
+  {
+    "case": "single-daily",
+    "file": "p1.run",
+    "sha256": "4744f3cc4f58fb4151bf41f1a0c303e08de6f2fc75828d8fdbf4f07063b9d8d7"
+  },
+  {
+    "case": "single-daily",
+    "file": "chntyp.txt",
+    "sha256": "06acfc308b8308a3cfe717de49b9e80e7287ba52df00198fafdeb7153e724ec4"
+  },
+  {
+    "case": "single-daily",
+    "file": "gwcoeff.txt",
+    "sha256": "ec23463aad0cd1e3000d68b6af5a1a85a327d4952a239c92efeba060007eb7e8"
+  },
+  {
+    "case": "single-daily",
+    "file": "chan.inp",
+    "sha256": "f969814b32f6397c65166dc0c9bf932a2268ef52fe225f46f1683c4429ce51e7"
+  },
+  {
+    "case": "single-daily",
+    "file": "p1.man",
+    "sha256": "0fd3aa93454797ae72cf2550a4d311f816ae578cc9d6d1a81b27d0e234237e48"
+  },
+  {
+    "case": "single-daily",
+    "file": "tc.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "case": "single-daily",
+    "file": "p1.cli",
+    "sha256": "9607ccf7625b27833a0a77ba0b0c940257ba16883915699ff445bef751ddda4c"
+  },
+  {
+    "case": "single-daily",
+    "file": "pw0.imp",
+    "sha256": "d501d52f5d4468b1550051a0eef1de31272ba9ffe843d6c4cc3db9c7df15d9ce"
+  },
+  {
+    "case": "single-daily",
+    "file": "pw0.sol",
+    "sha256": "225321e4c2a038ca1ae9d49b94e06cfb522dec13aa1f1229f52786fcbe71bf65"
+  },
+  {
+    "case": "single-daily",
+    "file": "p1.slp",
+    "sha256": "7c8975d633e0a0cc31729b5059cc6eb7afe7edd713e0e6c699b4909cdd29b70d"
+  },
+  {
+    "case": "single-daily",
+    "file": "pw0.man",
+    "sha256": "9150e317ff1cedf544e545116c92817d8fbe66a52fb3ce928d85fb35196882a6"
+  },
+  {
+    "case": "single-daily",
+    "file": "pmetpara.txt",
+    "sha256": "f3a1c4b33c0854b8fb0b4ecf4a9d11691d2b1e63633828f8c4c20c92c5b0e69d"
+  },
+  {
+    "case": "single-daily",
+    "file": "pw0.slp",
+    "sha256": "00a41a52a1c456c6b43adc422be00d3a9f9ae9503586ca1e32aeca6d63aedff0"
+  },
+  {
+    "case": "single-daily",
+    "file": "pw0.chn",
+    "sha256": "c0e7dd11f6c943c02359cec26f430667c5ffa7f42281ea3a1953c2439228de5f"
+  },
+  {
+    "case": "single-daily",
+    "file": "pw0.run",
+    "sha256": "b6de7863e3ae049c789783543eb2e98a2d73fbbc27b25a25ffc9e868d8219d95"
+  },
+  {
+    "case": "single-daily",
+    "file": "pw0.str",
+    "sha256": "637ebdd5df65de9b95b1fe2136b836f9f7b83a60c463e275ec4c330bbdef01ca"
+  },
+  {
+    "case": "watch-p24",
+    "file": "snow.txt",
+    "sha256": "9ec38a41c59b81c2409a0cc430dad2c2f633948a1ed2e3a985eb63d3be16da19"
+  },
+  {
+    "case": "watch-p24",
+    "file": "gwcoeff.txt",
+    "sha256": "ec23463aad0cd1e3000d68b6af5a1a85a327d4952a239c92efeba060007eb7e8"
+  },
+  {
+    "case": "watch-p24",
+    "file": "p24.sol",
+    "sha256": "cc2c549a54200c8a40b96b0c8bb654bb95d30b27b272e2f4b822083be45944d4"
+  },
+  {
+    "case": "watch-p24",
+    "file": "p24.man",
+    "sha256": "5c34ae0cf0b024891b78c833d22fe4e5437bc3408123354a8b60b585afce54e8"
+  },
+  {
+    "case": "watch-p24",
+    "file": "p24.cli",
+    "sha256": "b3183e579d82e248d7670e8380d0afd5ea5e52ff2786e414b26d1aac2f46f102"
+  },
+  {
+    "case": "watch-p24",
+    "file": "pmetpara.txt",
+    "sha256": "2dd047dd4908b3fbf89b7a240b8de55a8208874cfbe8e4cc29e179160f512d0c"
+  },
+  {
+    "case": "watch-p24",
+    "file": "p24.slp",
+    "sha256": "3a55adc6e283d422973bbabf75513b2c29a3251466fcebf01eb507c2221cb59d"
+  },
+  {
+    "case": "watch-p24",
+    "file": "p24.err",
+    "sha256": "2ee307964680ba298a377fdb79bf83690cc64b04de309aa52307ed145756c4bf"
+  },
+  {
+    "case": "watch-p24",
+    "file": "wepp_ui.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "case": "watch-p24",
+    "file": "p24.run",
+    "sha256": "72b7f1474f11bf15f151cce79ba4c8dbf9b5a4a5a8593e5f7d6b484dec728d41"
+  }
+]

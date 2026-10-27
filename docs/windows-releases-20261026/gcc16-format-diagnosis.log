@@ -1,0 +1,11 @@
+Breakpoint 1 at 0x1400e069d
+[New Thread 16216.0x2b60]
+
+Thread 1 hit Breakpoint 1, 0x00007ff61b20069d in _gfortrani_format_error ()
+#0  0x00007ff61b20069d in _gfortrani_format_error ()
+#1  0x00007ff61b20d8a0 in data_transfer_init ()
+#2  0x00007ff61b18494e in outfil (lunp=0, luns=0, lunw=0, lun1=0) at outfil.for:208
+#3  0x00007ff61b12ed0f in contin (iwpass=1) at contin.for:430
+#4  0x0000000000000000 in ?? ()
+0x0:	<error: Cannot access memory at address 0x0>
+0x7ff61b253180 <comma_missing>:	'Missing comma between descriptors\000'

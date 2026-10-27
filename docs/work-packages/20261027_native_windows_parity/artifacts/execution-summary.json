@@ -1,0 +1,411 @@
+[
+  {
+    "tag": "261010",
+    "platform": "linux",
+    "lane": "reference-cases",
+    "passed": 2,
+    "failed": 0,
+    "cases": [
+      {
+        "case": "single-daily",
+        "card": "p1.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      },
+      {
+        "case": "watch-p24",
+        "card": "p24.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "tag": "261010",
+    "platform": "linux",
+    "lane": "diagnostic-cases",
+    "passed": 1,
+    "failed": 1,
+    "cases": [
+      {
+        "case": "single-daily",
+        "card": "p1.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      },
+      {
+        "case": "watch-p24",
+        "card": "p24.run",
+        "role": "hill",
+        "returncode": 2,
+        "passed": false
+      }
+    ]
+  },
+  {
+    "tag": "261010",
+    "platform": "linux",
+    "lane": "radtrig-cases",
+    "passed": 2,
+    "failed": 0,
+    "cases": [
+      {
+        "case": "single-daily",
+        "card": "p1.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      },
+      {
+        "case": "watch-p24",
+        "card": "p24.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "tag": "261010",
+    "platform": "windows",
+    "lane": "checked-cases",
+    "passed": 1,
+    "failed": 1,
+    "cases": [
+      {
+        "case": "single-daily",
+        "card": "p1.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      },
+      {
+        "case": "watch-p24",
+        "card": "p24.run",
+        "role": "hill",
+        "returncode": 2,
+        "passed": false
+      }
+    ]
+  },
+  {
+    "tag": "261010",
+    "platform": "windows",
+    "lane": "plain-cases",
+    "passed": 2,
+    "failed": 0,
+    "cases": [
+      {
+        "case": "single-daily",
+        "card": "p1.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      },
+      {
+        "case": "watch-p24",
+        "card": "p24.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "tag": "261010",
+    "platform": "windows",
+    "lane": "radtrig-cases",
+    "passed": 2,
+    "failed": 0,
+    "cases": [
+      {
+        "case": "single-daily",
+        "card": "p1.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      },
+      {
+        "case": "watch-p24",
+        "card": "p24.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "tag": "261026",
+    "platform": "linux",
+    "lane": "reference-cases",
+    "passed": 2,
+    "failed": 0,
+    "cases": [
+      {
+        "case": "single-daily",
+        "card": "p1.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      },
+      {
+        "case": "watch-p24",
+        "card": "p24.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "tag": "261026",
+    "platform": "linux",
+    "lane": "baseline-cases",
+    "passed": 2,
+    "failed": 0,
+    "cases": [
+      {
+        "case": "single-daily",
+        "card": "p1.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      },
+      {
+        "case": "watch-p24",
+        "card": "p24.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "tag": "261026",
+    "platform": "linux",
+    "lane": "observe-radiation-cases",
+    "passed": 1,
+    "failed": 0,
+    "cases": [
+      {
+        "case": "single-daily",
+        "card": "p1.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "tag": "261026",
+    "platform": "linux",
+    "lane": "diagnostic-cases",
+    "passed": 1,
+    "failed": 1,
+    "cases": [
+      {
+        "case": "single-daily",
+        "card": "p1.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      },
+      {
+        "case": "watch-p24",
+        "card": "p24.run",
+        "role": "hill",
+        "returncode": 2,
+        "passed": false
+      }
+    ]
+  },
+  {
+    "tag": "261026",
+    "platform": "linux",
+    "lane": "crop-checked-cases",
+    "passed": 1,
+    "failed": 1,
+    "cases": [
+      {
+        "case": "single-daily",
+        "card": "p1.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      },
+      {
+        "case": "watch-p24",
+        "card": "p24.run",
+        "role": "hill",
+        "returncode": 2,
+        "passed": false
+      }
+    ]
+  },
+  {
+    "tag": "261026",
+    "platform": "linux",
+    "lane": "observe-cases",
+    "passed": 1,
+    "failed": 0,
+    "cases": [
+      {
+        "case": "single-daily",
+        "card": "p1.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "tag": "261026",
+    "platform": "linux",
+    "lane": "radtrig-cases",
+    "passed": 2,
+    "failed": 0,
+    "cases": [
+      {
+        "case": "single-daily",
+        "card": "p1.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      },
+      {
+        "case": "watch-p24",
+        "card": "p24.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "tag": "261026",
+    "platform": "windows",
+    "lane": "observe-radiation-cases",
+    "passed": 1,
+    "failed": 0,
+    "cases": [
+      {
+        "case": "single-daily",
+        "card": "p1.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "tag": "261026",
+    "platform": "windows",
+    "lane": "checked-cases",
+    "passed": 1,
+    "failed": 1,
+    "cases": [
+      {
+        "case": "single-daily",
+        "card": "p1.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      },
+      {
+        "case": "watch-p24",
+        "card": "p24.run",
+        "role": "hill",
+        "returncode": 2,
+        "passed": false
+      }
+    ]
+  },
+  {
+    "tag": "261026",
+    "platform": "windows",
+    "lane": "plain-cases",
+    "passed": 2,
+    "failed": 0,
+    "cases": [
+      {
+        "case": "single-daily",
+        "card": "p1.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      },
+      {
+        "case": "watch-p24",
+        "card": "p24.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "tag": "261026",
+    "platform": "windows",
+    "lane": "crop-checked-cases",
+    "passed": 1,
+    "failed": 1,
+    "cases": [
+      {
+        "case": "single-daily",
+        "card": "p1.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      },
+      {
+        "case": "watch-p24",
+        "card": "p24.run",
+        "role": "hill",
+        "returncode": 2,
+        "passed": false
+      }
+    ]
+  },
+  {
+    "tag": "261026",
+    "platform": "windows",
+    "lane": "observe-cases",
+    "passed": 1,
+    "failed": 0,
+    "cases": [
+      {
+        "case": "single-daily",
+        "card": "p1.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "tag": "261026",
+    "platform": "windows",
+    "lane": "radtrig-cases",
+    "passed": 2,
+    "failed": 0,
+    "cases": [
+      {
+        "case": "single-daily",
+        "card": "p1.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      },
+      {
+        "case": "watch-p24",
+        "card": "p24.run",
+        "role": "hill",
+        "returncode": 0,
+        "passed": true
+      }
+    ]
+  }
+]

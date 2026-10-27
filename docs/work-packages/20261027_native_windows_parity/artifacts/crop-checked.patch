@@ -1,0 +1,21 @@
+--- a/src/pmetcoef.for
++++ b/src/pmetcoef.for
+@@ -27,6 +27,7 @@
+ c     + + + PARAMETERS + + +
+ c
+       include 'pmxcrp.inc'
++      include 'pntype.inc'
+       include 'ccrpet.inc'
+ c     readin: kcb
+ c
+--- a/src/ccrpet.inc
++++ b/src/ccrpet.inc
+@@ -4,7 +4,7 @@
+ c     + + + COMMON BLOCK DESCRIPTION + + +
+ c     + + + INSERT DESCRIPTION HERE  + + +
+ 
+-      common /crpet/kcb(mxcrop),rawp(mxcrop),kcbcon
++      common /crpet/kcb(ntype),rawp(ntype),kcbcon
+     
+ c     + + + VARIABLE DECLARATIONS + + +
+ 

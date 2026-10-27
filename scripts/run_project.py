@@ -64,6 +64,12 @@ if is_macos and is_arm64:
 if is_linux and is_x86_64:
     wepp_exe = os.path.abspath(_join(_thisdir, "../bin/wepp_a557997"))
 
+wepp_hill_exe = wepp_exe
+if platform.system() == "Windows":
+    wepp_exe = os.path.abspath(_join(_thisdir, "../bin/wepp_261027.exe"))
+    wepp_hill_exe = os.path.abspath(_join(_thisdir, "../bin/wepp_261027_hill.exe"))
+
+assert exists(wepp_hill_exe), f"Can't find wepp executable {wepp_hill_exe}"
 assert exists(wepp_exe), f"Can't find wepp executable {wepp_exe}"
 assert exists(wepp_reveg_exe), f"Can't find wepp executable {wepp_reveg_exe}"
 
@@ -79,8 +85,8 @@ def _sanitize_run_file(run_fn):
 
 
 def run_hillslope(wepp_id, runs_dir):
-    global wepp_exe
-    cmd = [wepp_exe]
+    global wepp_hill_exe
+    cmd = [wepp_hill_exe]
 
     t0 = time()
 
@@ -188,6 +194,7 @@ if __name__ == "__main__":
     revegetation = (args.revegetation, False)[args.revegetation is None]
     if revegetation:
         wepp_exe = wepp_reveg_exe
+        wepp_hill_exe = wepp_reveg_exe
     
     run_pmetpara_prep = (args.pmetpara_prep, False)[args.pmetpara_prep is None]
     run_phosphorus_prep = (args.phosphorus_prep, False)[args.phosphorus_prep is None]
@@ -228,7 +235,7 @@ if __name__ == "__main__":
     os.mkdir(output_dir)
 
     if USE_MULTIPROCESSING:
-        pool = ThreadPoolExecutor(NCPU)
+        pool = ThreadPoolExecutor(numcpu)
         futures = []
 
     for hillslope_run in hillslope_runs:

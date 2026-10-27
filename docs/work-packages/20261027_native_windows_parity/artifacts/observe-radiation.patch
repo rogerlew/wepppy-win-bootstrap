@@ -1,0 +1,64 @@
+--- a/src/winter.for
++++ b/src/winter.for
+@@ -284,7 +284,13 @@
+ c
+ c      -- Now we call the RADCUR routine to calc hourly radiation.
+ c
++       call wepp_observe('PAR_SUN',year,sdate,iplane,hour,0,
++     1   radlat,dsunmp)
+        call radcur(sdate,hour,radlat,dsunmp,cratio)
++       call wepp_observe('PAR_RAT',year,sdate,iplane,hour,0,
++     1   cratio,rpoth)
++       call wepp_observe('PAR_EST',year,sdate,iplane,hour,0,
++     1   estrad,halfdy)
+ c
+ c      -- Now we know the ratio of daily radiation to hourly radiation.
+ c      reza, in the next line hradmj is in MJ
+@@ -370,6 +376,10 @@
+ c -- passed back to the main WEPP model to account for erosion
+ c -- possibly taking place.
+ c
++         call wepp_observe('PAR_RAW',year,sdate,iplane,hour,0,
++     1     wmelt(iplane),hrtemp)
++         call wepp_observe('PAR_RAD',year,sdate,iplane,hour,0,
++     1     hradmj,snodpt(iplane))
+          hrmlt(hour,iplane)  = wmelt(iplane)
+ cd        wmelt(iplane) = wmelt(iplane) + hrrain(hour)
+        
+@@ -458,6 +468,8 @@
+            if(hrrain(hour).gt.0) then
+                hrmlt(hour,iplane)= hrmlt(hour,iplane) + hrrain(hour)              
+            endif
++           call wepp_observe('PAR_FIN',year,sdate,iplane,hour,0,
++     1       hrmlt(hour,iplane),hrrain(hour))
+            totmel = totmel + hrmlt(hour,iplane)
+ 50     continue
+ 
+--- a/src/wepp_observe.for
++++ b/src/wepp_observe.for
+@@ -18,6 +18,8 @@
+       data obs_checked /.false./, obs_on_cached /.false./
+ c
+ c     + + + END SPECIFICATIONS + + +
++      if (tag(1:3).ne.'PAR') return
++      if (sdate.lt.50.or.sdate.gt.53) return
+       lun = 99
+ 
+ c     Cache observe flag once per process to avoid repeated filesystem probes
+@@ -41,10 +43,16 @@
+ 
+       open(unit=lun,file='wepp_observe.log',status='unknown',
+      1  position='append',form='formatted')
++      if (tag(1:3).eq.'PAR') then
++        write(lun,1001) tag,year,sdate,ielmt,ichan,iseg,
++     1    transfer(v1,0),transfer(v2,0),v1,v2
++      else
+       write (lun,1000) tag, year, sdate, ielmt, ichan, iseg, v1, v2
++      endif
+       close(lun)
+ 
+       return
+  1000 format (a,' y=',i6,' d=',i4,' e=',i4,' c=',i4,' s=',i4,
+      1  ' v1=',1pe12.4,' v2=',1pe12.4)
++ 1001 format(a,5(1x,i8),2(1x,z8.8),2(1x,es24.16))
+       end

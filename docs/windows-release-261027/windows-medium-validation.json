@@ -1,0 +1,32 @@
+{
+  "hillslopes": 491,
+  "days_per_hill": 3288,
+  "channels": 211,
+  "channel_daily_rows": 693768,
+  "channel_columns": 27,
+  "finite_channel_values": true,
+  "negative_channel_values": 0,
+  "active_source_records": [
+    {
+      "hill": "H1.pass.dat",
+      "year": 2016,
+      "day": 1,
+      "rain_m3": 0.0,
+      "return_m3": 155.439362,
+      "return_support_s": 16997.48099352808
+    },
+    {
+      "hill": "H327.pass.dat",
+      "year": 2016,
+      "day": 2,
+      "rain_m3": 0.0,
+      "return_m3": 267.077698,
+      "return_support_s": 23091.49208354302
+    }
+  ],
+  "outlet_event_rows": 3288,
+  "last_outlet_event": "2024-12-31",
+  "reported_outlet_volume_m3": 62997745.60000005,
+  "reported_peak_m3s": 7.80228,
+  "scope": "Date/finite/source validation only; not independent whole-watershed water conservation"
+}

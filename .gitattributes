@@ -1,2 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Preserve original validation evidence bytes and executable checksums.
+bin/*.exe -text
+docs/work-packages/20261027_native_windows_parity/artifacts/** -text
+docs/windows-releases-20261026/** -text
+docs/windows-release-261027/** -text
