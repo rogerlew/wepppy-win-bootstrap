@@ -87,3 +87,20 @@ passed. Documentation lint reported zero errors or warnings. Model source is
 unchanged since the previously completed 537-test Linux release gate.
 
 Source release and complete medium-run evidence: [wepp-forest commit 10fe9af69](https://github.com/wepp-in-the-woods/wepp-forest/commit/10fe9af69).
+
+## Windows and Linux selection follow-up
+
+The bootstrap also vendors the original validated Linux `wepp_261027` and
+`wepp_261027_hill` binaries with unchanged JSON sidecars and SHA-256 hashes.
+Both Windows and Linux x86_64 now default to 261027. `--wepp_exec` selects a
+bundled name or explicit path; `--wepp_hill_exec` can select the matching custom
+hillslope executable. Both resolved paths are printed before execution. The
+legacy macOS ARM64 default remains separate.
+
+Validation: native Linux default selection and native Windows explicit 261027
+selection each completed the four-year single-daily project through CSV export.
+Linux ELF interpreters and runtime dependency resolution were verified. Selection
+tests cover both platform defaults, provenance, custom pairs, relative paths,
+unsupported defaults, missing binaries and preservation of existing output on
+selection errors. The existing 3,443-file medium parity evidence applies to the
+identical binaries; no model rebuild was performed.

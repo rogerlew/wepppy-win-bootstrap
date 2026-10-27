@@ -53,25 +53,10 @@ if NCPU < 1:
     
 USE_MULTIPROCESSING = True
 
-_thisdir = os.path.dirname(__file__)
+from wepp_executables import select_executables
 
-wepp_exe = os.path.abspath(_join(_thisdir, "../bin/wepppy-win-bootstrap.exe"))
-wepp_reveg_exe = os.path.abspath(_join(_thisdir, "../bin/wepp_reveg.exe"))
-
-if is_macos and is_arm64:
-    wepp_exe = os.path.abspath(_join(_thisdir, "../bin/wepp.arm64.mac"))
-
-if is_linux and is_x86_64:
-    wepp_exe = os.path.abspath(_join(_thisdir, "../bin/wepp_a557997"))
-
-wepp_hill_exe = wepp_exe
-if platform.system() == "Windows":
-    wepp_exe = os.path.abspath(_join(_thisdir, "../bin/wepp_261027.exe"))
-    wepp_hill_exe = os.path.abspath(_join(_thisdir, "../bin/wepp_261027_hill.exe"))
-
-assert exists(wepp_hill_exe), f"Can't find wepp executable {wepp_hill_exe}"
-assert exists(wepp_exe), f"Can't find wepp executable {wepp_exe}"
-assert exists(wepp_reveg_exe), f"Can't find wepp executable {wepp_reveg_exe}"
+wepp_exe = None
+wepp_hill_exe = None
 
 
 def _sanitize_run_file(run_fn):
@@ -171,7 +156,12 @@ if __name__ == "__main__":
                         help='run WY Calc postprocessing routine')   
     parser.add_argument('--no_multiprocessing',
                         help='Disable multiprocessing', action='store_true')  
-    parser.add_argument('--revegetation',
+    selection = parser.add_mutually_exclusive_group()
+    selection.add_argument('--wepp_exec', '--wepp-exec',
+                           help='Bundled name or executable path (default: wepp_261027 on Windows/Linux x86_64)')
+    parser.add_argument('--wepp_hill_exec', '--wepp-hill-exec',
+                        help='Hillslope executable path; defaults to the matching 261027 hill binary or the selected custom executable')
+    selection.add_argument('--revegetation',
                         help='Use WEPP Revegetation EXE', action='store_true')    
     parser.add_argument('--pmetpara_prep',
                         help='Build pmetpara.txt', action='store_true')    
@@ -192,9 +182,17 @@ if __name__ == "__main__":
         USE_MULTIPROCESSING = False
         
     revegetation = (args.revegetation, False)[args.revegetation is None]
-    if revegetation:
-        wepp_exe = wepp_reveg_exe
-        wepp_hill_exe = wepp_reveg_exe
+    if revegetation and args.wepp_hill_exec:
+        parser.error('--revegetation cannot be combined with --wepp_hill_exec')
+    if revegetation and platform.system() != 'Windows':
+        parser.error('The bundled revegetation executable requires Windows')
+    try:
+        wepp_exe, wepp_hill_exe = select_executables(
+            'wepp_reveg' if revegetation else args.wepp_exec, args.wepp_hill_exec)
+    except ValueError as error:
+        parser.error(str(error))
+    print(f'Watershed executable: {wepp_exe}')
+    print(f'Hillslope executable: {wepp_hill_exe}')
     
     run_pmetpara_prep = (args.pmetpara_prep, False)[args.pmetpara_prep is None]
     run_phosphorus_prep = (args.phosphorus_prep, False)[args.phosphorus_prep is None]

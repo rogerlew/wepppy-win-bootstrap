@@ -3,28 +3,33 @@ Acquire and Run weppcloud projects on Windows
 
 ## Current WEPP bootstrap binary contract
 
-The native Windows release is **wepp_261027**, built with GNU Fortran/GCC 13.3.0
-on blarhg. WSL and a separately installed GNU runtime are not required.
+The default release is **wepp_261027** on Windows and Linux x86_64. Both platforms
+use a matched watershed/hillslope pair built with GNU Fortran/GCC 13.3.0. Windows
+does not require WSL or a separately installed GNU runtime. Linux requires the
+system loader `/lib64/ld-linux-x86-64.so.2` and compatible runtime libraries
+including `libgfortran.so.5` (validated on Ubuntu 24.04).
 
-- Hillslope executable: `bin/wepp_261027_hill.exe` (32 OFEs).
-- Watershed executable: `bin/wepp_261027.exe` (4,500 hillslopes, 1,500 channels,
-  6,000 elements). Its static BSS is approximately 183 MiB; allow additional
-  memory for execution and concurrent hillslopes.
-- `bin/wepppy-win-bootstrap.exe` is a byte-identical watershed compatibility alias.
-- Each binary has a JSON provenance/checksum sidecar. The runner selects the
-  matched versioned pair. Regenerate hillslope PASS files before watershed runs;
-  do not mix releases. Windows 261010 and 261026 are not distributed.
+| Platform | Watershed | Hillslope | Watershed capacity |
+| --- | --- | --- | --- |
+| Windows x86_64 | `bin/wepp_261027.exe` | `bin/wepp_261027_hill.exe` | 4,500 hillslopes / 1,500 channels |
+| Linux x86_64 | `bin/wepp_261027` | `bin/wepp_261027_hill` | 45,000 hillslopes / 15,000 channels |
 
+Both hillslope executables support 32 OFEs. Each binary has a JSON provenance and
+checksum sidecar. `bin/wepppy-win-bootstrap.exe` remains a byte-identical Windows
+watershed alias. Windows 261010 and 261026 are not distributed.
+
+Regenerate hillslope PASS files before watershed runs; do not mix releases.
 Validation includes 491 fresh hillslopes and a 211-channel watershed over the
-complete 2016–2024 period. All 3,443 model output files match the new Linux
-261027 baseline after line-ending normalization only. See
-[release validation](docs/windows-release-261027.md) for scope and reproduction.
-Use `--numcpu 1` for a conservative memory/concurrency setting.
+complete 2016–2024 period. All 3,443 model output files match between these
+platforms after line-ending normalization only. See
+[release validation](docs/windows-release-261027.md).
+Use `--numcpu 1` for a conservative memory/concurrency setting. Windows watershed
+static BSS is approximately 183 MiB; Linux's larger capacity requires more memory.
 
-This project requires Python 3 with numpy and pandas; optional WY postprocessing
-also requires scipy. Historical Mac/Linux executable selections and the explicit
-revegetation option remain separate legacy releases.
-
+Python 3 with numpy and pandas is required; optional WY postprocessing also
+requires scipy. macOS ARM64 retains its legacy bundled default; 261027 is not
+provided for macOS or Linux ARM64. The revegetation option selects a separate
+legacy Windows release.
 ## JWT Authentication (PowerUsers)
 
 Some projects require JWT authentication to download. PowerUsers can obtain a JWT
@@ -131,12 +136,39 @@ e.g.
 python3 run_project.py C:\Users\roger\rlew-mucky-pepperoni --wy_calc_start_year 1989
 ```
 
+### Selecting the WEPP executable
+
+The runner prints the watershed and hillslope executable paths before running.
+These commands select the default matched 261027 pair on Windows or Linux:
+
+```bash
+python scripts/run_project.py /path/to/project --numcpu 1
+python scripts/run_project.py /path/to/project --wepp_exec wepp_261027 --numcpu 1
+```
+
+On Windows, use your project path, for example `C:\WEPP\my-project`; the `.exe`
+extension is added automatically for bundled names. Bare names resolve under
+this repository's `bin` directory. Use an absolute path or `./relative/path` for
+an external executable. Quote paths containing spaces.
+
+For a custom matched pair:
+
+```bash
+python scripts/run_project.py /path/to/project --wepp_exec /path/to/wepp --wepp_hill_exec /path/to/wepp_hill
+```
+
+For 261027, omitting `--wepp_hill_exec` selects its sibling hillslope binary.
+For other explicit executables, omitting it uses that executable for both modes.
+You are responsible for matching custom builds and platform compatibility.
+Missing executables are rejected before the output directory is cleared.
+`--revegetation` cannot be combined with executable overrides.
+
 ### Running Reveg for 9005 Soils
 
-To run the reveg wepp binary provide --reveg
+To run the reveg wepp binary provide --revegetation
 
 ```
-python run_project.py C:\Users\roger\Downloads\reasonable-acquirer --reveg
+python run_project.py C:\Users\roger\Downloads\reasonable-acquirer --revegetation
 ```
 
 ### pmetpara.txt prep
