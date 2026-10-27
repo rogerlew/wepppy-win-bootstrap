@@ -1,10 +1,12 @@
 import sys
-from urllib.request import urlopen, Request
+from http.client import HTTPException
 import zipfile
 import argparse
 import os
 from os.path import exists, expanduser
 from os.path import join as _join
+from urllib.error import URLError
+from download_http import DownloadError, open_download
 
 if __name__ == "__main__":
 
@@ -30,21 +32,26 @@ if __name__ == "__main__":
 
     # Read JWT token from ~/.weppcloud_jwt if it exists
     jwt_path = expanduser('~/.weppcloud_jwt')
-    headers = {}
+    jwt_token = ''
     if exists(jwt_path):
         with open(jwt_path) as f:
             jwt_token = f.read().strip()
         if jwt_token:
-            headers['Authorization'] = 'Bearer ' + jwt_token
             print('using JWT authentication')
 
     fname = _join(destination, "{wd}.zip".format(wd=wd))
     print("attempting to download", wd)
 
     url = url_template.format(wd=wd)
-    req = Request(url, headers=headers)
-    response = urlopen(req)
-    data = response.read()
+    try:
+        with open_download(url, jwt_token) as response:
+            data = response.read()
+    except DownloadError as error:
+        print(f'Download failed: {error}', file=sys.stderr)
+        sys.exit(1)
+    except (OSError, URLError, HTTPException) as error:
+        print(f'Download failed: {type(error).__name__}. Check connectivity and local file access.', file=sys.stderr)
+        sys.exit(1)
     print('download complete')
 
     print('saving archive')

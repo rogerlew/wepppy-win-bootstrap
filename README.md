@@ -39,13 +39,14 @@ will work for public projects).
 ## Downloading a project with aria2c
 
 Use [wget_download_weppcloud_project_noprep.bat](scripts/wget_download_weppcloud_project_noprep.bat)
-on Windows. Despite its name, this script uses the bundled `wget.exe` only to fetch
-`/weppcloud/runs/<run_id>/cfg/aria2c.spec`; `aria2c.exe` downloads the files listed
-in that manifest with up to 10 concurrent downloads.
+on Windows. The wrapper uses Python's standard library to fetch
+`/weppcloud/runs/<run_id>/cfg/aria2c.spec`; bundled `aria2c.exe` downloads the listed
+files with up to 10 concurrent downloads. The shell wrapper uses the same Python
+client and an installed `aria2c`.
 
 From PowerShell or Command Prompt, change to the repository's `scripts` directory
-so the bundled executables can be found. Replace `YOUR_RUN_ID` with a current run
-ID and choose a destination path without spaces:
+with Python available on PATH (activate your Python/Conda environment first).
+Replace `YOUR_RUN_ID` with a current run ID; quote destination paths with spaces:
 
 ```powershell
 cd scripts
@@ -59,21 +60,34 @@ prep-details endpoint and crawled HTML browse pages.
 
 ### Checking the download
 
-Check that the manifest request succeeds, aria2c reports completed downloads,
-and the expected project files exist in the destination. The batch script
-currently continues after a failed manifest request and can return exit code 0
-with `No files to download`; that message alone does not confirm success.
+Check that aria2c reports completed downloads, the script exits with code 0, and
+the expected files exist. Failed manifest requests print the server's explanation,
+error code and request ID when supplied, return nonzero and never launch aria2c.
+A validated inventory remains available as `<run_id>_aria2c.spec` in the current
+directory. aria2c consumes a private copy of the current response, preventing
+reuse of an earlier failed/stale response.
+An actual empty HTTP 200 manifest is reported explicitly as an empty project.
+
+Failed file transfers retain aria2c's nonzero exit and partial download files.
+The client rechecks up to ten failed URLs with a one-byte range request (ten-second
+socket inactivity timeout each) to obtain HTTP error details that aria2c does not display. If a
+recheck succeeds, the original download still counts as failed. Rerunning the
+command uses aria2c's existing resume behavior. Diagnostic responses are bounded
+to 8 KiB; credentials and terminal control characters are removed from messages.
 
 - **HTTP 401:** Check the JWT setup above and your access to the run.
 - **HTTP 404:** Verify the run ID and manifest URL.
-- **HTTP 500 or a stalled manifest request:** Report the run URL and downloader
-  output so the server request can be investigated. aria2c cannot download the
-  project until a valid manifest is available.
+- **HTTP 500:** Report the displayed message, error code and request ID. For
+  `server_configuration_error`, the service operator must repair the named
+  configuration; changing the project or refreshing the user's token will not
+  repair a missing server secret. Never send your JWT to support.
+- **Timeout or interrupted transfer:** The command fails; check connectivity and
+  retry. A server/proxy that provides no diagnostic body is reported explicitly.
 
-Windows validation on October 26, 2026 reached the manifest request for
-`animal-misgiving` using JWT authentication, but the request stalled. A separate
-curl request timed out after 45 seconds without receiving data. A successful
-end-to-end download has not yet been verified.
+October 27 validation exercises local HTTP failures and exact-byte successful
+downloads using native Windows Python and the bundled aria2c, including space
+and Unicode filenames. This is client validation, not a production deployment
+claim. Regression command: `python -m unittest discover -s tests -v`.
 
 ## Legacy Python downloader
 
@@ -81,6 +95,9 @@ end-to-end download has not yet been verified.
 the legacy `/weppcloud/runs/<run_id>/0/archive/` endpoint. HTTP 404 failures have
 been reported with this downloader; use the aria2c workflow above for project
 downloads.
+
+The legacy client also prints HTTP failure details and returns nonzero before
+writing or extracting an archive; its endpoint selection is unchanged.
 
 ## Running a project
 
