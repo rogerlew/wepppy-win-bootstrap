@@ -1,0 +1,52 @@
+{
+  "command": [
+    "C:\\Users\\roger\\miniconda3\\python.exe",
+    "C:\\tmp\\wepp-261029-windows-20261105\\bootstrap-validation-v2\\scripts\\run_project.py",
+    "C:\\tmp\\wepp-261029-windows-20261105\\bootstrap-project-v2",
+    "--wepp_exec",
+    "wepp_261029",
+    "--numcpu",
+    "1"
+  ],
+  "native_platform": "win32",
+  "csv_rows": 1461,
+  "csv_columns": [
+    "Year",
+    "Month",
+    "Day",
+    "Julian",
+    "Water Year",
+    "Sed Del (kg)",
+    "Sed Del c1 (kg)",
+    "Sed Del c2 (kg)",
+    "Sed Del c3 (kg)",
+    "Sed Del c4 (kg)",
+    "Sed Del c5 (kg)",
+    "Cumulative Sed Del (tonnes)",
+    "Sed Del Density (tonne/ha)",
+    "Precipitation (mm)",
+    "Rain + Melt (mm)",
+    "Transpiration (mm)",
+    "Evaporation (mm)",
+    "ET (mm)",
+    "Percolation (mm)",
+    "Runoff (mm)",
+    "Lateral Flow (mm)",
+    "Storage (mm)",
+    "Reservoir Volume (mm)",
+    "Baseflow (mm)",
+    "Aquifer Losses (mm)",
+    "Streamflow (mm)"
+  ],
+  "csv_sha256": "e83e425caec9a251211ebbeeb3f693a2665f9be734c659a24743be3b28492a07",
+  "csv_bytes": 282372,
+  "csv_preamble_lines": 4,
+  "finite_numeric_values": true,
+  "calendar_start": "1980-01-01",
+  "calendar_end": "1983-12-31",
+  "passed": true,
+  "binary_sha256": {
+    "wepp_261029.exe": "9d7b34295e7fda97de9804b142d11604c404c548f9987e30f59af273f4747107",
+    "wepp_261029_hill.exe": "a1476ca5be83be3af429124426bee14511b4f1e8e93d17868395c50bad131d97"
+  }
+}

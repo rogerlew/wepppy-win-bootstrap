@@ -1,0 +1,35 @@
+{
+  "small": {
+    "linux_files": 347,
+    "windows_files": 347,
+    "same_file_set": true,
+    "different_files": [],
+    "missing_windows": [],
+    "extra_windows": [],
+    "allowed_normalization": "CRLF to LF only",
+    "passed": true
+  },
+  "medium": {
+    "linux_files": 3443,
+    "windows_files": 3443,
+    "same_file_set": true,
+    "different_files": [],
+    "missing_windows": [],
+    "extra_windows": [],
+    "allowed_normalization": "CRLF to LF only",
+    "passed": true
+  },
+  "medium_inputs": {
+    "files": 2468,
+    "matched": true
+  },
+  "linux_executions": {
+    "count": 51,
+    "passed": true
+  },
+  "windows_executions": {
+    "count": 51,
+    "passed": true
+  },
+  "passed": true
+}

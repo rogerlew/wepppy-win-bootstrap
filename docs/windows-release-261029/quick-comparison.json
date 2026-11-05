@@ -1,0 +1,8 @@
+{
+  "executions_per_platform": 20,
+  "files_linux": 130,
+  "files_windows": 130,
+  "same_file_set": true,
+  "different_files": [],
+  "passed": true
+}

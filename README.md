@@ -30,6 +30,27 @@ Python 3 with numpy and pandas is required; optional WY postprocessing also
 requires scipy. macOS ARM64 retains its legacy bundled default; 261027 is not
 provided for macOS or Linux ARM64. The revegetation option selects a separate
 legacy Windows release.
+## Optional Windows WEPP 261029 release
+
+Native Windows x86_64 users can select the matched revision-7 pair explicitly:
+
+```powershell
+python scripts/run_project.py "C:\WEPP\my-project" --wepp_exec wepp_261029 --numcpu 1
+```
+
+The pair is `bin/wepp_261029.exe` and `bin/wepp_261029_hill.exe`, with checksum
+sidecars and registered hashes. It was built on blarhg from the accepted Linux
+revision-7 source. The quick parity check matched all 130 output files; the
+expanded suite matched 347 files and the full nine-year, 491-hillslope watershed
+matched all 3,443 files after CRLF normalization only. See the
+[261029 Windows validation record](docs/windows-release-261029.md).
+
+This is an additional Windows selection: the default and compatibility alias
+remain 261027, and `--revegetation` still selects the separate legacy release.
+261029 is not registered for Linux in this bootstrap. Regenerate the complete
+matched hillslope/PASS/watershed chain; do not mix same-name historical 261029
+artifacts. The revision-7 scientific limitations still apply.
+
 ## JWT Authentication (PowerUsers)
 
 Some projects require JWT authentication to download. PowerUsers can obtain a JWT

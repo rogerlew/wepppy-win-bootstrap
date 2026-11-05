@@ -1,0 +1,96 @@
+{
+  "artifact_revision": 7,
+  "binary_name": "wepp_261029_hill.exe",
+  "binary_role": "hillslope",
+  "build": {
+    "source_commit": "e0abe0581f77c6f66917e90daf8f8f429e9315c8",
+    "source_archive_sha256": "323a96dc36194c3893b17da261dc2a3585fe260d28ed2da1e6ee02922eb39215",
+    "compiler": "WinLibs GNU Fortran/GCC 13.3.0 UCRT",
+    "shell": "MSYS2 Bash",
+    "link_flags": "-mcmodel=medium -static",
+    "watershed_include_dir": "includes_windows",
+    "model_source_changes": false,
+    "command_record": "docs/work-packages/20261105_windows_261029/artifacts/build.sh"
+  },
+  "built_utc": "2026-11-05",
+  "capacity": {
+    "ofes": 32
+  },
+  "execution_calendar": {
+    "ascii_pass_daily_key_validation": true,
+    "climate_date_validation": true,
+    "policy": "proleptic-gregorian",
+    "regenerate_hillslope_and_watershed_outputs": true
+  },
+  "features": {
+    "hbp_pass_family": "H*.hbp",
+    "hbp_schema_major": 0,
+    "hbp_schema_minor": 0,
+    "hbp_supported": false,
+    "legacy_ascii_pass_family": "H*.pass.dat",
+    "mode2_direct_hbp_reader": false,
+    "mode2_master_pass_prompt_required": true,
+    "mode3_process_pass_reload": true,
+    "mofe_supported": true,
+    "pass_components_reader_required": true,
+    "pass_components_version": 3,
+    "process_mode_pass_pw0_required": true,
+    "single_user_defined_inputs_supported": true
+  },
+  "known_limitations": [
+    "Reference fire anniversary, differing canopy comparison/assignment, crop-wide root-depth mutation and logarithm domain behavior deliberately preserved; no field-calibration claim.",
+    "RAP supports continuous daily/hourly hillslope simulation; single-event RAP is explicitly rejected. Routing consumes matched passes without RAP reapplied.",
+    "No new FC/HK refresh schedule, retention default, thermal recalibration or full water-conservation claim.",
+    "Prior Roads screen remains unmet:744/840 passed,96failed. Historical counts are not fresh revision7 campaign results.",
+    "No deployment, executable-default switch, installed Rust promotion or bulk project regeneration. Regenerate matched hill/watershed outputs.",
+    "Inherited graphics BIGOUT F10.5 disturbance-age field overflows at10000days;734107asterisk cells in configured72hill graphics,solelythatfield. Formats preserved; installed water reports/interchange do not consume that field.",
+    "Optional InterceptionStorage is not emitted by this native water writer and remains null in interchange; dense diagnostic traces require isolated directories and can exceed NFS timeouts.",
+    "Cross-platform parity covers the declared ordinary/MOFE/watchlist and medium watershed fixtures; no universal floating-point, specialized RAP-history or maximum-capacity parity claim.",
+    "Bootstrap default and legacy revegetation selector remain unchanged; select this matched pair explicitly with --wepp_exec wepp_261029."
+  ],
+  "matched_pair_sha256": {
+    "wepp_261029_hill.exe": "a1476ca5be83be3af429124426bee14511b4f1e8e93d17868395c50bad131d97",
+    "wepp_261029.exe": "9d7b34295e7fda97de9804b142d11604c404c548f9987e30f59af273f4747107"
+  },
+  "math_runtime": {
+    "architecture": "x86_64",
+    "contract": "SC-MATH-001#INV-MATH-001",
+    "native_double_calls": "unwrapped system libm; stable deposition and Yalin factors use double intermediates",
+    "other_float_functions": "double evaluation followed by one real32 conversion",
+    "policy": "portable-real32-v1",
+    "sine_cosine": "deterministic Fortran kernel; 1e-4 absolute error budget",
+    "toolchain": "WinLibs GNU Fortran/GCC 13.3.0 UCRT; static GNU runtime"
+  },
+  "release_status": "native_windows_validated_against_linux_revision_7",
+  "release_tag": "261029",
+  "schema": "wepp-binary-release-metadata-v1",
+  "sha256": "a1476ca5be83be3af429124426bee14511b4f1e8e93d17868395c50bad131d97",
+  "source_branch": "wepp_260430_negmeltfix_comparator",
+  "source_commit": "e0abe0581f77c6f66917e90daf8f8f429e9315c8",
+  "source_repo": "wepp-in-the-woods/wepp-forest",
+  "specialized_reference": {
+    "contract": "docs/contracts/specialized-revegetation-consumer.md",
+    "decision": "ADR-0134",
+    "historical_binary_sha256": "2c79a5ecb392a6ed7f70102ff7b6caac888d0cb9df1ce303c93eb10d447740a0",
+    "model_source_commit": "2e5928702edd5526a119216bd6be5997729ec72e"
+  },
+  "validation": {
+    "linux_reference_artifact_revision": 7,
+    "linux_native_pytest_passed": 1752,
+    "linux_watchlist": "31 passed, 0 failed",
+    "linux_host_smokes": "both passed",
+    "artifact_policy": "passed",
+    "pe_imports": "Windows system and UCRT DLLs only; no separately installed GNU runtime",
+    "quick_parity": "20 executions per platform; 130/130 outputs exact after CRLF normalization",
+    "small_release_suite": "51 executions per platform; 347 outputs exact after CRLF normalization",
+    "medium_full_watershed": "491 hillslopes, 211 channels, all nine years 2016\u20132024; 3443 outputs exact after CRLF normalization",
+    "inputs": "571 small-suite files and 2468 medium-run files verified identical",
+    "semantic_validation": "complete calendars, finite channel values and valid source metadata; not independent water conservation",
+    "evidence": "docs/work-packages/20261105_windows_261029/",
+    "production_deployment": false
+  },
+  "wepp_banner_version": "2020.500",
+  "platform": "Windows x86_64",
+  "build_host": "blarhg",
+  "platform_artifact_revision": 1
+}

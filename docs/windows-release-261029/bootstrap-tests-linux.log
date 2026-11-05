@@ -1,0 +1,141 @@
+test_cli_prints_server_message_and_exits_nonzero (test_download_errors.DownloadTests.test_cli_prints_server_message_and_exits_nonzero) ... ok
+test_error_redaction_happens_after_control_sanitization (test_download_errors.DownloadTests.test_error_redaction_happens_after_control_sanitization) ... ok
+test_failed_file_body_reported_and_nonzero (test_download_errors.DownloadTests.test_failed_file_body_reported_and_nonzero) ... ok
+test_false_success_html_manifest_rejected (test_download_errors.DownloadTests.test_false_success_html_manifest_rejected) ... ok
+test_indented_error_and_orphan_option_rejected (test_download_errors.DownloadTests.test_indented_error_and_orphan_option_rejected) ... ok
+test_legacy_archive_reports_http_and_truncated_errors_without_writing (test_download_errors.DownloadTests.test_legacy_archive_reports_http_and_truncated_errors_without_writing) ... ok
+test_legacy_archive_success_preserves_archive_and_extracts_bytes (test_download_errors.DownloadTests.test_legacy_archive_success_preserves_archive_and_extracts_bytes) ... ok
+test_manifest_error_stops_before_aria_and_preserves_diagnostic (test_download_errors.DownloadTests.test_manifest_error_stops_before_aria_and_preserves_diagnostic) ... ok
+test_plain_and_large_errors (test_download_errors.DownloadTests.test_plain_and_large_errors) ... ok
+test_real_aria_success_and_file_error (test_download_errors.DownloadTests.test_real_aria_success_and_file_error) ... 
+11/05 11:09:10 [[1;32mNOTICE[0m] Downloading 1 item(s)
+
+11/05 11:09:10 [[1;32mNOTICE[0m] Download complete: /tmp/tmpr8743qip/file.txt
+
+Download Results:
+gid   |stat|avg speed  |path/URI
+======+====+===========+=======================================================
+72d638|OK  |    18KiB/s|/tmp/tmpr8743qip/file.txt
+
+Status Legend:
+(OK):download completed.
+
+11/05 11:09:10 [[1;32mNOTICE[0m] Serialized session to '/tmp/wepp-download-q5i4kq0l/failed.spec' successfully.
+
+11/05 11:09:10 [[1;32mNOTICE[0m] Downloading 1 item(s)
+
+11/05 11:09:10 [[1;31mERROR[0m] CUID#7 - Download aborted. URI=http://127.0.0.1:36703/file.txt
+Exception: [AbstractCommand.cc:351] errorCode=22 URI=http://127.0.0.1:36703/file.txt
+  -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=500
+
+11/05 11:09:10 [[1;32mNOTICE[0m] Download GID#5ffe394957c7c905 not complete: /tmp/tmpr8743qip/file.txt
+
+Download Results:
+gid   |stat|avg speed  |path/URI
+======+====+===========+=======================================================
+5ffe39|ERR |       0B/s|/tmp/tmpr8743qip/file.txt
+
+Status Legend:
+(ERR):error occurred.
+
+aria2 will resume download if the transfer is restarted.
+If there are any errors, then see the log file. See '-l' option in help/man page for details.
+
+11/05 11:09:10 [[1;32mNOTICE[0m] Serialized session to '/tmp/wepp-download-vtpp9cj6/failed.spec' successfully.
+
+11/05 11:09:11 [[1;32mNOTICE[0m] Downloading 1 item(s)
+
+11/05 11:09:11 [[1;32mNOTICE[0m] Download complete: /tmp/tmpr8743qip/file name.txt
+
+Download Results:
+gid   |stat|avg speed  |path/URI
+======+====+===========+=======================================================
+2e9b3b|OK  |    18KiB/s|/tmp/tmpr8743qip/file name.txt
+
+Status Legend:
+(OK):download completed.
+
+11/05 11:09:11 [[1;32mNOTICE[0m] Serialized session to '/tmp/wepp-download-1vy8k9um/failed.spec' successfully.
+
+11/05 11:09:11 [[1;32mNOTICE[0m] Downloading 1 item(s)
+
+11/05 11:09:11 [[1;31mERROR[0m] CUID#7 - Download aborted. URI=http://127.0.0.1:36703/file%20name.txt
+Exception: [AbstractCommand.cc:351] errorCode=22 URI=http://127.0.0.1:36703/file%20name.txt
+  -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=500
+
+11/05 11:09:11 [[1;32mNOTICE[0m] Download GID#8a5f17da4f5e35b2 not complete: /tmp/tmpr8743qip/file name.txt
+
+Download Results:
+gid   |stat|avg speed  |path/URI
+======+====+===========+=======================================================
+8a5f17|ERR |       0B/s|/tmp/tmpr8743qip/file name.txt
+
+Status Legend:
+(ERR):error occurred.
+
+aria2 will resume download if the transfer is restarted.
+If there are any errors, then see the log file. See '-l' option in help/man page for details.
+
+11/05 11:09:11 [[1;32mNOTICE[0m] Serialized session to '/tmp/wepp-download-ryh911of/failed.spec' successfully.
+
+11/05 11:09:11 [[1;32mNOTICE[0m] Downloading 1 item(s)
+
+11/05 11:09:11 [[1;32mNOTICE[0m] Download complete: /tmp/tmpr8743qip/fílè.txt
+
+Download Results:
+gid   |stat|avg speed  |path/URI
+======+====+===========+=======================================================
+c47433|OK  |    18KiB/s|/tmp/tmpr8743qip/fílè.txt
+
+Status Legend:
+(OK):download completed.
+
+11/05 11:09:11 [[1;32mNOTICE[0m] Serialized session to '/tmp/wepp-download-idwg54ga/failed.spec' successfully.
+
+11/05 11:09:11 [[1;32mNOTICE[0m] Downloading 1 item(s)
+
+11/05 11:09:11 [[1;31mERROR[0m] CUID#7 - Download aborted. URI=http://127.0.0.1:36703/f%C3%ADl%C3%A8.txt
+Exception: [AbstractCommand.cc:351] errorCode=22 URI=http://127.0.0.1:36703/f%C3%ADl%C3%A8.txt
+  -> [HttpSkipResponseCommand.cc:239] errorCode=22 The response status is not successful. status=500
+
+11/05 11:09:11 [[1;32mNOTICE[0m] Download GID#03a3ffb1c976ab85 not complete: /tmp/tmpr8743qip/fílè.txt
+
+Download Results:
+gid   |stat|avg speed  |path/URI
+======+====+===========+=======================================================
+03a3ff|ERR |       0B/s|/tmp/tmpr8743qip/fílè.txt
+
+Status Legend:
+(ERR):error occurred.
+
+aria2 will resume download if the transfer is restarted.
+If there are any errors, then see the log file. See '-l' option in help/man page for details.
+
+11/05 11:09:11 [[1;32mNOTICE[0m] Serialized session to '/tmp/wepp-download-0284grbs/failed.spec' successfully.
+ok
+test_redirect_auth_scope_and_successful_bytes (test_download_errors.DownloadTests.test_redirect_auth_scope_and_successful_bytes) ... ok
+test_successful_bytes_and_aria_exit (test_download_errors.DownloadTests.test_successful_bytes_and_aria_exit) ... ok
+test_windows_batch_exit_propagation (test_download_errors.DownloadTests.test_windows_batch_exit_propagation) ... skipped 'native Windows wrapper'
+test_windows_batch_http_failure_and_success (test_download_errors.DownloadTests.test_windows_batch_http_failure_and_success) ... skipped 'native Windows wrapper'
+test_explicit_261029_windows_pair_matches_release_provenance (test_wepp_executables.ExecutableSelectionTests.test_explicit_261029_windows_pair_matches_release_provenance) ... ok
+test_invalid_selection_does_not_clear_existing_output (test_wepp_executables.ExecutableSelectionTests.test_invalid_selection_does_not_clear_existing_output) ... ok
+test_missing_or_replaced_pair_member_is_rejected (test_wepp_executables.ExecutableSelectionTests.test_missing_or_replaced_pair_member_is_rejected) ... ok
+test_only_registered_platform_releases_are_accepted (test_wepp_executables.ExecutableSelectionTests.test_only_registered_platform_releases_are_accepted) ... ok
+test_platform_defaults_and_provenance (test_wepp_executables.ExecutableSelectionTests.test_platform_defaults_and_provenance) ... ok
+test_packaged_pair_and_alias (test_windows_release.WindowsReleaseTests.test_packaged_pair_and_alias) ... ok
+test_pass_v3_preserves_legacy_daily_totals (test_windows_release.WindowsReleaseTests.test_pass_v3_preserves_legacy_daily_totals) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 10.757s
+
+OK (skipped=2)
+downloading without authentication
+downloading without authentication
+downloading without authentication
+downloading without authentication
+downloading without authentication
+downloading without authentication
+downloading without authentication
+downloading without authentication
+downloading without authentication
+downloading without authentication

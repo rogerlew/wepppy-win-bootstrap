@@ -8,3 +8,6 @@ docs/windows-releases-20261026/** -text
 docs/windows-release-261027/** -text
 bin/wepp_261027 -text
 bin/wepp_261027_hill -text
+
+# Preserve native Windows 261029 validation receipts and logs.
+docs/windows-release-261029/** -text

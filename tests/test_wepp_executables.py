@@ -27,6 +27,26 @@ class ExecutableSelectionTests(unittest.TestCase):
                 sources.add(metadata['source_commit'])
         self.assertEqual(len(sources), 1)
 
+    def test_explicit_261029_windows_pair_matches_release_provenance(self):
+        pair = select_executables('wepp_261029', system='Windows', machine='AMD64')
+        self.assertEqual([Path(p).name for p in pair],
+                         ['wepp_261029.exe', 'wepp_261029_hill.exe'])
+        metadata = [json.loads(Path(p + '.json').read_text()) for p in pair]
+        self.assertEqual({m['source_commit'] for m in metadata},
+                         {'e0abe0581f77c6f66917e90daf8f8f429e9315c8'})
+        for path, sidecar in zip(pair, metadata):
+            content = Path(path).read_bytes()
+            self.assertTrue(content.startswith(b'MZ'))
+            self.assertEqual(hashlib.sha256(content).hexdigest(), sidecar['sha256'])
+            self.assertEqual(sidecar['artifact_revision'], 7)
+            self.assertEqual(sidecar['matched_pair_sha256'],
+                             {Path(p).name: m['sha256'] for p, m in zip(pair, metadata)})
+        # This addition must not silently change default or Linux selections.
+        self.assertEqual(Path(select_executables(system='Windows', machine='AMD64')[0]).name,
+                         'wepp_261027.exe')
+        with self.assertRaises(ValueError):
+            select_executables('wepp_261029', system='Linux', machine='x86_64')
+
     def test_missing_or_replaced_pair_member_is_rejected(self):
         import shutil
         with tempfile.TemporaryDirectory() as tmp:

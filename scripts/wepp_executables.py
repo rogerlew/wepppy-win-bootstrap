@@ -9,6 +9,9 @@ BIN = Path(__file__).resolve().parents[1] / 'bin'
 # Register both validated artifacts together. User paths and independent hill
 # overrides are deliberately unsupported: matching filenames are not provenance.
 RELEASES = {
+    ('wepp_261029', 'Windows', 'x86_64'): (
+        ('wepp_261029.exe', '9d7b34295e7fda97de9804b142d11604c404c548f9987e30f59af273f4747107'),
+        ('wepp_261029_hill.exe', 'a1476ca5be83be3af429124426bee14511b4f1e8e93d17868395c50bad131d97')),
     ('wepp_261027', 'Windows', 'x86_64'): (
         ('wepp_261027.exe', 'ad4a14e56ff5da4670c8c40dbfbd187299d6ee54e9b0a76ddf6df3cde4ab880f'),
         ('wepp_261027_hill.exe', '50e650645b4784aca9175c55aa9b508d8b2214b597409b466b2c084dd9408f0b')),

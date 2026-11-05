@@ -1,0 +1,35 @@
+{
+  "source_commit": "e0abe0581f77c6f66917e90daf8f8f429e9315c8",
+  "source_branch": "wepp_260430_negmeltfix_comparator",
+  "source_archive_sha256": "323a96dc36194c3893b17da261dc2a3585fe260d28ed2da1e6ee02922eb39215",
+  "archive_paths": [
+    "src",
+    "fpm-src"
+  ],
+  "source_archive_preserved_at": "/tmp/wepp-261029-windows-20261105/source.tar",
+  "bootstrap_helper_commit": "3fd30d070577f22a4c3e490903af1a9e5e60628b",
+  "build_host": "blarhg",
+  "native_python": "C:/Users/roger/miniconda3/python.exe",
+  "linux_reference_sha256": {
+    "wepp_261029": "4a9da3980d1a9249e566626c01de920de7dba5088ec25324dc1c6dd6eff8c825",
+    "wepp_261029_hill": "210d48da09ff60707ba2404dd32af1f0a74e95437d2cb900c5408121141a1936"
+  },
+  "build_input_clean": true,
+  "model_source_changes": false,
+  "build_root_windows": "C:/tmp/wepp-261029-windows-20261105",
+  "temporary_root_linux": "/tmp/wepp-261029-windows-20261105",
+  "small_cases": 41,
+  "small_executions_per_platform": 51,
+  "small_input_files": 571,
+  "windows_candidate_sha256": {
+    "wepp_261029_hill.exe": "a1476ca5be83be3af429124426bee14511b4f1e8e93d17868395c50bad131d97",
+    "wepp_261029.exe": "9d7b34295e7fda97de9804b142d11604c404c548f9987e30f59af273f4747107"
+  },
+  "validation_helper_commit": "e4cefd09f905c251c40cd2d8e567aff54b736bba",
+  "windows_capacity": {
+    "hillslopes": 4500,
+    "channels": 1500,
+    "elements": 6000,
+    "hill_ofes": 32
+  }
+}
